@@ -716,7 +716,7 @@ summary = "Makes working with XML feel like you are working with JSON"
 
 [metadata]
 lock_version = "3.1"
-content_hash = "sha256:25a5a7e67726cfd5cc5c36b0a87dab9e43a38fc56fc75def023433bf755af87d"
+content_hash = "sha256:5defddc5f24cadcb5832e18f0a36fc5e5487930c9aa125872907805a9e524a5b"
 
 [metadata.files]
 "argcomplete 1.12.3" = [
