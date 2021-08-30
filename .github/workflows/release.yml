@@ -60,8 +60,7 @@ jobs:
         id: update
         shell: bash
         run: |
-          pdm install
-          pdm update --save-compatible --update-eager -v
+          pdm update --save-compatible --update-eager
           pdm config --list
           echo "=============================="
           echo "Run format/test/lint"
