@@ -111,20 +111,21 @@ jobs:
           git config user.name "Sam"
           git config user.email dev@samarthj.com
           git config user.signkey dev@samarthj.com
-          git config commit.gpgsign true
+          # git config commit.gpgsign true
           git config init.defaultBranch main
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
 
           pdm run cz changelog
           git add .
           git status
-          git commit -S -m "ci(github-actions): :construction_worker: updpkg" || true
+          git commit -S -m "ci(github-actions): :construction_worker: format, lint, test" || true
 
       - name: Python Semantic Release
         if: ${{ steps.git.outcome == 'success' }}
         uses: relekang/python-semantic-release@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          # pypi_token: ${{ secrets.PYPI_API_TOKEN }}
 
       - name: Publish distribution 📦 to Test PyPI
         id: test_pypi
