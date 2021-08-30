@@ -65,6 +65,8 @@ jobs:
           pdm update --save-compatible --update-eager
           pdm install
           pdm config
+          pdm info
+          echo $PATH
           echo "=============================="
           echo "Run format/test/lint"
           echo "++++++++++++++++++++++++++++++"
