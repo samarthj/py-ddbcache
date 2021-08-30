@@ -49,7 +49,7 @@ lint = [
     "pylint; python_version>='3.9'",
     "rope; python_version>='3.9'",
 ]
-other = ["colorama; python_version>='3.9'", "commitizen; python_version>='3.9'"]
+other = ["colorama; python_version>='3.9'"]
 test = [
     "pytest>=6.0; python_version>='3.9'",
     "pytest-cov; python_version>='3.9'",
@@ -103,52 +103,6 @@ show-source               = "true"
 [tool.pytest.ini_options]
 addopts   = "-ra"
 testpaths = ["tests"]
-
-[tool.commitizen]
-name = "cz_conventional_commits"
-style = [
-    [
-        "qmark",
-        "fg:#ff9d00 bold",
-    ],
-    [
-        "question",
-        "bold",
-    ],
-    [
-        "answer",
-        "fg:#ff9d00 bold",
-    ],
-    [
-        "pointer",
-        "fg:#ff9d00 bold",
-    ],
-    [
-        "highlighted",
-        "fg:#ff9d00 bold",
-    ],
-    [
-        "selected",
-        "fg:#cc5454",
-    ],
-    [
-        "separator",
-        "fg:#cc5454",
-    ],
-    [
-        "instruction",
-        "",
-    ],
-    [
-        "text",
-        "",
-    ],
-    [
-        "disabled",
-        "fg:#858585 italic",
-    ],
-]
-version_files = ['pyproject.toml:version']
 
 [tool.pycln]
 all          = true
