@@ -59,7 +59,9 @@ jobs:
       - name: Update the project
         id: update
         shell: bash
+        continue-on-error: true
         run: |
+          eval $(pdm --pep582)
           pdm update --save-compatible --update-eager
           pdm install
           pdm config
@@ -77,6 +79,7 @@ jobs:
           pycln -a tests src
 
       - name: Import GPG key
+        if: ${{ steps.update.outcome == 'success' }}
         uses: crazy-max/ghaction-import-gpg@v3
         with:
           gpg-private-key: ${{ secrets.PGP_PRIVATE_KEY }}
@@ -84,6 +87,7 @@ jobs:
           git-commit-gpgsign: true
 
       - name: Setup git config
+        if: ${{ steps.update.outcome == 'success' }}
         id: git
         shell: bash
         run: |
@@ -104,6 +108,7 @@ jobs:
           git commit -S -m "ci(github-actions): :construction_worker: updpkg" || true
 
       - name: Python Semantic Release
+        if: ${{ steps.git.outcome == 'success' }}
         uses: relekang/python-semantic-release@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
