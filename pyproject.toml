@@ -49,7 +49,7 @@ lint = [
     "pylint; python_version>='3.9'",
     "rope; python_version>='3.9'",
 ]
-other = ["colorama; python_version>='3.9'"]
+other = ["colorama; python_version>='3.9'", "commitizen; python_version>='3.9'"]
 test = [
     "pytest; python_version>='3.9'",
     "pytest-cov; python_version>='3.9'",
@@ -166,3 +166,12 @@ style = [
     ],
 ]
 version_files = ["pyproject.toml:version"]
+
+[tool.pycln]
+all          = true
+exclude      = '(__pypackages__|__pycache__|\.pytest_cache|\.github|\.git)'
+expand_stars = true
+include      = '(src|tests)/.*\.py$'
+no_gitignore = false
+path         = "src"
+verbose      = true
