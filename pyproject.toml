@@ -4,7 +4,10 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Database",
 ]
-dependencies = ["boto3; python_version>='3.9'", "pylib-helpers"]
+dependencies = [
+    "boto3; python_version>='3.9'",
+    "pylib-helpers; python_version>='3.9'",
+]
 description = "A simple interface for caching items in DynamoDB"
 dynamic = ["classifiers", "version"]
 license = {text = "GPL-3.0-or-later"}
