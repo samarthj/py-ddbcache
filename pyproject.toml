@@ -1,0 +1,160 @@
+[project]
+authors = [{name = "Sam", email = "dev@samarthj.com"}]
+classifiers = [
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Database",
+]
+dependencies = ["boto3~=1.18", "pylib-helpers"]
+description = "A simple interface for caching items in DynamoDB"
+dynamic = ["classifiers"]
+license = {text = "GPL-3.0-or-later"}
+name = "ddb-cache"
+requires-python = ">=3.9,<4.0"
+version = "0.1.0"
+
+[project.urls]
+homepage = ""
+
+
+[project.optional-dependencies]
+[tool.pdm]
+allow_prereleases = true
+
+[tool.pdm.dev-dependencies]
+ci = ["commitizen~=2.18"]
+ide = ["rope~=0.19"]
+lint = [
+    "autopep8~=1.5",
+    "bandit~=1.7",
+    "black~=21.8b0",
+    "flake8~=3.9",
+    "flake8-bandit~=2.1",
+    "flake8-black~=0.2",
+    "flake8-comprehensions~=3.6",
+    "flake8-expression-complexity~=0.0",
+    "flake8-functions~=0.0",
+    "flake8-isort~=4.0",
+    "flake8-pytest~=1.3",
+    "flake8-pytest-style~=1.5",
+    "flake8-simplify~=0.14",
+    "flake8-use-fstring~=1.1",
+    "isort~=5.9",
+    "mccabe~=0.6",
+    "mypy~=0.910",
+    "pep8-naming~=0.12",
+    "pyproject-flake8~=0.0",
+    "pylint~=2.10",
+]
+other = ["colorama~=0.4"]
+test = ["pytest~=6.2", "pytest-cov~=2.12", "moto~=2.2"]
+
+[build-system]
+build-backend = "pdm.pep517.api"
+requires      = ["pdm-pep517"]
+
+[tool.pdm.scripts]
+format         = {cmd = "black --config pyproject.toml --color .", help = "Format code using black config"}
+format-imports = {cmd = "isort --settings-file pyproject.toml --color .", help = "Optimize and sort imports"}
+lint           = {cmd = "pflake8", help = "Print lint errors"}
+lint-plugins   = {cmd = "pflake8 --version", help = "Print plugins used for linting"}
+style          = {cmd = "black --config pyproject.toml --color --diff .", help = "Check code style"}
+style-imports  = {cmd = "isort --settings-file pyproject.toml --color --diff .", help = "Check code style for imports"}
+test           = {cmd = "pytest", help = "Run the tests"}
+test-local     = {cmd = "pytest -r A", help = "Run the tests with cred access"}
+
+[tool.black]
+line_length = 120
+
+[tool.isort]
+ensure_newline_before_comments = true
+extend_skip                    = [".vscode", "__pypackages__"]
+force_grid_wrap                = 0
+force_sort_within_sections     = true
+group_by_package               = true
+import_heading_stdlib          = "StdLib"
+include_trailing_comma         = true
+lexicographical                = true
+line_length                    = 120
+multi_line_output              = 3
+profile                        = "black"
+remove_redundant_aliases       = true
+src_paths                      = ["facedb", "tests"]
+use_parentheses                = true
+
+[tool.flake8]
+black-config              = 'pyproject.toml'
+extend-exclude            = ["__pypackages__"]
+extend-ignore             = "E203,E501,W503,C0330,C0326,S101,S603,E722"
+indent-size               = 4
+max-complexity            = 10
+max-expression-complexity = 10
+max-line-length           = 120
+max-returns-amount        = 5
+show-source               = "true"
+
+[tool.pytest.ini_options]
+addopts    = "-ra"
+minversion = "6.0"
+testpaths  = ["tests"]
+
+[tool.poetry-dynamic-versioning]
+format-jinja = """
+    {%- if distance == 0 -%}
+        {{ serialize_pep440(base, stage, revision) }}
+    {%- elif distance > 20 -%}
+        {{ serialize_pep440(base, stage="rc", revision=distance) }}
+    {%- elif distance > 10 -%}
+        {{ serialize_pep440(base, stage="b", revision=distance) }}
+    {%- elif distance > 0 -%}
+        {{ serialize_pep440(base, stage="a", revision=distance) }}
+    {%- endif -%}
+"""
+latest-tag = true
+pattern = '^v(?P<base>\d+\.\d+\.\d+)'
+vcs = "git"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+style = [
+    [
+        "qmark",
+        "fg:#ff9d00 bold",
+    ],
+    [
+        "question",
+        "bold",
+    ],
+    [
+        "answer",
+        "fg:#ff9d00 bold",
+    ],
+    [
+        "pointer",
+        "fg:#ff9d00 bold",
+    ],
+    [
+        "highlighted",
+        "fg:#ff9d00 bold",
+    ],
+    [
+        "selected",
+        "fg:#cc5454",
+    ],
+    [
+        "separator",
+        "fg:#cc5454",
+    ],
+    [
+        "instruction",
+        "",
+    ],
+    [
+        "text",
+        "",
+    ],
+    [
+        "disabled",
+        "fg:#858585 italic",
+    ],
+]
+version_files = ["pyproject.toml:version"]
