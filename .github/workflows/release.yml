@@ -61,9 +61,9 @@ jobs:
         shell: bash
         continue-on-error: true
         run: |
-          eval $(pdm --pep582)
+          # eval "$(pdm --pep582)"
           pdm update --save-compatible --update-eager
-          pdm install
+          pdm install -v -dG:all
           pdm config
           pdm info
           echo $PATH
