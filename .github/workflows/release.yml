@@ -61,7 +61,7 @@ jobs:
         shell: bash
         run: |
           pdm update --save-compatible --update-eager
-          pdm config --list
+          pdm config
           echo "=============================="
           echo "Run format/test/lint"
           echo "++++++++++++++++++++++++++++++"
