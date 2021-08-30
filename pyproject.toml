@@ -6,14 +6,16 @@ classifiers = [
 ]
 dependencies = ["boto3~=1.18", "pylib-helpers"]
 description = "A simple interface for caching items in DynamoDB"
-dynamic = ["classifiers"]
+dynamic = ["classifiers", "version"]
 license = {text = "GPL-3.0-or-later"}
 name = "ddb-cache"
 requires-python = ">=3.9,<4.0"
-version = "0.1.0"
+# version = {from = "src/_version.py"}
+version = {use_scm = true}
 
 [project.urls]
-homepage = ""
+"Bug Tracker" = "https://github.com/samarthj/py-ddbcache/issues"
+repository    = "https://github.com/samarthj/py-ddbcache"
 
 
 [project.optional-dependencies]
