@@ -2,7 +2,10 @@ name: Daily Release
 
 on:
   schedule:
-    - cron: '0 1 * * *'
+    - cron: '0 1 * * */2'
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 concurrency:
@@ -46,7 +49,7 @@ jobs:
       - name: Install system dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pdm pycln pdm-publish commitizen
+          pip install pdm pycln pdm-publish
       - name: Get pdm cache dir
         id: pdm-cache-dir
         run: |
@@ -134,6 +137,8 @@ jobs:
         if: ${{ steps.github_release.outcome == 'success' }}
         continue-on-error: true
         run: |
+          rm -rf dist/*
+          pdm build
           pdm publish -r testpypi --password ${{ secrets.TEST_PYPI_TOKEN }}
 
       - name: Publish distribution 📦 to PyPI
