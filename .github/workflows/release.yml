@@ -67,8 +67,8 @@ jobs:
         continue-on-error: true
         run: |
           pdm config parallel_install true
-          pdm update --save-compatible --update-eager
-          pdm sync -dG:all --no-self --no-editable
+          pdm sync -dG:all --no-self --clean
+          pdm update
           pdm config
           pdm info
           echo $PATH
@@ -122,6 +122,7 @@ jobs:
           # pdm build
 
       - name: Python Semantic Release
+        id: github_release
         if: ${{ steps.git.outcome == 'success' }}
         uses: relekang/python-semantic-release@master
         with:
@@ -131,11 +132,13 @@ jobs:
       - name: Publish distribution 📦 to Test PyPI
         id: test_pypi
         if: ${{ steps.github_release.outcome == 'success' }}
+        continue-on-error: true
         run: |
           pdm publish -r testpypi --password ${{ secrets.TEST_PYPI_TOKEN }}
 
       - name: Publish distribution 📦 to PyPI
         id: pypi
         if: ${{ steps.test_pypi.outcome == 'success' }}
+        continue-on-error: true
         run: |
           pdm publish --password ${{ secrets.PYPI_API_TOKEN }}
