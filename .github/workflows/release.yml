@@ -137,7 +137,6 @@ jobs:
         if: ${{ steps.github_release.outcome == 'success' }}
         continue-on-error: true
         run: |
-          rm -rf dist/*
           pdm build
           pdm publish -r testpypi --password ${{ secrets.TEST_PYPI_TOKEN }}
 
