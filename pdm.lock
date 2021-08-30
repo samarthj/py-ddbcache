@@ -1,9 +1,4 @@
 [[package]]
-name = "argcomplete"
-version = "1.12.3"
-summary = "Bash tab completion for argparse"
-
-[[package]]
 name = "astor"
 version = "0.8.1"
 requires_python = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
@@ -133,23 +128,6 @@ requires_python = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
 summary = "Cross-platform colored terminal text."
 
 [[package]]
-name = "commitizen"
-version = "2.18.0"
-requires_python = ">=3.6.1,<4.0"
-summary = "Python commitizen client tool"
-dependencies = [
-    "argcomplete<2.0.0,>=1.12.1",
-    "colorama<0.5.0,>=0.4.1",
-    "decli<0.6.0,>=0.5.2",
-    "jinja2>=2.10.3",
-    "packaging<21,>=19",
-    "pyyaml>=3.08",
-    "questionary<2.0.0,>=1.4.0",
-    "termcolor<2.0,>=1.1",
-    "tomlkit<1.0.0,>=0.5.3",
-]
-
-[[package]]
 name = "coverage"
 version = "6.0b1"
 requires_python = ">=3.6"
@@ -163,12 +141,6 @@ summary = "cryptography is a package which provides cryptographic recipes and pr
 dependencies = [
     "cffi>=1.12",
 ]
-
-[[package]]
-name = "decli"
-version = "0.5.2"
-requires_python = ">=3.6"
-summary = "Minimal, easy-to-use, declarative cli tool"
 
 [[package]]
 name = "flake8"
@@ -329,7 +301,7 @@ requires_python = ">=3.6.1,<4.0"
 summary = "A Python utility / library to sort Python imports."
 
 [[package]]
-name = "jinja2"
+name = "Jinja2"
 version = "3.0.1"
 requires_python = ">=3.6"
 summary = "A very fast and expressive template engine."
@@ -412,8 +384,8 @@ summary = "Experimental type system extensions for programs checked with the myp
 
 [[package]]
 name = "packaging"
-version = "20.9"
-requires_python = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
+version = "21.0"
+requires_python = ">=3.6"
 summary = "Core utilities for Python packages"
 dependencies = [
     "pyparsing>=2.0.2",
@@ -451,15 +423,6 @@ name = "pluggy"
 version = "1.0.0.dev0"
 requires_python = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
 summary = "plugin and hook calling mechanisms for python"
-
-[[package]]
-name = "prompt-toolkit"
-version = "3.0.20"
-requires_python = ">=3.6.2"
-summary = "Library for building powerful interactive command lines in Python"
-dependencies = [
-    "wcwidth",
-]
 
 [[package]]
 name = "py"
@@ -570,15 +533,6 @@ requires_python = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*"
 summary = "YAML parser and emitter for Python"
 
 [[package]]
-name = "questionary"
-version = "1.10.0"
-requires_python = ">=3.6,<4.0"
-summary = "Python library to build pretty command line user prompts ⭐️"
-dependencies = [
-    "prompt-toolkit<4.0,>=2.0",
-]
-
-[[package]]
 name = "regex"
 version = "2021.8.28"
 summary = "Alternative regular expression module, to replace re."
@@ -653,11 +607,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "termcolor"
-version = "1.1.0"
-summary = "ANSII Color formatting for output in terminal."
-
-[[package]]
 name = "testfixtures"
 version = "6.18.1"
 summary = "A collection of helpers and mock objects for unit tests and doc tests."
@@ -675,12 +624,6 @@ requires_python = ">=3.6"
 summary = "A lil' TOML parser"
 
 [[package]]
-name = "tomlkit"
-version = "0.7.2"
-requires_python = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
-summary = "Style preserving TOML library"
-
-[[package]]
 name = "typing-extensions"
 version = "3.10.0.0"
 summary = "Backported and Experimental Type Hints for Python 3.5+"
@@ -690,11 +633,6 @@ name = "urllib3"
 version = "1.26.6"
 requires_python = ">=2.7,<4.0,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*"
 summary = "HTTP library with thread-safe connection pooling, file post, and more."
-
-[[package]]
-name = "wcwidth"
-version = "0.2.5"
-summary = "Measures the displayed width of unicode strings in a terminal"
 
 [[package]]
 name = "werkzeug"
@@ -715,13 +653,9 @@ summary = "Makes working with XML feel like you are working with JSON"
 
 [metadata]
 lock_version = "3.1"
-content_hash = "sha256:7a36d3d2f0f286d9fb163288172b12e0f04620df98e5646678e3e92cab97031e"
+content_hash = "sha256:51457a1795cd2449a9914fe070d5e56833541d8efc17e20d5a363845d51215c8"
 
 [metadata.files]
-"argcomplete 1.12.3" = [
-    {file = "argcomplete-1.12.3-py2.py3-none-any.whl", hash = "sha256:291f0beca7fd49ce285d2f10e4c1c77e9460cf823eef2de54df0c0fec88b0d81"},
-    {file = "argcomplete-1.12.3.tar.gz", hash = "sha256:2c7dbffd8c045ea534921e63b0be6fe65e88599990d8dc408ac8c542b72a5445"},
-]
 "astor 0.8.1" = [
     {file = "astor-0.8.1-py2.py3-none-any.whl", hash = "sha256:070a54e890cefb5b3739d19f30f5a5ec840ffc9c50ffa7d23cc9fc1a38ebbfc5"},
     {file = "astor-0.8.1.tar.gz", hash = "sha256:6a6effda93f4e1ce9f618779b2dd1d9d84f1e32812c23a29b3fff6fd7f63fa5e"},
@@ -825,10 +759,6 @@ content_hash = "sha256:7a36d3d2f0f286d9fb163288172b12e0f04620df98e5646678e3e92ca
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
     {file = "colorama-0.4.4.tar.gz", hash = "sha256:5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"},
 ]
-"commitizen 2.18.0" = [
-    {file = "commitizen-2.18.0-py3-none-any.whl", hash = "sha256:3a8d9a90aca987708a474ff2fdfa619e07c5340f6d1cca4421d3516c78db1c1e"},
-    {file = "commitizen-2.18.0.tar.gz", hash = "sha256:f24a22eb6734e1791046e817dff72505b515e9a1f282577a82423cf7563201d7"},
-]
 "coverage 6.0b1" = [
     {file = "coverage-6.0b1-cp310-cp310-macosx_10_14_x86_64.whl", hash = "sha256:da7de6e4162c69cc03cc56b7d051ae11147ac30872ff57df4ba4cac6d70ce5d9"},
     {file = "coverage-6.0b1-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.whl", hash = "sha256:23c1611471cbfa2ac0e283862a76a333c13e5e7c4d499feb9919a5f52884610e"},
@@ -879,10 +809,6 @@ content_hash = "sha256:7a36d3d2f0f286d9fb163288172b12e0f04620df98e5646678e3e92ca
     {file = "cryptography-3.4.8-pp37-pypy37_pp73-manylinux_2_24_x86_64.whl", hash = "sha256:8695456444f277af73a4877db9fc979849cd3ee74c198d04fc0776ebc3db52b9"},
     {file = "cryptography-3.4.8-pp37-pypy37_pp73-win_amd64.whl", hash = "sha256:cd65b60cfe004790c795cc35f272e41a3df4631e2fb6b35aa7ac6ef2859d554e"},
     {file = "cryptography-3.4.8.tar.gz", hash = "sha256:94cc5ed4ceaefcbe5bf38c8fba6a21fc1d365bb8fb826ea1688e3370b2e24a1c"},
-]
-"decli 0.5.2" = [
-    {file = "decli-0.5.2-py3-none-any.whl", hash = "sha256:d3207bc02d0169bf6ed74ccca09ce62edca0eb25b0ebf8bf4ae3fb8333e15ca0"},
-    {file = "decli-0.5.2.tar.gz", hash = "sha256:f2cde55034a75c819c630c7655a844c612f2598c42c21299160465df6ad463ad"},
 ]
 "flake8 3.9.2" = [
     {file = "flake8-3.9.2-py2.py3-none-any.whl", hash = "sha256:bf8fd333346d844f616e8d47905ef3a3384edae6b4e9beb0c5101e25e3110907"},
@@ -1085,9 +1011,9 @@ content_hash = "sha256:7a36d3d2f0f286d9fb163288172b12e0f04620df98e5646678e3e92ca
     {file = "mypy_extensions-0.4.3-py2.py3-none-any.whl", hash = "sha256:090fedd75945a69ae91ce1303b5824f428daf5a028d2f6ab8a299250a846f15d"},
     {file = "mypy_extensions-0.4.3.tar.gz", hash = "sha256:2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8"},
 ]
-"packaging 20.9" = [
-    {file = "packaging-20.9-py2.py3-none-any.whl", hash = "sha256:67714da7f7bc052e064859c05c595155bd1ee9f69f76557e21f051443c20947a"},
-    {file = "packaging-20.9.tar.gz", hash = "sha256:5b327ac1320dc863dca72f4514ecc086f31186744b84a230374cc1fd776feae5"},
+"packaging 21.0" = [
+    {file = "packaging-21.0-py3-none-any.whl", hash = "sha256:c86254f9220d55e31cc94d69bade760f0847da8000def4dfe1c6b872fd14ff14"},
+    {file = "packaging-21.0.tar.gz", hash = "sha256:7dc96269f53a4ccec5c0670940a4281106dd0bb343f47b7471f779df49c2fbe7"},
 ]
 "pathspec 0.9.0" = [
     {file = "pathspec-0.9.0-py2.py3-none-any.whl", hash = "sha256:7d15c4ddb0b5c802d161efc417ec1a2558ea2653c2e8ad9c19098201dc1c993a"},
@@ -1108,10 +1034,6 @@ content_hash = "sha256:7a36d3d2f0f286d9fb163288172b12e0f04620df98e5646678e3e92ca
 "pluggy 1.0.0.dev0" = [
     {file = "pluggy-1.0.0.dev0-py2.py3-none-any.whl", hash = "sha256:467f0219e89bb5061a8429c6fc5cf055fa3983a0e68e84a1d205046306b37d9e"},
     {file = "pluggy-1.0.0.dev0.tar.gz", hash = "sha256:265a94bf44ca13662f12fcd1b074c14d4b269a712f051b6f644ef7e705d6735f"},
-]
-"prompt-toolkit 3.0.20" = [
-    {file = "prompt_toolkit-3.0.20-py3-none-any.whl", hash = "sha256:6076e46efae19b1e0ca1ec003ed37a933dc94b4d20f486235d436e64771dcd5c"},
-    {file = "prompt_toolkit-3.0.20.tar.gz", hash = "sha256:eb71d5a6b72ce6db177af4a7d4d7085b99756bf656d98ffcc4fecd36850eea6c"},
 ]
 "py 1.10.0" = [
     {file = "py-1.10.0-py2.py3-none-any.whl", hash = "sha256:3b80836aa6d1feeaa108e046da6423ab8f6ceda6468545ae8d02d9d58d18818a"},
@@ -1192,10 +1114,6 @@ content_hash = "sha256:7a36d3d2f0f286d9fb163288172b12e0f04620df98e5646678e3e92ca
     {file = "PyYAML-5.4.1-cp39-cp39-win_amd64.whl", hash = "sha256:c20cfa2d49991c8b4147af39859b167664f2ad4561704ee74c1de03318e898db"},
     {file = "PyYAML-5.4.1.tar.gz", hash = "sha256:607774cbba28732bfa802b54baa7484215f530991055bb562efbed5b2f20a45e"},
 ]
-"questionary 1.10.0" = [
-    {file = "questionary-1.10.0-py3-none-any.whl", hash = "sha256:fecfcc8cca110fda9d561cb83f1e97ecbb93c613ff857f655818839dac74ce90"},
-    {file = "questionary-1.10.0.tar.gz", hash = "sha256:600d3aefecce26d48d97eee936fdb66e4bc27f934c3ab6dd1e292c4f43946d90"},
-]
 "regex 2021.8.28" = [
     {file = "regex-2021.8.28-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:9d05ad5367c90814099000442b2125535e9d77581855b9bee8780f1b41f2b1a2"},
     {file = "regex-2021.8.28-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:f3bf1bc02bc421047bfec3343729c4bbbea42605bcfd6d6bfe2c07ade8b12d2a"},
@@ -1274,9 +1192,6 @@ content_hash = "sha256:7a36d3d2f0f286d9fb163288172b12e0f04620df98e5646678e3e92ca
     {file = "stevedore-3.4.0-py3-none-any.whl", hash = "sha256:920ce6259f0b2498aaa4545989536a27e4e4607b8318802d7ddc3a533d3d069e"},
     {file = "stevedore-3.4.0.tar.gz", hash = "sha256:59b58edb7f57b11897f150475e7bc0c39c5381f0b8e3fa9f5c20ce6c89ec4aa1"},
 ]
-"termcolor 1.1.0" = [
-    {file = "termcolor-1.1.0.tar.gz", hash = "sha256:1d6d69ce66211143803fbc56652b41d73b4a400a2891d7bf7a1cdf4c02de613b"},
-]
 "testfixtures 6.18.1" = [
     {file = "testfixtures-6.18.1-py2.py3-none-any.whl", hash = "sha256:486be7b01eb71326029811878a3317b7e7994324621c0ec633c8e24499d8d5b3"},
     {file = "testfixtures-6.18.1.tar.gz", hash = "sha256:0a6422737f6d89b45cdef1e2df5576f52ad0f507956002ce1020daa9f44211d6"},
@@ -1289,10 +1204,6 @@ content_hash = "sha256:7a36d3d2f0f286d9fb163288172b12e0f04620df98e5646678e3e92ca
     {file = "tomli-1.2.1-py3-none-any.whl", hash = "sha256:8dd0e9524d6f386271a36b41dbf6c57d8e32fd96fd22b6584679dc569d20899f"},
     {file = "tomli-1.2.1.tar.gz", hash = "sha256:a5b75cb6f3968abb47af1b40c1819dc519ea82bcc065776a866e8d74c5ca9442"},
 ]
-"tomlkit 0.7.2" = [
-    {file = "tomlkit-0.7.2-py2.py3-none-any.whl", hash = "sha256:173ad840fa5d2aac140528ca1933c29791b79a374a0861a80347f42ec9328117"},
-    {file = "tomlkit-0.7.2.tar.gz", hash = "sha256:d7a454f319a7e9bd2e249f239168729327e4dd2d27b17dc68be264ad1ce36754"},
-]
 "typing-extensions 3.10.0.0" = [
     {file = "typing_extensions-3.10.0.0-py2-none-any.whl", hash = "sha256:0ac0f89795dd19de6b97debb0c6af1c70987fd80a2d62d1958f7e56fcc31b497"},
     {file = "typing_extensions-3.10.0.0-py3-none-any.whl", hash = "sha256:779383f6086d90c99ae41cf0ff39aac8a7937a9283ce0a414e5dd782f4c94a84"},
@@ -1301,10 +1212,6 @@ content_hash = "sha256:7a36d3d2f0f286d9fb163288172b12e0f04620df98e5646678e3e92ca
 "urllib3 1.26.6" = [
     {file = "urllib3-1.26.6-py2.py3-none-any.whl", hash = "sha256:39fb8672126159acb139a7718dd10806104dec1e2f0f6c88aab05d17df10c8d4"},
     {file = "urllib3-1.26.6.tar.gz", hash = "sha256:f57b4c16c62fa2760b7e3d97c35b255512fb6b59a259730f36ba32ce9f8e342f"},
-]
-"wcwidth 0.2.5" = [
-    {file = "wcwidth-0.2.5-py2.py3-none-any.whl", hash = "sha256:beb4802a9cebb9144e99086eff703a642a13d6a0052920003a230f3294bbe784"},
-    {file = "wcwidth-0.2.5.tar.gz", hash = "sha256:c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83"},
 ]
 "werkzeug 2.0.1" = [
     {file = "Werkzeug-2.0.1-py3-none-any.whl", hash = "sha256:6c1ec500dcdba0baa27600f6a22f6333d8b662d22027ff9f6202e3367413caa8"},

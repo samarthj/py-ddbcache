@@ -4,7 +4,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Database",
 ]
-dependencies = ["boto3>=1.18", "pylib-helpers"]
+dependencies = ["boto3", "pylib-helpers"]
 description = "A simple interface for caching items in DynamoDB"
 dynamic = ["classifiers", "version"]
 license = {text = "GPL-3.0-or-later"}
@@ -23,8 +23,6 @@ repository    = "https://github.com/samarthj/py-ddbcache"
 allow_prereleases = true
 
 [tool.pdm.dev-dependencies]
-ci = ["commitizen"]
-ide = ["rope"]
 lint = [
     "autopep8",
     "bandit",
@@ -46,6 +44,7 @@ lint = [
     "pep8-naming",
     "pyproject-flake8",
     "pylint",
+    "rope",
 ]
 other = ["colorama"]
 test = ["pytest", "pytest-cov", "moto"]
