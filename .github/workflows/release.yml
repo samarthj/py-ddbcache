@@ -68,7 +68,7 @@ jobs:
           # eval "$(pdm --pep582)"
           pdm config parallel_install true
           pdm update --save-compatible --update-eager
-          pdm install -v -dG:all
+          pdm install -v -dG:all --no-self --no-editable
           pdm config
           pdm info
           echo $PATH
