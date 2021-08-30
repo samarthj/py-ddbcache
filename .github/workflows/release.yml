@@ -58,10 +58,10 @@ jobs:
 
       - name: Update the project
         id: update
-        shell: bash
         continue-on-error: true
         run: |
           # eval "$(pdm --pep582)"
+          pdm config parallel_install true
           pdm update --save-compatible --update-eager
           pdm install -v -dG:all
           pdm config
@@ -91,7 +91,6 @@ jobs:
       - name: Setup git config
         if: ${{ steps.update.outcome == 'success' }}
         id: git
-        shell: bash
         run: |
           echo "::set-output name=diff::$(git diff FETCH_HEAD --stat)"
           echo "=============================="
