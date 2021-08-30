@@ -1,10 +1,8 @@
 # StdLib
 import os
-from pprint import pprint
 from random import randint
 from time import sleep
 
-from dbus import ValidationException
 
 from boto3.dynamodb import types
 from boto3.dynamodb.conditions import Key
