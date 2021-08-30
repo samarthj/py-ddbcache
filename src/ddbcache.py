@@ -52,14 +52,13 @@ class DDBCache:
             self.TABLE = tbl
         except:  # noqa
             print("Table does not exist. Creating...")
-
-        tbl = self._DDB.create_table(
-            TableName=self.table_name,
-            KeySchema=key_schema,
-            AttributeDefinitions=attr_schema,
-            **create_kwargs,
-        )
-        self.TABLE = tbl
+            tbl = self._DDB.create_table(
+                TableName=self.table_name,
+                KeySchema=key_schema,
+                AttributeDefinitions=attr_schema,
+                **create_kwargs,
+            )
+            self.TABLE = tbl
 
     def create_backup(self):
         response = self._DDB_CLIENT.create_backup(
