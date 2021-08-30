@@ -14,7 +14,7 @@ license = {text = "GPL-3.0-or-later"}
 name = "ddb-cache"
 requires-python = ">=3.9"
 # version = {from = "src/_version.py"}
-version = "0.2.0"
+version = "0.1.0"
 
 [project.urls]
 "Bug Tracker" = "https://github.com/samarthj/py-ddbcache/issues"
@@ -161,5 +161,5 @@ verbose      = true
 
 [tool.semantic_release]
 branch           = "main"
-build_command    = "pdm build"
+build_command    = false
 version_variable = ['pyproject.toml:version']
