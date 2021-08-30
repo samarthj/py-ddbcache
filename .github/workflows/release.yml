@@ -98,7 +98,7 @@ jobs:
         with:
           gpg-private-key: ${{ secrets.PGP_PRIVATE_KEY }}
           git-user-signingkey: true
-          git-commit-gpgsign: true
+          # git-commit-gpgsign: true
 
       - name: Setup git config
         if: ${{ steps.update.outcome == 'success' }}
@@ -119,6 +119,8 @@ jobs:
           git add .
           git status
           git commit -S -m "ci(github-actions): :construction_worker: format, lint, test" || true
+
+          pdm build
 
       - name: Python Semantic Release
         if: ${{ steps.git.outcome == 'success' }}
