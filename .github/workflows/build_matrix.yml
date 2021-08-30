@@ -8,10 +8,6 @@ on:
     - cron: '0 0 * * 1'
   workflow_dispatch:
 
-concurrency:
-  group: ${{ github.repository }}
-  cancel-in-progress: true
-
 jobs:
   build:
     runs-on: ${{ matrix.os }}
