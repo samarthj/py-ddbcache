@@ -42,8 +42,8 @@ class DDBCache:
 
     def create_table(
         self,
-        key_schema: list[dict[str, Any]],
-        attr_schema: list[dict[str, Any]],
+        key_schema: list[dict[str, Any]] = [],
+        attr_schema: list[dict[str, Any]] = [],
         **create_kwargs,
     ):
         try:
