@@ -12,20 +12,21 @@ LOGGER = Logger()
 SLEEPER = NormalSleeper()
 
 
+def _client_error(error_obj):
+    err_msg = str(error_obj)
+    if "ProvisionedThroughputExceededException" not in err_msg:
+        raise error_obj
+    else:
+        LOGGER.print_error(err_msg)
+        SLEEPER.sleep(10)
+
+
 class DDBCache:
     TTL_DAYS = 30
 
     def __init__(self, table_name, access_key, secret_key, region):
         self.table_name = table_name
         self._setup_session(access_key, secret_key, region)
-
-    def _client_error(err_obj):
-        err_msg = str(err_obj)
-        if "ProvisionedThroughputExceededException" not in err_msg:
-            raise err_obj
-        else:
-            LOGGER.print_error(err_msg)
-            SLEEPER.sleep(10)
 
     def _setup_session(self, access_key, secret_key, region):
         _session_config = {
@@ -40,6 +41,12 @@ class DDBCache:
         self._DDB = self._SESSION.resource(**_service_config)
         self._DDB_CLIENT = self._SESSION.client(**_service_config)
 
+    @RetryHandler(
+        (ClientError),
+        max_retries=10,
+        wait_time=0,
+        err_callbacks={"ClientError": (_client_error, {})},
+    ).wrap
     def create_table(
         self,
         key_schema: list[dict[str, Any]] = [],
@@ -67,12 +74,12 @@ class DDBCache:
         )
         print(f"Backup: {response}")
 
-    # @RetryHandler(
-    #     (ClientError),
-    #     max_retries=10,
-    #     wait_time=0,
-    #     err_callbacks={"ClientError": (_client_error, {})},
-    # ).wrap
+    @RetryHandler(
+        (ClientError),
+        max_retries=10,
+        wait_time=0,
+        err_callbacks={"ClientError": (_client_error, {})},
+    ).wrap
     def put_item(self, data: dict[str, Any]):
         response = self.TABLE.put_item(Item=data)
         return response

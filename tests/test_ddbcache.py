@@ -1,10 +1,14 @@
 # StdLib
 import os
+from pprint import pprint
 from random import randint
 from time import sleep
 
+from dbus import ValidationException
+
 from boto3.dynamodb import types
 from boto3.dynamodb.conditions import Key
+from botocore.exceptions import ClientError
 from ddbcache import DDBCache
 from moto import mock_dynamodb2
 import pytest
@@ -40,7 +44,13 @@ def ddb_cache(aws_credentials):
                 "AttributeType": types.STRING,
             },
         ]
-        cache.create_table(key_schema, attr_schema)
+        create_kwargs = {
+            "ProvisionedThroughput": {
+                "ReadCapacityUnits": 1,
+                "WriteCapacityUnits": 1,
+            },
+        }
+        cache.create_table(key_schema, attr_schema, **create_kwargs)
         yield cache
 
 
@@ -55,6 +65,14 @@ def init_cache(ddb_cache: DDBCache):  # noqa: PT004
 def test_scan(ddb_cache: DDBCache, init_cache):
     items = ddb_cache.scan_items()
     assert len(items) >= 1
+
+
+def test_client_error(ddb_cache: DDBCache):
+    data = randint(1, 100)  # noqa: S311
+    with pytest.raises(ClientError) as err:
+        ddb_cache.put_item({"not-id": data, "data": data})
+    assert err.value.response["Error"]["Code"] == "ValidationException"
+    assert "Missing the key id" in err.value.response["Error"]["Message"]
 
 
 def test_put(ddb_cache: DDBCache):
