@@ -5,4 +5,7 @@ __pycache__
 *.egg-info
 *.pyc
 dist
+.coverage
+coverage.xml
+.pdm.toml
 !.vscode/settings.json

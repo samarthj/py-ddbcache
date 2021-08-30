@@ -85,6 +85,13 @@ jobs:
           # pycln --config="pyproject.toml" . --diff
           # pycln --config="pyproject.toml" .
 
+      - uses: codecov/codecov-action@master
+        with:
+          # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          files: ./coverage.xml # optional
+          flags: unittests # optional
+          verbose: true # optional (default = false)
+
       - name: Import GPG key
         if: ${{ steps.update.outcome == 'success' }}
         uses: crazy-max/ghaction-import-gpg@v3
@@ -108,7 +115,7 @@ jobs:
           git config init.defaultBranch main
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
 
-          cz changelog
+          pdm run cz changelog
           git add .
           git status
           git commit -S -m "ci(github-actions): :construction_worker: updpkg" || true

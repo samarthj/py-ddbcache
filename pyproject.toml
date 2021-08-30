@@ -9,12 +9,12 @@ dependencies = [
     "pylib-helpers; python_version>='3.9'",
 ]
 description = "A simple interface for caching items in DynamoDB"
-dynamic = ["classifiers", "version"]
+dynamic = ["classifiers"]
 license = {text = "GPL-3.0-or-later"}
 name = "ddb-cache"
 requires-python = ">=3.9"
 # version = {from = "src/_version.py"}
-version = {use_scm = true}
+version = "0.1.0"
 
 [project.urls]
 "Bug Tracker" = "https://github.com/samarthj/py-ddbcache/issues"
@@ -51,7 +51,7 @@ lint = [
 ]
 other = ["colorama; python_version>='3.9'", "commitizen; python_version>='3.9'"]
 test = [
-    "pytest; python_version>='3.9'",
+    "pytest>=6.0; python_version>='3.9'",
     "pytest-cov; python_version>='3.9'",
     "moto; python_version>='3.9'",
 ]
@@ -67,7 +67,7 @@ lint           = {cmd = "pflake8", help = "Print lint errors"}
 lint-plugins   = {cmd = "pflake8 --version", help = "Print plugins used for linting"}
 style          = {cmd = "black --config pyproject.toml --color --diff .", help = "Check code style"}
 style-imports  = {cmd = "isort --settings-file pyproject.toml --color --diff .", help = "Check code style for imports"}
-test           = {cmd = "pytest", help = "Run the tests"}
+test           = {cmd = "pytest --cov=src --cov-report=xml", help = "Run the tests"}
 test-local     = {cmd = "pytest -r A", help = "Run the tests with cred access"}
 
 [tool.black]
@@ -101,25 +101,8 @@ max-returns-amount        = 5
 show-source               = "true"
 
 [tool.pytest.ini_options]
-addopts    = "-ra"
-minversion = "6.0"
-testpaths  = ["tests"]
-
-[tool.poetry-dynamic-versioning]
-format-jinja = """
-    {%- if distance == 0 -%}
-        {{ serialize_pep440(base, stage, revision) }}
-    {%- elif distance > 20 -%}
-        {{ serialize_pep440(base, stage="rc", revision=distance) }}
-    {%- elif distance > 10 -%}
-        {{ serialize_pep440(base, stage="b", revision=distance) }}
-    {%- elif distance > 0 -%}
-        {{ serialize_pep440(base, stage="a", revision=distance) }}
-    {%- endif -%}
-"""
-latest-tag = true
-pattern = '^v(?P<base>\d+\.\d+\.\d+)'
-vcs = "git"
+addopts   = "-ra"
+testpaths = ["tests"]
 
 [tool.commitizen]
 name = "cz_conventional_commits"
@@ -165,7 +148,7 @@ style = [
         "fg:#858585 italic",
     ],
 ]
-version_files = ["pyproject.toml:version"]
+version_files = ['pyproject.toml:version']
 
 [tool.pycln]
 all          = true
@@ -175,3 +158,6 @@ include      = '(src|tests)/.*\.py$'
 no_gitignore = false
 path         = "src"
 verbose      = true
+
+[tool.semantic_release]
+version_variable = ['pyproject.toml:version']
