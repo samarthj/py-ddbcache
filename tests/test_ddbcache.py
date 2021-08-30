@@ -3,7 +3,6 @@ import os
 from random import randint
 from time import sleep
 
-
 from boto3.dynamodb import types
 from boto3.dynamodb.conditions import Key
 from botocore.exceptions import ClientError
