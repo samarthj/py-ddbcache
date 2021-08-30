@@ -11,6 +11,7 @@ concurrency:
 
 jobs:
   release:
+    environment: pdm_release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
