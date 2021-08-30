@@ -127,14 +127,16 @@ jobs:
         uses: relekang/python-semantic-release@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          pypi_token: ${{ secrets.PYPI_API_TOKEN }}
-      # - name: Publish distribution 📦 to Test PyPI
-      #   id: test_pypi
-      #   if: ${{ steps.github_release.outcome == 'success' }}
-      #   run: |
-      #     pdm publish -r testpypi --password ${{ secrets.TEST_PYPI_TOKEN }}
-      # - name: Publish distribution 📦 to PyPI
-      #   id: pypi
-      #   if: ${{ steps.test_pypi.outcome == 'success' }}
-      #   run: |
-      #     pdm publish --password ${{ secrets.PYPI_API_TOKEN }}
+          # pypi_token: ${{ secrets.PYPI_API_TOKEN }}
+
+      - name: Publish distribution 📦 to Test PyPI
+        id: test_pypi
+        if: ${{ steps.github_release.outcome == 'success' }}
+        run: |
+          pdm publish -r testpypi --password ${{ secrets.TEST_PYPI_TOKEN }}
+
+      - name: Publish distribution 📦 to PyPI
+        id: pypi
+        if: ${{ steps.test_pypi.outcome == 'success' }}
+        run: |
+          pdm publish --password ${{ secrets.PYPI_API_TOKEN }}

@@ -162,4 +162,6 @@ verbose      = true
 [tool.semantic_release]
 branch           = "main"
 build_command    = "pip install pdm && pdm build"
+remove_dist      = false
+upload_to_pypi   = false
 version_variable = ['pyproject.toml:version']
