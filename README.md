@@ -4,7 +4,7 @@ A simple interface for caching items in DynamoDB
 
 [![Release](https://github.com/samarthj/py-ddbcache/actions/workflows/release.yml/badge.svg)](https://github.com/samarthj/py-ddbcache/actions/workflows/release.yml)
 [![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/samarthj/py-ddbcache?sort=semver)](https://github.com/samarthj/py-ddbcache/releases)
-[![PyPI](https://img.shields.io/pypi/v/py-ddbcache)](https://pypi.org/project/py-ddbcache/)
+[![PyPI](https://img.shields.io/pypi/v/ddb-cache)](https://pypi.org/project/ddb-cache/)
 
 [![Build](https://github.com/samarthj/py-ddbcache/actions/workflows/build_matrix.yml/badge.svg)](https://github.com/samarthj/py-ddbcache/actions/workflows/build_matrix.yml)
 [![codecov](https://codecov.io/gh/samarthj/py-ddbcache/branch/main/graph/badge.svg?token=9VCCD1BDNY)](https://codecov.io/gh/samarthj/py-ddbcache)

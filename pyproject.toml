@@ -12,13 +12,14 @@ description = "A simple interface for caching items in DynamoDB"
 dynamic = ["classifiers"]
 license = {text = "GPL-3.0-or-later"}
 name = "ddb-cache"
+readme = "README.md"
 requires-python = ">=3.9"
-# version = {from = "src/_version.py"}
 version = "0.2.1"
 
 [project.urls]
 "Bug Tracker" = "https://github.com/samarthj/py-ddbcache/issues"
-repository    = "https://github.com/samarthj/py-ddbcache"
+Documentation = "https://github.com/samarthj/py-ddbcache/blob/main/README.md"
+Repository    = "https://github.com/samarthj/py-ddbcache"
 
 
 [project.optional-dependencies]
