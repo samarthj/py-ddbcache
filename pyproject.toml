@@ -160,4 +160,5 @@ path         = "src"
 verbose      = true
 
 [tool.semantic_release]
+branch           = "main"
 version_variable = ['pyproject.toml:version']
