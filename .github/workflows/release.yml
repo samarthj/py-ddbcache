@@ -60,6 +60,7 @@ jobs:
         id: update
         shell: bash
         run: |
+          pdm install
           pdm update --save-compatible --update-eager -v
           pdm config --list
           echo "=============================="
