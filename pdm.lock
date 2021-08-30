@@ -653,7 +653,7 @@ summary = "Makes working with XML feel like you are working with JSON"
 
 [metadata]
 lock_version = "3.1"
-content_hash = "sha256:51457a1795cd2449a9914fe070d5e56833541d8efc17e20d5a363845d51215c8"
+content_hash = "sha256:bac4100583cfe8efebbd04a18685cb3528b2083f6a1f2e718339824c263aaf7c"
 
 [metadata.files]
 "astor 0.8.1" = [
