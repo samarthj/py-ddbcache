@@ -161,4 +161,5 @@ verbose      = true
 
 [tool.semantic_release]
 branch           = "main"
+build_command    = "pdm build"
 version_variable = ['pyproject.toml:version']

@@ -120,8 +120,6 @@ jobs:
           git status
           git commit -S -m "ci(github-actions): :construction_worker: format, lint, test" || true
 
-          pdm build
-
       - name: Python Semantic Release
         if: ${{ steps.git.outcome == 'success' }}
         uses: relekang/python-semantic-release@master
