@@ -9,6 +9,9 @@ A simple interface for caching items in DynamoDB
 [![Build](https://github.com/samarthj/py-ddbcache/actions/workflows/build_matrix.yml/badge.svg)](https://github.com/samarthj/py-ddbcache/actions/workflows/build_matrix.yml)
 [![codecov](https://codecov.io/gh/samarthj/py-ddbcache/branch/main/graph/badge.svg?token=9VCCD1BDNY)](https://codecov.io/gh/samarthj/py-ddbcache)
 
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/samarthj/py-ddbcache.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/samarthj/py-ddbcache/alerts/)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/samarthj/py-ddbcache.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/samarthj/py-ddbcache/context:python)
+
 [![pdm-managed](https://img.shields.io/badge/pdm-managed-blueviolet)](https://pdm.fming.dev)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
