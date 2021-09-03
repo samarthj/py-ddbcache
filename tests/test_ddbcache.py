@@ -154,16 +154,35 @@ def test_cache_floats(ddb_cache: DDBCache):
     assert item
     assert item["id"] == "test_put_cache"
     assert str(item["data"]) == str(data)
+    assert type(item["data"]) is float
     item = ddb_cache.get_item({"id": "test_put_cache"})
     assert item
     assert item["id"] == "test_put_cache"
     assert str(item["data"]) == str(data)
+
+
+def test_cache_floats_in_list(ddb_cache: DDBCache):
+    data = randint(1, 9) / 0.7  # noqa: S311
     ddb_cache.put_cache({"id": "test_put_cache", "data": [data]}, with_ttl=False)
+    item = ddb_cache.fetch_cache({"id": "test_put_cache"})
+    assert item
+    assert item["id"] == "test_put_cache"
+    assert str(item["data"][0]) == str(data)
+    assert type(item["data"][0]) is float
     item = ddb_cache.get_item({"id": "test_put_cache"})
     assert item
     assert item["id"] == "test_put_cache"
     assert str(item["data"][0]) == str(data)
+
+
+def test_cache_floats_in_dict(ddb_cache: DDBCache):
+    data = randint(1, 9) / 0.7  # noqa: S311
     ddb_cache.put_cache({"id": "test_put_cache", "data": {"node": data}}, with_ttl=False)
+    item = ddb_cache.fetch_cache({"id": "test_put_cache"})
+    assert item
+    assert item["id"] == "test_put_cache"
+    assert str(item["data"]["node"]) == str(data)
+    assert type(item["data"]["node"]) is float
     item = ddb_cache.get_item({"id": "test_put_cache"})
     assert item
     assert item["id"] == "test_put_cache"

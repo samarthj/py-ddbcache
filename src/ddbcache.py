@@ -177,7 +177,7 @@ class DDBCache:
                 self.update_item(key, cache)
             if cache.get("ttl", None):
                 del cache["ttl"]
-            return cache
+            return _dict_decimal_to_float(cache)
         else:
             return {}
 
@@ -224,6 +224,36 @@ def _dict_float_to_decimal(obj: dict):
             obj[k] = _dict_float_to_decimal(obj[k])
         elif isinstance(obj[k], list):
             obj[k] = _list_float_to_decimal(obj[k])
+    for d in dels:
+        del obj[d]
+    return obj
+
+
+def _list_decimal_to_float(obj: list):
+    for i, v in enumerate(obj):
+        if v is None:
+            continue
+        if type(v) is Decimal:
+            obj[i] = float(str(v))
+        elif isinstance(v, dict):
+            obj[i] = _dict_decimal_to_float(v)
+        elif isinstance(v, list):
+            obj[i] = _list_decimal_to_float(v)
+    return obj
+
+
+def _dict_decimal_to_float(obj: dict):
+    dels = []
+    for k in obj:
+        if obj[k] is None:
+            dels.append(k)
+            continue
+        if type(obj[k]) is Decimal:
+            obj[k] = float(str(obj[k]))
+        elif isinstance(obj[k], dict):
+            obj[k] = _dict_decimal_to_float(obj[k])
+        elif isinstance(obj[k], list):
+            obj[k] = _list_decimal_to_float(obj[k])
     for d in dels:
         del obj[d]
     return obj
