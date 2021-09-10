@@ -9,3 +9,4 @@ dist
 coverage.xml
 .pdm.toml
 !.vscode/settings.json
+pytestdebug.log

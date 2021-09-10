@@ -1,8 +1,9 @@
 # StdLib
 from datetime import datetime
 from decimal import Decimal
+import json
 from time import time
-from typing import Any
+from typing import Any, Union
 
 import boto3
 from botocore.exceptions import ClientError
@@ -177,7 +178,7 @@ class DDBCache:
                 self.update_item(key, cache)
             if cache.get("ttl", None):
                 del cache["ttl"]
-            return _dict_decimal_to_float(cache)
+            return _decimal_to_float(cache)
         else:
             return {}
 
@@ -188,7 +189,7 @@ class DDBCache:
         err_callbacks={"ClientError": (_client_error, {})},
     ).wrap
     def put_cache(self, cache: dict[str, Any], with_ttl=True):
-        cache_for_db = _dict_float_to_decimal(cache)
+        cache_for_db = _float_to_decimal(cache)
         if with_ttl:
             cache_for_db["ttl"] = self._get_item_ttl()
         self.put_item(data=cache_for_db)
@@ -199,61 +200,20 @@ class DDBCache:
         return int(time()) + int(60 * 60 * 24 * self.TTL_DAYS)
 
 
-def _list_float_to_decimal(obj: list):
-    for i, v in enumerate(obj):
-        if v is None:
-            continue
-        if type(v) is float:
-            obj[i] = Decimal(str(v))
-        elif isinstance(v, dict):
-            obj[i] = _dict_float_to_decimal(v)
-        elif isinstance(v, list):
-            obj[i] = _list_float_to_decimal(v)
-    return obj
+def _float_to_decimal(obj: Any):
+    if not obj or type(obj) not in [dict, list]:
+        return obj
+    else:
+        return json.loads(json.dumps(obj), parse_float=Decimal)
 
 
-def _dict_float_to_decimal(obj: dict):
-    dels = []
-    for k in obj:
-        if obj[k] is None:
-            dels.append(k)
-            continue
-        if type(obj[k]) is float:
-            obj[k] = Decimal(str(obj[k]))
-        elif isinstance(obj[k], dict):
-            obj[k] = _dict_float_to_decimal(obj[k])
-        elif isinstance(obj[k], list):
-            obj[k] = _list_float_to_decimal(obj[k])
-    for d in dels:
-        del obj[d]
-    return obj
-
-
-def _list_decimal_to_float(obj: list):
-    for i, v in enumerate(obj):
-        if v is None:
-            continue
-        if type(v) is Decimal:
-            obj[i] = float(str(v))
-        elif isinstance(v, dict):
-            obj[i] = _dict_decimal_to_float(v)
-        elif isinstance(v, list):
-            obj[i] = _list_decimal_to_float(v)
-    return obj
-
-
-def _dict_decimal_to_float(obj: dict):
-    dels = []
-    for k in obj:
-        if obj[k] is None:
-            dels.append(k)
-            continue
-        if type(obj[k]) is Decimal:
-            obj[k] = float(str(obj[k]))
-        elif isinstance(obj[k], dict):
-            obj[k] = _dict_decimal_to_float(obj[k])
-        elif isinstance(obj[k], list):
-            obj[k] = _list_decimal_to_float(obj[k])
-    for d in dels:
-        del obj[d]
+def _decimal_to_float(obj: Any):
+    if not obj:
+        return obj
+    if type(obj) is Decimal:
+        return float(obj)
+    if type(obj) is dict:
+        return {k: _decimal_to_float(v) for k, v in obj.items()}
+    if type(obj) is list:
+        return [_decimal_to_float(o) for o in obj]
     return obj
