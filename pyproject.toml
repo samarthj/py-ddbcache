@@ -117,6 +117,10 @@ verbose      = true
 [tool.semantic_release]
 branch           = "main"
 build_command    = "pip install pdm && pdm build"
-remove_dist      = true
+commit_author  = "dev@samarthj.com"
+commit_parser  = "semantic_release.history.emoji_parser"
+commit_subject = "{version} via python-semantic-release"
+patch_emoji    = ":ambulance:, :lock:, :bug:, :zap:, :goal_net:, :alien:, :wheelchair:, :speech_balloon:, :mag:, :apple:, :penguin:, :checkered_flag:, :robot:, :green_apple:, :bookmark:, :construction_worker:"
+remove_dist      = false
 upload_to_pypi   = false
 version_variable = ['pyproject.toml:version']
