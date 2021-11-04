@@ -705,7 +705,6 @@ content_hash = "sha256:10ce2c85e9cc949bd7be983955ddbc494b82eca4c1dc257e25b06182a
 ]
 "botocore 1.22.10" = [
     {file = "botocore-1.22.10-py3-none-any.whl", hash = "sha256:543cd69e9b248be942d181a097a4715312939ec998602a7b4b07e9fda36d30e9"},
-    {file = "botocore-1.22.10.tar.gz", hash = "sha256:dffa1e7e7e3a8da73bbdead3aeff7d52fd5a159a1a93b2896ac67b2aa79a461c"},
 ]
 "certifi 2021.10.8" = [
     {file = "certifi-2021.10.8-py2.py3-none-any.whl", hash = "sha256:d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569"},
