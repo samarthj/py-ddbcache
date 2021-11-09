@@ -73,18 +73,18 @@ dependencies = [
 
 [[package]]
 name = "boto3"
-version = "1.19.12"
+version = "1.20.0"
 requires_python = ">= 3.6"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore<1.23.0,>=1.22.12",
+    "botocore<1.24.0,>=1.23.0",
     "jmespath<1.0.0,>=0.7.1",
     "s3transfer<0.6.0,>=0.5.0",
 ]
 
 [[package]]
 name = "botocore"
-version = "1.22.12"
+version = "1.23.1"
 requires_python = ">= 3.6"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -351,7 +351,7 @@ summary = "More routines for operating on iterables, beyond itertools"
 
 [[package]]
 name = "moto"
-version = "2.2.13.dev24"
+version = "2.2.14.dev9"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
     "Jinja2>=2.10.1",
@@ -698,13 +698,13 @@ content_hash = "sha256:10ce2c85e9cc949bd7be983955ddbc494b82eca4c1dc257e25b06182a
     {file = "black-21.10b0-py3-none-any.whl", hash = "sha256:6eb7448da9143ee65b856a5f3676b7dda98ad9abe0f87fce8c59291f15e82a5b"},
     {file = "black-21.10b0.tar.gz", hash = "sha256:a9952229092e325fe5f3dae56d81f639b23f7131eb840781947e4b2886030f33"},
 ]
-"boto3 1.19.12" = [
-    {file = "boto3-1.19.12-py3-none-any.whl", hash = "sha256:b9105554477978e80fda1103ff21ecf07502080667730e45383e1d3951c87954"},
-    {file = "boto3-1.19.12.tar.gz", hash = "sha256:182a2b756a2c2180b473bc8452227062394a24e3701548be23ebc30d85976c64"},
+"boto3 1.20.0" = [
+    {file = "boto3-1.20.0-py3-none-any.whl", hash = "sha256:da7dcc85c65c4dcd02ce56481f02e4f7904b4b43c9821c8b23998b90db603874"},
+    {file = "boto3-1.20.0.tar.gz", hash = "sha256:17b942d9513f396b2e90f71131b48cdc49279c9714189bbf84a232d189a793dd"},
 ]
-"botocore 1.22.12" = [
-    {file = "botocore-1.22.12-py3-none-any.whl", hash = "sha256:1d1094fb53ebe4535d8840fbd7c14aadb65bde7ff03a65f9a4f1d76bd03e16ff"},
-    {file = "botocore-1.22.12.tar.gz", hash = "sha256:fc59b55e8c5dde64b017b2f114c25f8cce397b667e812aea7eafb4b59b49d7cb"},
+"botocore 1.23.1" = [
+    {file = "botocore-1.23.1-py3-none-any.whl", hash = "sha256:ae6c29083a5c1bddf2a2d89e3dae1a2cafb1601c95f28a2ec30109ffe2c99343"},
+    {file = "botocore-1.23.1.tar.gz", hash = "sha256:3daa7148017685ee8120c12b024ad2b6eadc1abc775627d4f4dd8182aaca5d0f"},
 ]
 "certifi 2021.10.8" = [
     {file = "certifi-2021.10.8-py2.py3-none-any.whl", hash = "sha256:d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569"},
@@ -1024,9 +1024,9 @@ content_hash = "sha256:10ce2c85e9cc949bd7be983955ddbc494b82eca4c1dc257e25b06182a
     {file = "more_itertools-8.10.0-py3-none-any.whl", hash = "sha256:56ddac45541718ba332db05f464bebfb0768110111affd27f66e0051f276fa43"},
     {file = "more-itertools-8.10.0.tar.gz", hash = "sha256:1debcabeb1df793814859d64a81ad7cb10504c24349368ccf214c664c474f41f"},
 ]
-"moto 2.2.13.dev24" = [
-    {file = "moto-2.2.13.dev24-py2.py3-none-any.whl", hash = "sha256:63b6ab12ad230b7ab95fc3015d506bcb9f2e0bdc969c65088c5d77fba7e3bd53"},
-    {file = "moto-2.2.13.dev24.tar.gz", hash = "sha256:ffd794c61e78d48f9c7a6a49aff2b911e01fac74bb40783cfad9cfab0bfc4fb2"},
+"moto 2.2.14.dev9" = [
+    {file = "moto-2.2.14.dev9-py2.py3-none-any.whl", hash = "sha256:f8253df909e50a91da1fce808d95072dd90590ffa437fded77007396768b0c51"},
+    {file = "moto-2.2.14.dev9.tar.gz", hash = "sha256:7214c72588154353636bf989e554b578d6f3e63f35490b7ae95753f34bd35457"},
 ]
 "mr-proper 0.0.7" = [
     {file = "mr_proper-0.0.7-py3-none-any.whl", hash = "sha256:74a1b60240c46f10ba518707ef72811a01e5c270da0a78b5dd2dd923d99fdb14"},
