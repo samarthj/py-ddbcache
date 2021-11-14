@@ -350,7 +350,7 @@ summary = "More routines for operating on iterables, beyond itertools"
 
 [[package]]
 name = "moto"
-version = "2.2.14.dev25"
+version = "2.2.14"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
     "Jinja2>=2.10.1",
@@ -1024,9 +1024,9 @@ content_hash = "sha256:10ce2c85e9cc949bd7be983955ddbc494b82eca4c1dc257e25b06182a
     {file = "more_itertools-8.11.0-py3-none-any.whl", hash = "sha256:88afff98d83d08fe5e4049b81e2b54c06ebb6b3871a600040865c7a592061cbb"},
     {file = "more-itertools-8.11.0.tar.gz", hash = "sha256:0a2fd25d343c08d7e7212071820e7e7ea2f41d8fb45d6bc8a00cd6ce3b7aab88"},
 ]
-"moto 2.2.14.dev25" = [
-    {file = "moto-2.2.14.dev25-py2.py3-none-any.whl", hash = "sha256:5e0e9906d85df35410ca672fcaca6f3589cd45dd3af26fe71f6f5077be1ad474"},
-    {file = "moto-2.2.14.dev25.tar.gz", hash = "sha256:9931d32368e105a8145199727dc3dc5cfa11f23d99946fdad7bab75a5adb30bc"},
+"moto 2.2.14" = [
+    {file = "moto-2.2.14-py2.py3-none-any.whl", hash = "sha256:7d118157495055e4fedd95a66bd2fd3719c8bdf96d1dfdd6e427714b68ed2389"},
+    {file = "moto-2.2.14.tar.gz", hash = "sha256:51a7faf90c2e6b71b06f4cc16f663dadf6efa7e36a9000dc97b032eb6ff83316"},
 ]
 "mr-proper 0.0.7" = [
     {file = "mr_proper-0.0.7-py3-none-any.whl", hash = "sha256:74a1b60240c46f10ba518707ef72811a01e5c270da0a78b5dd2dd923d99fdb14"},
