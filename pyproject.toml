@@ -14,7 +14,7 @@ license = {text = "GPL-3.0-or-later"}
 name = "ddb-cache"
 readme = "README.md"
 requires-python = ">=3.9"
-version = "0.4.11"
+version = "0.4.12"
 
 [project.urls]
 "Bug Tracker" = "https://github.com/samarthj/py-ddbcache/issues"
