@@ -9,7 +9,6 @@ dependencies = [
     "pylib-helpers; python_version>='3.9'",
 ]
 description = "A simple interface for caching items in DynamoDB"
-dynamic = ["classifiers"]
 license = {text = "GPL-3.0-or-later"}
 name = "ddb-cache"
 readme = "README.md"
