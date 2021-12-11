@@ -71,18 +71,18 @@ dependencies = [
 
 [[package]]
 name = "boto3"
-version = "1.20.21"
+version = "1.20.23"
 requires_python = ">= 3.6"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore<1.24.0,>=1.23.21",
+    "botocore<1.24.0,>=1.23.23",
     "jmespath<1.0.0,>=0.7.1",
     "s3transfer<0.6.0,>=0.5.0",
 ]
 
 [[package]]
 name = "botocore"
-version = "1.23.21"
+version = "1.23.23"
 requires_python = ">= 3.6"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -343,7 +343,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "2.2.18.dev14"
+version = "2.2.18.dev22"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
     "Jinja2>=2.10.1",
@@ -489,7 +489,7 @@ dependencies = [
 
 [[package]]
 name = "pytest"
-version = "6.2.5"
+version = "7.0.0rc1"
 requires_python = ">=3.6"
 summary = "pytest: simple powerful testing with Python"
 dependencies = [
@@ -500,7 +500,7 @@ dependencies = [
     "packaging",
     "pluggy<2.0,>=0.12",
     "py>=1.8.2",
-    "toml",
+    "tomli>=1.0.0",
 ]
 
 [[package]]
@@ -685,13 +685,13 @@ content_hash = "sha256:10ce2c85e9cc949bd7be983955ddbc494b82eca4c1dc257e25b06182a
     {file = "black-21.12b0-py3-none-any.whl", hash = "sha256:a615e69ae185e08fdd73e4715e260e2479c861b5740057fde6e8b4e3b7dd589f"},
     {file = "black-21.12b0.tar.gz", hash = "sha256:77b80f693a569e2e527958459634f18df9b0ba2625ba4e0c2d5da5be42e6f2b3"},
 ]
-"boto3 1.20.21" = [
-    {file = "boto3-1.20.21-py3-none-any.whl", hash = "sha256:aa4efdb811476a9e6c6fdf7c4595e3aa4258834351d2f3af1d97c87c1180e3be"},
-    {file = "boto3-1.20.21.tar.gz", hash = "sha256:2fb05cbe81b9ce11d9394fc6c4ffa5fd1cceb114dc1d2887dc61081707e44522"},
+"boto3 1.20.23" = [
+    {file = "boto3-1.20.23-py3-none-any.whl", hash = "sha256:76b3ee0d1dd860c9218bc864cd29f1ee986f6e1e75e8669725dd3c411039379e"},
+    {file = "boto3-1.20.23.tar.gz", hash = "sha256:c39cb6ed376ba1d4689ac8f6759a2b2d8a0b0424dbec0cd3af1558079bcf06e8"},
 ]
-"botocore 1.23.21" = [
-    {file = "botocore-1.23.21-py3-none-any.whl", hash = "sha256:853828e871dff588d92b383a3cf5e93861e180b9ed43135e36c2e139a72e030e"},
-    {file = "botocore-1.23.21.tar.gz", hash = "sha256:d7f8e82cba38aa1e66015cab0a5ca3204503e90afc4695e97228e28329a14c04"},
+"botocore 1.23.23" = [
+    {file = "botocore-1.23.23-py3-none-any.whl", hash = "sha256:7459766c4594f3b8877e8013f93f0dc6c6486acbeb7d9c9ae488396529cc2e84"},
+    {file = "botocore-1.23.23.tar.gz", hash = "sha256:640b62110aa6d1c25553eceafb5bcd89aedeb84b191598d1f6492ad24374d285"},
 ]
 "certifi 2021.10.8" = [
     {file = "certifi-2021.10.8-py2.py3-none-any.whl", hash = "sha256:d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569"},
@@ -1009,9 +1009,9 @@ content_hash = "sha256:10ce2c85e9cc949bd7be983955ddbc494b82eca4c1dc257e25b06182a
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
     {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
 ]
-"moto 2.2.18.dev14" = [
-    {file = "moto-2.2.18.dev14-py2.py3-none-any.whl", hash = "sha256:e9292ae38267cc340e493984f957b87d95a2244e83716a7fc8265c27120d1584"},
-    {file = "moto-2.2.18.dev14.tar.gz", hash = "sha256:d7a62bb4f257e855b0d0456ebd7af87d0d56dc8ae4aa6cfdbd9264e7a76c3e2c"},
+"moto 2.2.18.dev22" = [
+    {file = "moto-2.2.18.dev22-py2.py3-none-any.whl", hash = "sha256:d9f98e23aaef85b6366ea34028358c9c0c1c9256e7ee6e7fcd882ff171658b3b"},
+    {file = "moto-2.2.18.dev22.tar.gz", hash = "sha256:3948afe3f61d23d556e3b2ab40aafddeddadd28b1235505e72251b25b8feadc7"},
 ]
 "mr-proper 0.0.7" = [
     {file = "mr_proper-0.0.7-py3-none-any.whl", hash = "sha256:74a1b60240c46f10ba518707ef72811a01e5c270da0a78b5dd2dd923d99fdb14"},
@@ -1102,9 +1102,9 @@ content_hash = "sha256:10ce2c85e9cc949bd7be983955ddbc494b82eca4c1dc257e25b06182a
     {file = "pyproject_flake8-0.0.1a2-py2.py3-none-any.whl", hash = "sha256:e61ed1dc088e9f9f8a7170967ac4ec135acfef3a59ab9738c7b58cc11f294a7e"},
     {file = "pyproject-flake8-0.0.1a2.tar.gz", hash = "sha256:bdeca37f78ecd34bd64a49d3657d53d099f5445831071a31c46e1fe20cd61461"},
 ]
-"pytest 6.2.5" = [
-    {file = "pytest-6.2.5-py3-none-any.whl", hash = "sha256:7310f8d27bc79ced999e760ca304d69f6ba6c6649c0b60fb0e04a4a77cacc134"},
-    {file = "pytest-6.2.5.tar.gz", hash = "sha256:131b36680866a76e6781d13f101efb86cf674ebb9762eb70d3082b6f29889e89"},
+"pytest 7.0.0rc1" = [
+    {file = "pytest-7.0.0rc1-py3-none-any.whl", hash = "sha256:8fc363e0b7407a9397e660ef81e1634e4504faaeb6ad1d2416da4c38d29a0f45"},
+    {file = "pytest-7.0.0rc1.tar.gz", hash = "sha256:e1af71303d633af3376130b388e028342815cff74d2f3be4aeb22f3fd94325e6"},
 ]
 "pytest-cov 3.0.0" = [
     {file = "pytest_cov-3.0.0-py3-none-any.whl", hash = "sha256:578d5d15ac4a25e5f961c938b85a05b09fdaae9deef3bb6de9a6e766622ca7a6"},
