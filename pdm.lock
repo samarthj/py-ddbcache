@@ -343,7 +343,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "2.3.1.dev10"
+version = "2.3.1.dev15"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
     "Jinja2>=2.10.1",
@@ -1023,9 +1023,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
     {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
 ]
-"moto 2.3.1.dev10" = [
-    {file = "moto-2.3.1.dev10-py2.py3-none-any.whl", hash = "sha256:fcd93637e811c1bd39db33955648f85074c79d4d4536d1a160422d2ecc5eef5c"},
-    {file = "moto-2.3.1.dev10.tar.gz", hash = "sha256:088d3b6e6114588ec31a79a35eabad158a81790f33c39bc913ad42606c289a80"},
+"moto 2.3.1.dev15" = [
+    {file = "moto-2.3.1.dev15-py2.py3-none-any.whl", hash = "sha256:6dd983db91e45f60e60ad829cf1f8fc86e82540eb8e4fe7b31170de6b37f5b49"},
+    {file = "moto-2.3.1.dev15.tar.gz", hash = "sha256:51696074a69d42db6b88ca70ba08a8365d7adf42e8592d68b7bfce52fe8dd3c0"},
 ]
 "mr-proper 0.0.7" = [
     {file = "mr_proper-0.0.7-py3-none-any.whl", hash = "sha256:74a1b60240c46f10ba518707ef72811a01e5c270da0a78b5dd2dd923d99fdb14"},
