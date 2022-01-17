@@ -451,7 +451,7 @@ summary = "passive checker of Python programs"
 
 [[package]]
 name = "pylib-helpers"
-version = "0.3.18"
+version = "0.3.19"
 requires_python = ">=3.9,<4.0"
 summary = "Helpers for common functional work done across several projects"
 dependencies = [
@@ -1096,9 +1096,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "pyflakes-2.4.0-py2.py3-none-any.whl", hash = "sha256:3bb3a3f256f4b7968c9c788781e4ff07dce46bdf12339dcda61053375426ee2e"},
     {file = "pyflakes-2.4.0.tar.gz", hash = "sha256:05a85c2872edf37a4ed30b0cce2f6093e1d0581f8c19d7393122da7e25b2b24c"},
 ]
-"pylib-helpers 0.3.18" = [
-    {file = "pylib_helpers-0.3.18-py3-none-any.whl", hash = "sha256:85695cfaf9eb9531e6c524aaad8981f45a0bbd8e1a96b906753bf3588724dcd8"},
-    {file = "pylib-helpers-0.3.18.tar.gz", hash = "sha256:7a75de35b2a560920436301209da1d22c067af8d9de2ade7da2ace0c82027309"},
+"pylib-helpers 0.3.19" = [
+    {file = "pylib_helpers-0.3.19-py3-none-any.whl", hash = "sha256:c63dc6bd6fbe42e10ba9ea8b63062e452d2bfcc45c4ad92ef64581bee17e1685"},
+    {file = "pylib-helpers-0.3.19.tar.gz", hash = "sha256:6f124a813745cb0ae83023b3ed35debd6c27da5a6216ee5f09568b65e695372b"},
 ]
 "pylint 3.0.0a4" = [
     {file = "pylint-3.0.0a4-py3-none-any.whl", hash = "sha256:adc11bec00c2084bf55c81dd69e26f2793fef757547997d44b21aed038f74403"},
