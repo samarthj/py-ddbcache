@@ -451,7 +451,7 @@ summary = "passive checker of Python programs"
 
 [[package]]
 name = "pylib-helpers"
-version = "0.3.19"
+version = "0.3.20"
 requires_python = ">=3.9,<4.0"
 summary = "Helpers for common functional work done across several projects"
 dependencies = [
@@ -690,6 +690,7 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
 ]
 "botocore 1.23.41" = [
     {file = "botocore-1.23.41-py3-none-any.whl", hash = "sha256:41104e1c976c9c410387b3c7d265466b314f287a1c13fd4b543768135301058a"},
+    {file = "botocore-1.23.41.tar.gz", hash = "sha256:9137c59c4eb1dee60ae3c710e94f56119a1b33b0b17ff3ad878fc2f4ce77843a"},
 ]
 "certifi 2021.10.8" = [
     {file = "certifi-2021.10.8-py2.py3-none-any.whl", hash = "sha256:d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569"},
@@ -1095,9 +1096,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "pyflakes-2.4.0-py2.py3-none-any.whl", hash = "sha256:3bb3a3f256f4b7968c9c788781e4ff07dce46bdf12339dcda61053375426ee2e"},
     {file = "pyflakes-2.4.0.tar.gz", hash = "sha256:05a85c2872edf37a4ed30b0cce2f6093e1d0581f8c19d7393122da7e25b2b24c"},
 ]
-"pylib-helpers 0.3.19" = [
-    {file = "pylib_helpers-0.3.19-py3-none-any.whl", hash = "sha256:c63dc6bd6fbe42e10ba9ea8b63062e452d2bfcc45c4ad92ef64581bee17e1685"},
-    {file = "pylib-helpers-0.3.19.tar.gz", hash = "sha256:6f124a813745cb0ae83023b3ed35debd6c27da5a6216ee5f09568b65e695372b"},
+"pylib-helpers 0.3.20" = [
+    {file = "pylib_helpers-0.3.20-py3-none-any.whl", hash = "sha256:7b446286dc57659df6e7f1676ca320837a2aa62dc89eb0b901a52a81318e2085"},
+    {file = "pylib-helpers-0.3.20.tar.gz", hash = "sha256:cfa2360bea927faa07248711c6b14e908a578c7c8298a6977067f73df537cb55"},
 ]
 "pylint 3.0.0a4" = [
     {file = "pylint-3.0.0a4-py3-none-any.whl", hash = "sha256:adc11bec00c2084bf55c81dd69e26f2793fef757547997d44b21aed038f74403"},
