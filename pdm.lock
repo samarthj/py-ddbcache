@@ -104,7 +104,7 @@ dependencies = [
 
 [[package]]
 name = "charset-normalizer"
-version = "2.0.11"
+version = "2.0.12"
 requires_python = ">=3.5.0"
 summary = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
 
@@ -254,7 +254,7 @@ dependencies = [
 
 [[package]]
 name = "flake8-simplify"
-version = "0.15.2"
+version = "0.16.0"
 requires_python = ">=3.6.1"
 summary = "flake8 plugin which checks for code that can be simplified"
 dependencies = [
@@ -340,7 +340,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "3.0.4.dev9"
+version = "3.0.4.dev10"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
     "Jinja2>=2.10.1",
@@ -449,7 +449,7 @@ summary = "passive checker of Python programs"
 
 [[package]]
 name = "pylib-helpers"
-version = "0.3.31"
+version = "0.3.32"
 requires_python = ">=3.9,<4.0"
 summary = "Helpers for common functional work done across several projects"
 dependencies = [
@@ -617,7 +617,7 @@ summary = "A lil' TOML parser"
 
 [[package]]
 name = "typing-extensions"
-version = "4.0.1"
+version = "4.1.0"
 requires_python = ">=3.6"
 summary = "Backported and Experimental Type Hints for Python 3.6+"
 
@@ -766,9 +766,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "cffi-1.15.0-cp39-cp39-win_amd64.whl", hash = "sha256:3773c4d81e6e818df2efbc7dd77325ca0dcb688116050fb2b3011218eda36139"},
     {file = "cffi-1.15.0.tar.gz", hash = "sha256:920f0d66a896c2d99f0adbb391f990a84091179542c205fa53ce5787aff87954"},
 ]
-"charset-normalizer 2.0.11" = [
-    {file = "charset_normalizer-2.0.11-py3-none-any.whl", hash = "sha256:2842d8f5e82a1f6aa437380934d5e1cd4fcf2003b06fed6940769c164a480a45"},
-    {file = "charset-normalizer-2.0.11.tar.gz", hash = "sha256:98398a9d69ee80548c762ba991a4728bfc3836768ed226b3945908d1a688371c"},
+"charset-normalizer 2.0.12" = [
+    {file = "charset_normalizer-2.0.12-py3-none-any.whl", hash = "sha256:6881edbebdb17b39b4eaaa821b438bf6eddffb4468cf344f09f89def34a8b1df"},
+    {file = "charset-normalizer-2.0.12.tar.gz", hash = "sha256:2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597"},
 ]
 "click 8.0.3" = [
     {file = "click-8.0.3-py3-none-any.whl", hash = "sha256:353f466495adaeb40b6b5f592f9f91cb22372351c84caeb068132442a4518ef3"},
@@ -885,9 +885,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "flake8_pytest_style-1.6.0-py3-none-any.whl", hash = "sha256:5fedb371a950e9fe0e0e6bfc854be7d99151271208f34cd2cc517681ece27780"},
     {file = "flake8-pytest-style-1.6.0.tar.gz", hash = "sha256:c1175713e9e11b78cd1a035ed0bca0d1e41d09c4af329a952750b61d4194ddac"},
 ]
-"flake8-simplify 0.15.2" = [
-    {file = "flake8_simplify-0.15.2-py3-none-any.whl", hash = "sha256:5e0e311743af57d6eb17f46a5c3c5d04df6a5adddc6183573a0ea455833816d6"},
-    {file = "flake8_simplify-0.15.2.tar.gz", hash = "sha256:852d9ba96b572f530e14e2b393985b4d017f82039910c38b107388ef28ceb6dc"},
+"flake8-simplify 0.16.0" = [
+    {file = "flake8_simplify-0.16.0-py3-none-any.whl", hash = "sha256:a4e05bb21dab96bdbbea26c19ca1444cd64a521e28376488c79e37abc33b0b61"},
+    {file = "flake8_simplify-0.16.0.tar.gz", hash = "sha256:c758f6b35811517d6986c3c71677fc89523f98fe58d52be6237e81d676840542"},
 ]
 "flake8-use-fstring 1.3" = [
     {file = "flake8-use-fstring-1.3.tar.gz", hash = "sha256:1bd4a409adbb93e64e711fdd26b88759c33792e3899f174edc68ddf7307e81b6"},
@@ -1034,9 +1034,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
     {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
 ]
-"moto 3.0.4.dev9" = [
-    {file = "moto-3.0.4.dev9-py2.py3-none-any.whl", hash = "sha256:a2c14676f68dd710949a63aa86f44440c82e3e44de88286dc7039f75993de0ec"},
-    {file = "moto-3.0.4.dev9.tar.gz", hash = "sha256:32977e998899a1ed66de31ede2c4fd1424a36c16d0227f8c0ebbce658eb60a64"},
+"moto 3.0.4.dev10" = [
+    {file = "moto-3.0.4.dev10-py2.py3-none-any.whl", hash = "sha256:732c58e94b2b73dbf6eaf1dd9f9f867d0d33ab65ff5ed0a10f0cfea6f60cf495"},
+    {file = "moto-3.0.4.dev10.tar.gz", hash = "sha256:c941f6653b63407f822250f82fea62e2e8df6d3e5959072ab553daf73b47b099"},
 ]
 "mr-proper 0.0.7" = [
     {file = "mr_proper-0.0.7-py3-none-any.whl", hash = "sha256:74a1b60240c46f10ba518707ef72811a01e5c270da0a78b5dd2dd923d99fdb14"},
@@ -1108,9 +1108,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "pyflakes-2.4.0-py2.py3-none-any.whl", hash = "sha256:3bb3a3f256f4b7968c9c788781e4ff07dce46bdf12339dcda61053375426ee2e"},
     {file = "pyflakes-2.4.0.tar.gz", hash = "sha256:05a85c2872edf37a4ed30b0cce2f6093e1d0581f8c19d7393122da7e25b2b24c"},
 ]
-"pylib-helpers 0.3.31" = [
-    {file = "pylib_helpers-0.3.31-py3-none-any.whl", hash = "sha256:33684c0bcb6f999009d0527a8b2d3bf02f33f1dc6d7ef3b4537d2d6738dca13c"},
-    {file = "pylib-helpers-0.3.31.tar.gz", hash = "sha256:e47a3eb46531e9f2d6870fd3fc315a2c6721d97a09c9bc00b6e0ccc44f83d74c"},
+"pylib-helpers 0.3.32" = [
+    {file = "pylib_helpers-0.3.32-py3-none-any.whl", hash = "sha256:882996839924ed968ffe6d7afb53f48e700c365d085be6b76cd384091ea505be"},
+    {file = "pylib-helpers-0.3.32.tar.gz", hash = "sha256:ffb9fd75e9c717d67cae67df4eca64b06e8488681fb2af285df83918a4bd39e5"},
 ]
 "pylint 3.0.0a4" = [
     {file = "pylint-3.0.0a4-py3-none-any.whl", hash = "sha256:adc11bec00c2084bf55c81dd69e26f2793fef757547997d44b21aed038f74403"},
@@ -1223,9 +1223,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},
     {file = "tomli-2.0.1.tar.gz", hash = "sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"},
 ]
-"typing-extensions 4.0.1" = [
-    {file = "typing_extensions-4.0.1-py3-none-any.whl", hash = "sha256:7f001e5ac290a0c0401508864c7ec868be4e701886d5b573a9528ed3973d9d3b"},
-    {file = "typing_extensions-4.0.1.tar.gz", hash = "sha256:4ca091dea149f945ec56afb48dae714f21e8692ef22a395223bcd328961b6a0e"},
+"typing-extensions 4.1.0" = [
+    {file = "typing_extensions-4.1.0-py3-none-any.whl", hash = "sha256:c13180fbaa7cd97065a4915ceba012bdb31dc34743e63ddee16360161d358414"},
+    {file = "typing_extensions-4.1.0.tar.gz", hash = "sha256:ba97c5143e5bb067b57793c726dd857b1671d4b02ced273ca0538e71ff009095"},
 ]
 "urllib3 1.26.8" = [
     {file = "urllib3-1.26.8-py2.py3-none-any.whl", hash = "sha256:000ca7f471a233c2251c6c7023ee85305721bfdf18621ebff4fd17a8653427ed"},
