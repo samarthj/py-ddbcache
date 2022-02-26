@@ -69,18 +69,18 @@ dependencies = [
 
 [[package]]
 name = "boto3"
-version = "1.21.6"
+version = "1.21.8"
 requires_python = ">= 3.6"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore==1.24.6",
+    "botocore<1.25.0,>=1.24.8",
     "jmespath<1.0.0,>=0.7.1",
     "s3transfer<0.6.0,>=0.5.0",
 ]
 
 [[package]]
 name = "botocore"
-version = "1.24.6"
+version = "1.24.8"
 requires_python = ">= 3.6"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -173,12 +173,13 @@ dependencies = [
 
 [[package]]
 name = "flake8-black"
-version = "0.2.4"
+version = "0.3.2"
+requires_python = ">=3.7"
 summary = "flake8 plugin to call black as a code style validator"
 dependencies = [
-    "black",
+    "black>=22.1.0",
     "flake8>=3.0.0",
-    "toml",
+    "tomli",
 ]
 
 [[package]]
@@ -192,8 +193,8 @@ dependencies = [
 
 [[package]]
 name = "flake8-expression-complexity"
-version = "0.0.9"
-requires_python = ">=3.6"
+version = "0.0.10"
+requires_python = ">=3.7"
 summary = "A flake8 extension that checks expressions complexity"
 dependencies = [
     "astpretty",
@@ -203,11 +204,10 @@ dependencies = [
 
 [[package]]
 name = "flake8-functions"
-version = "0.0.6"
+version = "0.0.7"
 summary = "A flake8 extension that checks functions"
 dependencies = [
     "mr-proper",
-    "pytest",
     "setuptools",
 ]
 
@@ -254,7 +254,7 @@ dependencies = [
 
 [[package]]
 name = "flake8-simplify"
-version = "0.18.0"
+version = "0.18.1"
 requires_python = ">=3.6.1"
 summary = "flake8 plugin which checks for code that can be simplified"
 dependencies = [
@@ -340,7 +340,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "3.0.5.dev17"
+version = "3.0.5.dev29"
 requires_python = ">=3.6"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
@@ -450,7 +450,7 @@ summary = "passive checker of Python programs"
 
 [[package]]
 name = "pylib-helpers"
-version = "0.3.41"
+version = "0.3.42"
 requires_python = ">=3.9,<4.0"
 summary = "Helpers for common functional work done across several projects"
 dependencies = [
@@ -560,7 +560,7 @@ summary = "a python refactoring library..."
 
 [[package]]
 name = "s3transfer"
-version = "0.5.1"
+version = "0.5.2"
 requires_python = ">= 3.6"
 summary = "An Amazon S3 Transfer Manager"
 dependencies = [
@@ -601,7 +601,7 @@ dependencies = [
 
 [[package]]
 name = "testfixtures"
-version = "6.18.3"
+version = "6.18.4"
 summary = "A collection of helpers and mock objects for unit tests and doc tests."
 
 [[package]]
@@ -703,12 +703,13 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "black-22.1.0-py3-none-any.whl", hash = "sha256:3524739d76b6b3ed1132422bf9d82123cd1705086723bc3e235ca39fd21c667d"},
     {file = "black-22.1.0.tar.gz", hash = "sha256:a7c0192d35635f6fc1174be575cb7915e92e5dd629ee79fdaf0dcfa41a80afb5"},
 ]
-"boto3 1.21.6" = [
-    {file = "boto3-1.21.6-py3-none-any.whl", hash = "sha256:0e8d4d814f94031947035a4c2bb2c23832d5de941a6a492fb85794a02bafc44d"},
-    {file = "boto3-1.21.6.tar.gz", hash = "sha256:95d9b5b6fe3383fbf8f33d58f62258d3b3ea138d4369017031339b60fd5b8887"},
+"boto3 1.21.8" = [
+    {file = "boto3-1.21.8-py3-none-any.whl", hash = "sha256:9b6903fe9cc92d2f6111db28675263f1ab45adbcf1483025c82a304ce7790b71"},
+    {file = "boto3-1.21.8.tar.gz", hash = "sha256:f2ce641957c1782e382548ced4a447189e45851bbe58c1f6752ff2b661527de7"},
 ]
-"botocore 1.24.6" = [
-    {file = "botocore-1.24.6-py3-none-any.whl", hash = "sha256:69aaa5a78ac7371f573e463be51fb962213c42fab08ef82380e84b9a87386949"},
+"botocore 1.24.8" = [
+    {file = "botocore-1.24.8-py3-none-any.whl", hash = "sha256:9fbc5c57b31850c51c87abc3e166ed4e0f343665bec4e1a0ff814fbc9704642c"},
+    {file = "botocore-1.24.8.tar.gz", hash = "sha256:a5431d806dc75fb1844463d921759fcd8d387674443af8d7fd0867f296b02759"},
 ]
 "certifi 2021.10.8" = [
     {file = "certifi-2021.10.8-py2.py3-none-any.whl", hash = "sha256:d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569"},
@@ -850,20 +851,21 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
 "flake8-bandit 2.1.2" = [
     {file = "flake8_bandit-2.1.2.tar.gz", hash = "sha256:687fc8da2e4a239b206af2e54a90093572a60d0954f3054e23690739b0b0de3b"},
 ]
-"flake8-black 0.2.4" = [
-    {file = "flake8_black-0.2.4-py3-none-any.whl", hash = "sha256:0a70dfd97c8439827f365dc6dbc6c8c9cc087f0833625c6cc6848ff7876256be"},
-    {file = "flake8-black-0.2.4.tar.gz", hash = "sha256:a7871bfd1cbff431a1fc91ba60ae154510c80f575e6b9a2bbb13dfb4650afd22"},
+"flake8-black 0.3.2" = [
+    {file = "flake8_black-0.3.2-py3-none-any.whl", hash = "sha256:9c86b24ede16a80555808c6c4779d81bc54cff57d0dd1980029c0e4b39ac8b45"},
+    {file = "flake8-black-0.3.2.tar.gz", hash = "sha256:6f6bf198f3f45df43245d1d1a0ba2035ee5817d167680f9e1af23cde70cb7548"},
 ]
 "flake8-comprehensions 3.8.0" = [
     {file = "flake8_comprehensions-3.8.0-py3-none-any.whl", hash = "sha256:9406314803abe1193c064544ab14fdc43c58424c0882f6ff8a581eb73fc9bb58"},
     {file = "flake8-comprehensions-3.8.0.tar.gz", hash = "sha256:8e108707637b1d13734f38e03435984f6b7854fa6b5a4e34f93e69534be8e521"},
 ]
-"flake8-expression-complexity 0.0.9" = [
-    {file = "flake8_expression_complexity-0.0.9.tar.gz", hash = "sha256:1ae325880a5dbfef60a35eaa8bb5351d5c5102774a41d4ed7059bc093a95955b"},
+"flake8-expression-complexity 0.0.10" = [
+    {file = "flake8_expression_complexity-0.0.10-py3-none-any.whl", hash = "sha256:42daa9f16e982083febafd2eecc2c98090cb50b5e60d3c08e4c0395803d16d32"},
+    {file = "flake8_expression_complexity-0.0.10.tar.gz", hash = "sha256:2c91a55601077a555dcd3e5998063773585b323b63fec654e2b674867f3e0040"},
 ]
-"flake8-functions 0.0.6" = [
-    {file = "flake8_functions-0.0.6-py3-none-any.whl", hash = "sha256:7afa7979d20d28a3cde0c14b3fddf42beef23232620a641ad20dcc2de49eddf3"},
-    {file = "flake8_functions-0.0.6.tar.gz", hash = "sha256:6d42da93c4b13354a3973da7bf4e239225f9dba167e8a099fd647ae483ac3e24"},
+"flake8-functions 0.0.7" = [
+    {file = "flake8_functions-0.0.7-py3-none-any.whl", hash = "sha256:f2f75545c2b0df9eeba0ad316e2ac38c101676970b4441300fc07af3226a44f6"},
+    {file = "flake8_functions-0.0.7.tar.gz", hash = "sha256:40584b05d57e5ab185545bcfa08aa0edca52b04646d0df266e2b1667d6437184"},
 ]
 "flake8-isort 4.1.1" = [
     {file = "flake8_isort-4.1.1-py3-none-any.whl", hash = "sha256:c4e8b6dcb7be9b71a02e6e5d4196cefcef0f3447be51e82730fb336fff164949"},
@@ -885,9 +887,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "flake8_pytest_style-1.6.0-py3-none-any.whl", hash = "sha256:5fedb371a950e9fe0e0e6bfc854be7d99151271208f34cd2cc517681ece27780"},
     {file = "flake8-pytest-style-1.6.0.tar.gz", hash = "sha256:c1175713e9e11b78cd1a035ed0bca0d1e41d09c4af329a952750b61d4194ddac"},
 ]
-"flake8-simplify 0.18.0" = [
-    {file = "flake8_simplify-0.18.0-py3-none-any.whl", hash = "sha256:051977c37f4b5e2e63409987749f4f53a591aa8cfbc95619dcbb826636fdd72c"},
-    {file = "flake8_simplify-0.18.0.tar.gz", hash = "sha256:da05be5b90033b2eedb13f47af7c430be36a70d47659e8f9f069fcce12183d8e"},
+"flake8-simplify 0.18.1" = [
+    {file = "flake8_simplify-0.18.1-py3-none-any.whl", hash = "sha256:a4a0fcaad8fa0ad17634c6fa4ff62ebe4835bef48d78d3104eb528140cf0972b"},
+    {file = "flake8_simplify-0.18.1.tar.gz", hash = "sha256:8344a6a77b214ad7b3559d06a42c97333b73b11034abb018ea02cebba9fdebf1"},
 ]
 "flake8-use-fstring 1.3" = [
     {file = "flake8-use-fstring-1.3.tar.gz", hash = "sha256:1bd4a409adbb93e64e711fdd26b88759c33792e3899f174edc68ddf7307e81b6"},
@@ -1005,9 +1007,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
     {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
 ]
-"moto 3.0.5.dev17" = [
-    {file = "moto-3.0.5.dev17-py2.py3-none-any.whl", hash = "sha256:9cc564585a29f9e028a6e62152e526c8e28126cd7322ff48f5a10ee37cd99ea3"},
-    {file = "moto-3.0.5.dev17.tar.gz", hash = "sha256:71572112e5488d8c062653d8c0a0ed59efe4578f38a2e0503b1d137505921420"},
+"moto 3.0.5.dev29" = [
+    {file = "moto-3.0.5.dev29-py2.py3-none-any.whl", hash = "sha256:e8f0ac3c3c82892350190b4261455ebb44961c8cb309df37f1fe2432cc8877db"},
+    {file = "moto-3.0.5.dev29.tar.gz", hash = "sha256:b19ce1afb5908303f2f6132dbdc42f66a7a6a3e8d931d24bb5a85260d25af95c"},
 ]
 "mr-proper 0.0.7" = [
     {file = "mr_proper-0.0.7-py3-none-any.whl", hash = "sha256:74a1b60240c46f10ba518707ef72811a01e5c270da0a78b5dd2dd923d99fdb14"},
@@ -1079,9 +1081,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "pyflakes-2.4.0-py2.py3-none-any.whl", hash = "sha256:3bb3a3f256f4b7968c9c788781e4ff07dce46bdf12339dcda61053375426ee2e"},
     {file = "pyflakes-2.4.0.tar.gz", hash = "sha256:05a85c2872edf37a4ed30b0cce2f6093e1d0581f8c19d7393122da7e25b2b24c"},
 ]
-"pylib-helpers 0.3.41" = [
-    {file = "pylib_helpers-0.3.41-py3-none-any.whl", hash = "sha256:c09a77b56143cfd4f251117da48f069c438e21b8aa6d640ce5aafd26d3a60ca9"},
-    {file = "pylib-helpers-0.3.41.tar.gz", hash = "sha256:e55145e97e53f77aca591da9a5f53ed073d0c807580eaaa75daa63aa5cdac886"},
+"pylib-helpers 0.3.42" = [
+    {file = "pylib_helpers-0.3.42-py3-none-any.whl", hash = "sha256:e99f474f9a6f41afa10f75cf32399cec77c008eaceac2b572841e70d0da0884a"},
+    {file = "pylib-helpers-0.3.42.tar.gz", hash = "sha256:3941d3e838af1c4b059ba1f0945ce4063a1106d7a538a33c55f897fd3ef156a0"},
 ]
 "pylint 3.0.0a4" = [
     {file = "pylint-3.0.0a4-py3-none-any.whl", hash = "sha256:adc11bec00c2084bf55c81dd69e26f2793fef757547997d44b21aed038f74403"},
@@ -1158,9 +1160,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "rope-0.22.0-py3-none-any.whl", hash = "sha256:2847220bf72ead09b5abe72b1edc9cacff90ab93663ece06913fc97324167870"},
     {file = "rope-0.22.0.tar.gz", hash = "sha256:b00fbc064a26fc62d7220578a27fd639b2fad57213663cc396c137e92d73f10f"},
 ]
-"s3transfer 0.5.1" = [
-    {file = "s3transfer-0.5.1-py3-none-any.whl", hash = "sha256:25c140f5c66aa79e1ac60be50dcd45ddc59e83895f062a3aab263b870102911f"},
-    {file = "s3transfer-0.5.1.tar.gz", hash = "sha256:69d264d3e760e569b78aaa0f22c97e955891cd22e32b10c51f784eeda4d9d10a"},
+"s3transfer 0.5.2" = [
+    {file = "s3transfer-0.5.2-py3-none-any.whl", hash = "sha256:7a6f4c4d1fdb9a2b640244008e142cbc2cd3ae34b386584ef044dd0f27101971"},
+    {file = "s3transfer-0.5.2.tar.gz", hash = "sha256:95c58c194ce657a5f4fb0b9e60a84968c808888aed628cd98ab8771fe1db98ed"},
 ]
 "setuptools 60.9.3" = [
     {file = "setuptools-60.9.3-py3-none-any.whl", hash = "sha256:e4f30b9f84e5ab3decf945113119649fec09c1fc3507c6ebffec75646c56e62b"},
@@ -1182,9 +1184,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "stevedore-3.5.0-py3-none-any.whl", hash = "sha256:a547de73308fd7e90075bb4d301405bebf705292fa90a90fc3bcf9133f58616c"},
     {file = "stevedore-3.5.0.tar.gz", hash = "sha256:f40253887d8712eaa2bb0ea3830374416736dc8ec0e22f5a65092c1174c44335"},
 ]
-"testfixtures 6.18.3" = [
-    {file = "testfixtures-6.18.3-py2.py3-none-any.whl", hash = "sha256:6ddb7f56a123e1a9339f130a200359092bd0a6455e31838d6c477e8729bb7763"},
-    {file = "testfixtures-6.18.3.tar.gz", hash = "sha256:2600100ae96ffd082334b378e355550fef8b4a529a6fa4c34f47130905c7426d"},
+"testfixtures 6.18.4" = [
+    {file = "testfixtures-6.18.4-py2.py3-none-any.whl", hash = "sha256:27cfa35006407ef31a4e8752873ca2232fd5761e29047a86c919e363e0e17196"},
+    {file = "testfixtures-6.18.4.tar.gz", hash = "sha256:878f617c411793f155c26b39330a095a1cc58844d88bcdc767a65c7fc2096b54"},
 ]
 "toml 0.10.2" = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
