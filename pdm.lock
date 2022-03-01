@@ -44,7 +44,8 @@ dependencies = [
 
 [[package]]
 name = "bandit"
-version = "1.7.2"
+version = "1.7.3"
+requires_python = ">=3.7"
 summary = "Security oriented static analyser for python code."
 dependencies = [
     "GitPython>=1.0.1",
@@ -69,18 +70,18 @@ dependencies = [
 
 [[package]]
 name = "boto3"
-version = "1.21.8"
+version = "1.21.9"
 requires_python = ">= 3.6"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore<1.25.0,>=1.24.8",
+    "botocore<1.25.0,>=1.24.9",
     "jmespath<1.0.0,>=0.7.1",
     "s3transfer<0.6.0,>=0.5.0",
 ]
 
 [[package]]
 name = "botocore"
-version = "1.24.8"
+version = "1.24.9"
 requires_python = ">= 3.6"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -340,7 +341,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "3.0.5"
+version = "3.0.6.dev4"
 requires_python = ">=3.6"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
@@ -450,7 +451,7 @@ summary = "passive checker of Python programs"
 
 [[package]]
 name = "pylib-helpers"
-version = "0.3.43"
+version = "0.3.45"
 requires_python = ">=3.9,<4.0"
 summary = "Helpers for common functional work done across several projects"
 dependencies = [
@@ -674,9 +675,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "autopep8-1.6.0-py2.py3-none-any.whl", hash = "sha256:ed77137193bbac52d029a52c59bec1b0629b5a186c495f1eb21b126ac466083f"},
     {file = "autopep8-1.6.0.tar.gz", hash = "sha256:44f0932855039d2c15c4510d6df665e4730f2b8582704fa48f9c55bd3e17d979"},
 ]
-"bandit 1.7.2" = [
-    {file = "bandit-1.7.2-py3-none-any.whl", hash = "sha256:e20402cadfd126d85b68ed4c8862959663c8c372dbbb1fca8f8e2c9f55a067ec"},
-    {file = "bandit-1.7.2.tar.gz", hash = "sha256:6d11adea0214a43813887bfe71a377b5a9955e4c826c8ffd341b494e3ab25260"},
+"bandit 1.7.3" = [
+    {file = "bandit-1.7.3-py3-none-any.whl", hash = "sha256:3ce9b4e6a4f7f41aa966c9543e635dd35e52a793a47e746f0c55c7ecfc69d7e8"},
+    {file = "bandit-1.7.3.tar.gz", hash = "sha256:58772ca951bf1129dda8a280d351547de832720bf7b5c29fac3103927980b8a6"},
 ]
 "black 22.1.0" = [
     {file = "black-22.1.0-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:1297c63b9e1b96a3d0da2d85d11cd9bf8664251fd69ddac068b98dc4f34f73b6"},
@@ -703,13 +704,12 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "black-22.1.0-py3-none-any.whl", hash = "sha256:3524739d76b6b3ed1132422bf9d82123cd1705086723bc3e235ca39fd21c667d"},
     {file = "black-22.1.0.tar.gz", hash = "sha256:a7c0192d35635f6fc1174be575cb7915e92e5dd629ee79fdaf0dcfa41a80afb5"},
 ]
-"boto3 1.21.8" = [
-    {file = "boto3-1.21.8-py3-none-any.whl", hash = "sha256:9b6903fe9cc92d2f6111db28675263f1ab45adbcf1483025c82a304ce7790b71"},
-    {file = "boto3-1.21.8.tar.gz", hash = "sha256:f2ce641957c1782e382548ced4a447189e45851bbe58c1f6752ff2b661527de7"},
+"boto3 1.21.9" = [
+    {file = "boto3-1.21.9-py3-none-any.whl", hash = "sha256:32080e2d956b222f36b76f8fec532ec237ddb4a935dd1c9bb79c759fbe4a5868"},
+    {file = "boto3-1.21.9.tar.gz", hash = "sha256:bd7c71274e9257596879f99cff3d0f531b801e567e509b5e3d613bd2033a7279"},
 ]
-"botocore 1.24.8" = [
-    {file = "botocore-1.24.8-py3-none-any.whl", hash = "sha256:9fbc5c57b31850c51c87abc3e166ed4e0f343665bec4e1a0ff814fbc9704642c"},
-    {file = "botocore-1.24.8.tar.gz", hash = "sha256:a5431d806dc75fb1844463d921759fcd8d387674443af8d7fd0867f296b02759"},
+"botocore 1.24.9" = [
+    {file = "botocore-1.24.9-py3-none-any.whl", hash = "sha256:c44758c487df7a357c4a103d959962d78e225d1ab6c9eeda4c77f79a410ccd19"},
 ]
 "certifi 2021.10.8" = [
     {file = "certifi-2021.10.8-py2.py3-none-any.whl", hash = "sha256:d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569"},
@@ -1007,9 +1007,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
     {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
 ]
-"moto 3.0.5" = [
-    {file = "moto-3.0.5-py2.py3-none-any.whl", hash = "sha256:077dd5b96267bbb81fc7677b6d5cc3099ca99a371bd7e90932b6d3ff997106c6"},
-    {file = "moto-3.0.5.tar.gz", hash = "sha256:85f2ece0ad0305aa13a39139ce648ab3afe1c04cb32ac1db8d5e5e9117d4d10e"},
+"moto 3.0.6.dev4" = [
+    {file = "moto-3.0.6.dev4-py2.py3-none-any.whl", hash = "sha256:445b1be5ac6b33b79d0936f5012120bf56cddfb97c72d98bafe9523a7b409858"},
+    {file = "moto-3.0.6.dev4.tar.gz", hash = "sha256:346ffe999a567c0cb7b51c51997b7019580e2512a3c4b5d02663b38e39cb1294"},
 ]
 "mr-proper 0.0.7" = [
     {file = "mr_proper-0.0.7-py3-none-any.whl", hash = "sha256:74a1b60240c46f10ba518707ef72811a01e5c270da0a78b5dd2dd923d99fdb14"},
@@ -1081,9 +1081,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "pyflakes-2.4.0-py2.py3-none-any.whl", hash = "sha256:3bb3a3f256f4b7968c9c788781e4ff07dce46bdf12339dcda61053375426ee2e"},
     {file = "pyflakes-2.4.0.tar.gz", hash = "sha256:05a85c2872edf37a4ed30b0cce2f6093e1d0581f8c19d7393122da7e25b2b24c"},
 ]
-"pylib-helpers 0.3.43" = [
-    {file = "pylib_helpers-0.3.43-py3-none-any.whl", hash = "sha256:0ad96667b5ef4f998fe6e39acf030bd0ca964f2f0d9d28d1322b4f074f3756f2"},
-    {file = "pylib-helpers-0.3.43.tar.gz", hash = "sha256:4940571923b6b5233b859469a4880ca92d189fe5adc414a454a41fdd5169c521"},
+"pylib-helpers 0.3.45" = [
+    {file = "pylib_helpers-0.3.45-py3-none-any.whl", hash = "sha256:3396dc9693021013c5ec3b56fefdc86b2071da054e0b83ffb35b0d604ecc01b3"},
+    {file = "pylib-helpers-0.3.45.tar.gz", hash = "sha256:d5cdcf068054fa6351b260a7e1b0199a5fbf8ad5a160c3db06ad2b024781b018"},
 ]
 "pylint 3.0.0a4" = [
     {file = "pylint-3.0.0a4-py3-none-any.whl", hash = "sha256:adc11bec00c2084bf55c81dd69e26f2793fef757547997d44b21aed038f74403"},
