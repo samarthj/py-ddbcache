@@ -44,7 +44,7 @@ dependencies = [
 
 [[package]]
 name = "bandit"
-version = "1.7.3"
+version = "1.7.4"
 requires_python = ">=3.7"
 summary = "Security oriented static analyser for python code."
 dependencies = [
@@ -70,18 +70,18 @@ dependencies = [
 
 [[package]]
 name = "boto3"
-version = "1.21.11"
+version = "1.21.13"
 requires_python = ">= 3.6"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore<1.25.0,>=1.24.11",
+    "botocore<1.25.0,>=1.24.13",
     "jmespath<1.0.0,>=0.7.1",
     "s3transfer<0.6.0,>=0.5.0",
 ]
 
 [[package]]
 name = "botocore"
-version = "1.24.11"
+version = "1.24.13"
 requires_python = ">= 3.6"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -341,7 +341,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "3.0.6.dev5"
+version = "3.0.6.dev9"
 requires_python = ">=3.6"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
@@ -675,9 +675,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "autopep8-1.6.0-py2.py3-none-any.whl", hash = "sha256:ed77137193bbac52d029a52c59bec1b0629b5a186c495f1eb21b126ac466083f"},
     {file = "autopep8-1.6.0.tar.gz", hash = "sha256:44f0932855039d2c15c4510d6df665e4730f2b8582704fa48f9c55bd3e17d979"},
 ]
-"bandit 1.7.3" = [
-    {file = "bandit-1.7.3-py3-none-any.whl", hash = "sha256:3ce9b4e6a4f7f41aa966c9543e635dd35e52a793a47e746f0c55c7ecfc69d7e8"},
-    {file = "bandit-1.7.3.tar.gz", hash = "sha256:58772ca951bf1129dda8a280d351547de832720bf7b5c29fac3103927980b8a6"},
+"bandit 1.7.4" = [
+    {file = "bandit-1.7.4-py3-none-any.whl", hash = "sha256:412d3f259dab4077d0e7f0c11f50f650cc7d10db905d98f6520a95a18049658a"},
+    {file = "bandit-1.7.4.tar.gz", hash = "sha256:2d63a8c573417bae338962d4b9b06fbc6080f74ecd955a092849e1e65c717bd2"},
 ]
 "black 22.1.0" = [
     {file = "black-22.1.0-cp310-cp310-macosx_10_9_universal2.whl", hash = "sha256:1297c63b9e1b96a3d0da2d85d11cd9bf8664251fd69ddac068b98dc4f34f73b6"},
@@ -704,13 +704,13 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "black-22.1.0-py3-none-any.whl", hash = "sha256:3524739d76b6b3ed1132422bf9d82123cd1705086723bc3e235ca39fd21c667d"},
     {file = "black-22.1.0.tar.gz", hash = "sha256:a7c0192d35635f6fc1174be575cb7915e92e5dd629ee79fdaf0dcfa41a80afb5"},
 ]
-"boto3 1.21.11" = [
-    {file = "boto3-1.21.11-py3-none-any.whl", hash = "sha256:bf5f6a8997ed11a66280ace67cc25ec31c28525940da91d309c3976a9955d4cf"},
-    {file = "boto3-1.21.11.tar.gz", hash = "sha256:f2cecf5d176f398a39bfde0008df83c03f2142b2be5eabe32bf104961df68810"},
+"boto3 1.21.13" = [
+    {file = "boto3-1.21.13-py3-none-any.whl", hash = "sha256:e17d994d222162dac02ec32fde6ae910d819ebf239a94dddcee47def2c82b9c9"},
+    {file = "boto3-1.21.13.tar.gz", hash = "sha256:16fae86d0c4993fd5112128bb4622a879f02363bccd045153cc0bbd7722cc9a5"},
 ]
-"botocore 1.24.11" = [
-    {file = "botocore-1.24.11-py3-none-any.whl", hash = "sha256:b29c2b5906d7f70782634bb8713c77e39f23aafc994bb2f7dccbeb2b36712adc"},
-    {file = "botocore-1.24.11.tar.gz", hash = "sha256:2af93de704f3122878a3233e7cf5de0b02f6c4c9fa993ca853b583f597bb1c38"},
+"botocore 1.24.13" = [
+    {file = "botocore-1.24.13-py3-none-any.whl", hash = "sha256:7b166096f9413b41caf7cc6f4edfd5b3c3ab9d7c61eb120a649e69485c98131a"},
+    {file = "botocore-1.24.13.tar.gz", hash = "sha256:46e51f56f1c5784e4245e036503635fa71b722775657b6e1acf21ec5b906974c"},
 ]
 "certifi 2021.10.8" = [
     {file = "certifi-2021.10.8-py2.py3-none-any.whl", hash = "sha256:d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569"},
@@ -1008,9 +1008,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
     {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
 ]
-"moto 3.0.6.dev5" = [
-    {file = "moto-3.0.6.dev5-py2.py3-none-any.whl", hash = "sha256:2bf49c85117fa8f9b395e4b08dcec799ee3737bac135e50b133bfb0f1bdfe8ff"},
-    {file = "moto-3.0.6.dev5.tar.gz", hash = "sha256:895b2e22ef7f57f8a6e3f99b52b9f34dbb7a1d53ae49a7969c086c4bd7c698c2"},
+"moto 3.0.6.dev9" = [
+    {file = "moto-3.0.6.dev9-py2.py3-none-any.whl", hash = "sha256:151eb9fdb981d55fef02f3771f68b2bb85e1e8c3f7e184f24e0e2917f7bc5578"},
+    {file = "moto-3.0.6.dev9.tar.gz", hash = "sha256:436291e4b61277f250991cdac94f1fc99009a5e9df6a004f406511cf5f49c640"},
 ]
 "mr-proper 0.0.7" = [
     {file = "mr_proper-0.0.7-py3-none-any.whl", hash = "sha256:74a1b60240c46f10ba518707ef72811a01e5c270da0a78b5dd2dd923d99fdb14"},
