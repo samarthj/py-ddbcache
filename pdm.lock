@@ -70,18 +70,18 @@ dependencies = [
 
 [[package]]
 name = "boto3"
-version = "1.21.22"
+version = "1.21.23"
 requires_python = ">= 3.6"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore<1.25.0,>=1.24.22",
+    "botocore<1.25.0,>=1.24.23",
     "jmespath<2.0.0,>=0.7.1",
     "s3transfer<0.6.0,>=0.5.0",
 ]
 
 [[package]]
 name = "botocore"
-version = "1.24.22"
+version = "1.24.23"
 requires_python = ">= 3.6"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -341,7 +341,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "3.1.2.dev5"
+version = "3.1.2.dev9"
 requires_python = ">=3.6"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
@@ -451,7 +451,7 @@ summary = "passive checker of Python programs"
 
 [[package]]
 name = "pylib-helpers"
-version = "0.3.53"
+version = "0.3.54"
 requires_python = ">=3.9,<4.0"
 summary = "Helpers for common functional work done across several projects"
 dependencies = [
@@ -704,13 +704,12 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "black-22.1.0-py3-none-any.whl", hash = "sha256:3524739d76b6b3ed1132422bf9d82123cd1705086723bc3e235ca39fd21c667d"},
     {file = "black-22.1.0.tar.gz", hash = "sha256:a7c0192d35635f6fc1174be575cb7915e92e5dd629ee79fdaf0dcfa41a80afb5"},
 ]
-"boto3 1.21.22" = [
-    {file = "boto3-1.21.22-py3-none-any.whl", hash = "sha256:a56e34d8dc3390006a6d7ae5373f357917932045e874c82de2736f3b42c02b10"},
-    {file = "boto3-1.21.22.tar.gz", hash = "sha256:334f14ffbd89ddd15090e90b32e4fcea73d83b60b19ca2737a9264fd44096f35"},
+"boto3 1.21.23" = [
+    {file = "boto3-1.21.23-py3-none-any.whl", hash = "sha256:c60d2401226c723db809df5c611a850c101b562e0e0790be7631a38b82813038"},
+    {file = "boto3-1.21.23.tar.gz", hash = "sha256:44a30268702c78aa355a0044fa7fea5f1e7e7c125ad029196028787eea003c2e"},
 ]
-"botocore 1.24.22" = [
-    {file = "botocore-1.24.22-py3-none-any.whl", hash = "sha256:e812604653c635c78431b3dd168d3fc04e8c3514839226814c999336d5e59ea0"},
-    {file = "botocore-1.24.22.tar.gz", hash = "sha256:92ba8afeda48f5d2467811d87df401d703a25191f82882994d8d09a7d8b5b965"},
+"botocore 1.24.23" = [
+    {file = "botocore-1.24.23-py3-none-any.whl", hash = "sha256:536d5fcec2dfaf9671b9d361c2479ef435bfb905f73e24f6fbe73bc33ba66dfe"},
 ]
 "certifi 2021.10.8" = [
     {file = "certifi-2021.10.8-py2.py3-none-any.whl", hash = "sha256:d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569"},
@@ -1009,9 +1008,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
     {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
 ]
-"moto 3.1.2.dev5" = [
-    {file = "moto-3.1.2.dev5-py2.py3-none-any.whl", hash = "sha256:2cd451f3d8152349b2e360aa7323ca61b267ef13f7ceb2e9effeee2f69ac5f5c"},
-    {file = "moto-3.1.2.dev5.tar.gz", hash = "sha256:207baaab0922889d837acd8f341da173d8cf4911c6e313f9e8d9212e934de7a8"},
+"moto 3.1.2.dev9" = [
+    {file = "moto-3.1.2.dev9-py2.py3-none-any.whl", hash = "sha256:7aab6b368ee057a688b81324400f3cc07c2bb47e930749230350b038ac570791"},
+    {file = "moto-3.1.2.dev9.tar.gz", hash = "sha256:5f19e20ba53082a2d69826c3e18226eef77213eabc7aba60c7ec2593b7a22754"},
 ]
 "mr-proper 0.0.7" = [
     {file = "mr_proper-0.0.7-py3-none-any.whl", hash = "sha256:74a1b60240c46f10ba518707ef72811a01e5c270da0a78b5dd2dd923d99fdb14"},
@@ -1086,9 +1085,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "pyflakes-2.4.0-py2.py3-none-any.whl", hash = "sha256:3bb3a3f256f4b7968c9c788781e4ff07dce46bdf12339dcda61053375426ee2e"},
     {file = "pyflakes-2.4.0.tar.gz", hash = "sha256:05a85c2872edf37a4ed30b0cce2f6093e1d0581f8c19d7393122da7e25b2b24c"},
 ]
-"pylib-helpers 0.3.53" = [
-    {file = "pylib_helpers-0.3.53-py3-none-any.whl", hash = "sha256:166ca6dc878568f75c3e5dc5aa817f96cc74413853b9fa08c43156aacae7f852"},
-    {file = "pylib-helpers-0.3.53.tar.gz", hash = "sha256:2ca54c0a68eb9390f84341ab8c141dd222e62226e5658d787ee22f2bad3bc214"},
+"pylib-helpers 0.3.54" = [
+    {file = "pylib_helpers-0.3.54-py3-none-any.whl", hash = "sha256:4984bf7c5600017c19940ecbc37998079871a5bcb52b80f949abceaf10214350"},
+    {file = "pylib-helpers-0.3.54.tar.gz", hash = "sha256:0bdcb42f6dc892fd102b4703e2742d34f24f58264f469c625686a9cb4c0c9bbd"},
 ]
 "pylint 3.0.0a4" = [
     {file = "pylint-3.0.0a4-py3-none-any.whl", hash = "sha256:adc11bec00c2084bf55c81dd69e26f2793fef757547997d44b21aed038f74403"},
