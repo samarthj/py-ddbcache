@@ -341,7 +341,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "3.1.6.dev13"
+version = "3.1.6.dev15"
 requires_python = ">=3.6"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
@@ -488,7 +488,7 @@ dependencies = [
 
 [[package]]
 name = "pytest"
-version = "7.1.1"
+version = "7.1.2"
 requires_python = ">=3.7"
 summary = "pytest: simple powerful testing with Python"
 dependencies = [
@@ -1010,9 +1010,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
     {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
 ]
-"moto 3.1.6.dev13" = [
-    {file = "moto-3.1.6.dev13-py2.py3-none-any.whl", hash = "sha256:6ed3bcd009b311f2e770ef076b4a65ade57568e96e16008753a1d2bca69614d3"},
-    {file = "moto-3.1.6.dev13.tar.gz", hash = "sha256:710f7055b6e55ec503bed4eb959021167abc60f3f76896d641c6cc460445d19a"},
+"moto 3.1.6.dev15" = [
+    {file = "moto-3.1.6.dev15-py3-none-any.whl", hash = "sha256:1b87a6016fa050fd9f88095b2dc283dc05c3ef9b4ff1b2e7eb367c0171da6529"},
+    {file = "moto-3.1.6.dev15.tar.gz", hash = "sha256:fc96bc0a4b5e6272091ce46f05429d8ce406dd9d9c1865154b9ac28f3d081a2b"},
 ]
 "mr-proper 0.0.7" = [
     {file = "mr_proper-0.0.7-py3-none-any.whl", hash = "sha256:74a1b60240c46f10ba518707ef72811a01e5c270da0a78b5dd2dd923d99fdb14"},
@@ -1103,9 +1103,9 @@ content_hash = "sha256:13640c51a4a412c0a8edea7a7bb6c7d1bdfcda95a8447ef1db7860ed7
     {file = "pyproject_flake8-0.0.1a4-py2.py3-none-any.whl", hash = "sha256:1a8f94e18d08677ee780625049d9d00a9ee823661c6606caab8a383351037a75"},
     {file = "pyproject-flake8-0.0.1a4.tar.gz", hash = "sha256:8ed9453f1d984cfe94c998f9840275359e29e7f435b8ddd188ae084e2dc1270c"},
 ]
-"pytest 7.1.1" = [
-    {file = "pytest-7.1.1-py3-none-any.whl", hash = "sha256:92f723789a8fdd7180b6b06483874feca4c48a5c76968e03bb3e7f806a1869ea"},
-    {file = "pytest-7.1.1.tar.gz", hash = "sha256:841132caef6b1ad17a9afde46dc4f6cfa59a05f9555aae5151f73bdf2820ca63"},
+"pytest 7.1.2" = [
+    {file = "pytest-7.1.2-py3-none-any.whl", hash = "sha256:13d0e3ccfc2b6e26be000cb6568c832ba67ba32e719443bfe725814d3c42433c"},
+    {file = "pytest-7.1.2.tar.gz", hash = "sha256:a06a0425453864a270bc45e71f783330a7428defb4230fb5e6a731fde06ecd45"},
 ]
 "pytest-cov 3.0.0" = [
     {file = "pytest_cov-3.0.0-py3-none-any.whl", hash = "sha256:578d5d15ac4a25e5f961c938b85a05b09fdaae9deef3bb6de9a6e766622ca7a6"},
