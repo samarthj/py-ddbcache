@@ -43,13 +43,13 @@ jobs:
         uses: actions/cache@main
         with:
           path: ${{ steps.pip-cache-dir.outputs.dir }}
-          key: ${{ runner.os }}-pip-pdm-pycln
+          key: ${{ runner.os }}-pip-pdm-publish
           restore-keys: |
-            ${{ runner.os }}-pip-pdm-pycln
+            ${{ runner.os }}-pip-pdm-publish
       - name: Install system dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pdm pycln pdm-publish
+          pip install --upgrade pdm pdm-publish
       - name: Get pdm cache dir
         id: pdm-cache-dir
         run: |
@@ -67,27 +67,49 @@ jobs:
 
       - name: Update the project
         id: update
-        continue-on-error: true
         run: |
+          echo "::group::Configure pdm"
+          echo "=============================="
           pdm config parallel_install true
-          pdm sync -dG:all --no-self --clean
-          pdm update
           pdm config
           pdm info
-          echo $PATH
+
+          echo "::group::Run pdm update"
           echo "=============================="
-          echo "Run format/test/lint"
-          echo "++++++++++++++++++++++++++++++"
+          pdm sync -dG:all --no-self --clean
+          pdm update --no-self
+          echo "::endgroup::"
+
+          echo "::group::Run pycln"
+          echo "=============================="
+          pdm run style-pycln
           pdm run format-pycln
+          echo "::endgroup::"
+
+          echo "::group::Run isort"
+          echo "=============================="
+          pdm run style-imports
           pdm run format-imports
+          echo "::endgroup::"
+
+          echo "::group::Run black"
+          echo "=============================="
+          pdm run style
           pdm run format
+          echo "::endgroup::"
+
+          echo "::group::Run pytest"
+          echo "=============================="
           pdm run test
-          # Show the plugins used for linting
+          echo "::endgroup::"
+
+      - name: Run linting
+        id: lint
+        continue-on-error: true
+        run: |
           pdm run lint-plugins
           # exit-zero treats all errors as warnings.
           pdm run lint --count --exit-zero --statistics || true
-          # pycln --config="pyproject.toml" . --diff
-          # pycln --config="pyproject.toml" .
 
       - uses: codecov/codecov-action@master
         with:
@@ -109,21 +131,22 @@ jobs:
         id: git
         run: |
           echo "::set-output name=diff::$(git diff FETCH_HEAD --stat)"
+
+          echo "::group::Setup git config"
           echo "=============================="
-          echo "Setup git config"
-          echo "++++++++++++++++++++++++++++++"
           git config user.name "Sam"
           git config user.email dev@samarthj.com
           git config user.signkey dev@samarthj.com
           # git config commit.gpgsign true
           git config init.defaultBranch main
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
+          echo "::endgroup::"
 
+          echo "::group::Commit changes"
           git add .
           git status
-          git commit -S -m "ci(github-actions): :construction_worker: format, lint, test" || true
-
-          # pdm build
+          git commit -S -m "ci(github-actions): :construction_worker: update, format, lint, test" || true
+          echo "::endgroup::"
 
       - name: Python Semantic Release
         id: github_release
