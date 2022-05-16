@@ -11,6 +11,7 @@ dependencies = [
 description = "A simple interface for caching items in DynamoDB"
 license = {text = "GPL-3.0-or-later"}
 name = "ddb-cache"
+package-dir = "src"
 readme = "README.md"
 requires-python = ">=3.9"
 version = "0.4.99"
@@ -26,49 +27,42 @@ Repository    = "https://github.com/samarthj/py-ddbcache"
 allow_prereleases = true
 
 [tool.pdm.dev-dependencies]
-lint = [
-    "autopep8; python_version>='3.9'",
-    "bandit; python_version>='3.9'",
-    "black; python_version>='3.9'",
-    "flake8; python_version>='3.9'",
-    "flake8-bandit; python_version>='3.9'",
-    "flake8-black; python_version>='3.9'",
-    "flake8-comprehensions; python_version>='3.9'",
-    "flake8-expression-complexity; python_version>='3.9'",
-    "flake8-functions; python_version>='3.9'",
-    "flake8-isort; python_version>='3.9'",
-    "flake8-pytest; python_version>='3.9'",
-    "flake8-pytest-style; python_version>='3.9'",
-    "flake8-simplify; python_version>='3.9'",
-    "flake8-use-fstring; python_version>='3.9'",
-    "isort; python_version>='3.9'",
-    "mccabe; python_version>='3.9'",
-    "mypy; python_version>='3.9'",
-    "pep8-naming; python_version>='3.9'",
-    "pyproject-flake8; python_version>='3.9'",
-    "pylint; python_version>='3.9'",
-    "rope; python_version>='3.9'",
+code-style = [
+    "flake8-comprehensions",
+    "flake8-expression-complexity",
+    "flake8-functions",
+    "flake8-simplify",
+    "flake8-use-fstring",
+    "mccabe",
+    "pep8-naming",
 ]
-other = ["colorama; python_version>='3.9'"]
+formatting = ["black", "isort", "flake8-black", "flake8-isort", "pycln"]
+lint = ["autopep8", "flake8", "mypy", "pyproject-flake8>=0.0.1a2", "pylint"]
+other = ["colorama; python_version>='3.9'", "rope"]
+security = ["bandit", "flake8-bandit"]
 test = [
-    "pytest>=6.0; python_version>='3.9'",
-    "pytest-cov; python_version>='3.9'",
+    "pytest>=6.0",
+    "pytest-cov",
+    "flake8-pytest",
+    "flake8-pytest-style",
     "moto; python_version>='3.9'",
 ]
 
 [build-system]
 build-backend = "pdm.pep517.api"
-requires      = ["pdm-pep517"]
+requires      = ["pdm-pep517>=0.12.0"]
 
 [tool.pdm.scripts]
 format         = {cmd = "black --config pyproject.toml --color .", help = "Format code using black config"}
 format-imports = {cmd = "isort --settings-file pyproject.toml --color .", help = "Optimize and sort imports"}
+format-pycln   = {cmd = "pycln --config pyproject.toml .", help = "Remove unused imports"}
 lint           = {cmd = "pflake8", help = "Print lint errors"}
 lint-plugins   = {cmd = "pflake8 --version", help = "Print plugins used for linting"}
 style          = {cmd = "black --config pyproject.toml --color --diff .", help = "Check code style"}
 style-imports  = {cmd = "isort --settings-file pyproject.toml --color --diff .", help = "Check code style for imports"}
+style-pycln    = {cmd = "pycln --diff --config pyproject.toml .", help = "Check code style"}
 test           = {cmd = "pytest --cov=src --cov-report=xml", help = "Run the tests"}
-test-local     = {cmd = "pytest -r A", help = "Run the tests with cred access"}
+test-local     = {cmd = "pytest tests -r A", help = "Run the tests with cred access"}
 
 [tool.black]
 line_length = 120
@@ -86,7 +80,7 @@ line_length                    = 120
 multi_line_output              = 3
 profile                        = "black"
 remove_redundant_aliases       = true
-src_paths                      = ["facedb", "tests"]
+src_paths                      = ["src", "tests"]
 use_parentheses                = true
 
 [tool.flake8]
@@ -100,26 +94,33 @@ max-line-length           = 120
 max-returns-amount        = 5
 show-source               = "true"
 
+[tool.pyright]
+exclude    = ["**/__pypackages__"]
+extraPaths = ["__pypackages__/3.10/lib", "__pypackages__/3.9/lib"]
+
 [tool.pytest.ini_options]
-addopts   = "-ra"
-testpaths = ["tests"]
+# addopts    = "-ra"
+pythonpath = [".", "src"]
+testpaths  = ["tests"]
 
 [tool.pycln]
 all          = true
 exclude      = '(__pypackages__|__pycache__|\.pytest_cache|\.github|\.git)'
 expand_stars = true
-include      = '(src|tests)/.*\.py$'
+include      = '.*\.py$'
 no_gitignore = false
-path         = "src"
+paths        = ["src", "tests"]
 verbose      = true
 
 [tool.semantic_release]
 branch           = "main"
 build_command    = "pip install pdm && pdm build"
-commit_author  = "dev@samarthj.com"
-commit_parser  = "semantic_release.history.emoji_parser"
-commit_subject = "{version} via python-semantic-release"
-patch_emoji    = ":ambulance:, :lock:, :bug:, :zap:, :goal_net:, :alien:, :wheelchair:, :speech_balloon:, :mag:, :apple:, :penguin:, :checkered_flag:, :robot:, :green_apple:, :bookmark:, :construction_worker:"
+commit_author    = "dev@samarthj.com"
+commit_parser    = "semantic_release.history.emoji_parser"
+commit_subject   = "{version} via python-semantic-release"
+major_emoji      = ":boom:"
+minor_emoji      = ":sparkles:, :children_crossing:, :lipstick:, :iphone:, :egg:, :chart_with_upwards_trend:"
+patch_emoji      = ":ambulance:, :lock:, :bug:, :zap:, :goal_net:, :alien:, :wheelchair:, :speech_balloon:, :mag:, :apple:, :penguin:, :checkered_flag:, :robot:, :green_apple:, :bookmark:, :construction_worker:"
 remove_dist      = true
 upload_to_pypi   = false
 version_variable = ['pyproject.toml:version']

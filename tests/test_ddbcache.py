@@ -6,18 +6,19 @@ from time import sleep
 from boto3.dynamodb import types
 from boto3.dynamodb.conditions import Key
 from botocore.exceptions import ClientError
-from ddbcache import DDBCache
 from moto import mock_dynamodb2
 import pytest
+
+from src.ddbcache import DDBCache
 
 
 @pytest.fixture()
 def aws_credentials():  # noqa: PT004
     """Mocked AWS Credentials for moto."""
     os.environ["AWS_ACCESS_KEY_ID"] = "testing"
-    os.environ["AWS_SECRET_ACCESS_KEY"] = "testing"
-    os.environ["AWS_SECURITY_TOKEN"] = "testing"
-    os.environ["AWS_SESSION_TOKEN"] = "testing"
+    os.environ["AWS_SECRET_ACCESS_KEY"] = "testing"  # noqa: S105
+    os.environ["AWS_SECURITY_TOKEN"] = "testing"  # noqa: S105
+    os.environ["AWS_SESSION_TOKEN"] = "testing"  # noqa: S105
 
 
 @pytest.fixture()

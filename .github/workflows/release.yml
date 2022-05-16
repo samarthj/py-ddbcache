@@ -78,6 +78,7 @@ jobs:
           echo "=============================="
           echo "Run format/test/lint"
           echo "++++++++++++++++++++++++++++++"
+          pdm run format-pycln
           pdm run format-imports
           pdm run format
           pdm run test

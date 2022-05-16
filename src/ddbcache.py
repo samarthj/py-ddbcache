@@ -3,7 +3,7 @@ from datetime import datetime
 from decimal import Decimal
 import json
 from time import time
-from typing import Any, Union
+from typing import Any
 
 import boto3
 from botocore.exceptions import ClientError
@@ -44,7 +44,7 @@ class DDBCache:
 
     @RetryHandler(
         (ClientError),
-        max_retries=10,
+        max_retries=3,
         wait_time=0,
         err_callbacks={"ClientError": (_client_error, {})},
     ).wrap
@@ -77,27 +77,27 @@ class DDBCache:
 
     @RetryHandler(
         (ClientError),
-        max_retries=10,
+        max_retries=3,
         wait_time=0,
         err_callbacks={"ClientError": (_client_error, {})},
     ).wrap
     def put_item(self, data: dict[str, Any]):
-        response = self.TABLE.put_item(Item=data)
+        response = self.TABLE.put_item(Item=_float_to_decimal(data))
         return response
 
     @RetryHandler(
         (ClientError),
-        max_retries=10,
+        max_retries=3,
         wait_time=0,
         err_callbacks={"ClientError": (_client_error, {})},
     ).wrap
     def get_item(self, key: dict[str, Any]) -> dict[str, Any]:
         response = self.TABLE.get_item(Key=key)
-        return response.get("Item", None)
+        return _decimal_to_float(response.get("Item", None))
 
     @RetryHandler(
         (ClientError),
-        max_retries=10,
+        max_retries=3,
         wait_time=0,
         err_callbacks={"ClientError": (_client_error, {})},
     ).wrap
@@ -111,7 +111,7 @@ class DDBCache:
 
     @RetryHandler(
         (ClientError),
-        max_retries=10,
+        max_retries=3,
         wait_time=0,
         err_callbacks={"ClientError": (_client_error, {})},
     ).wrap
@@ -123,14 +123,14 @@ class DDBCache:
 
         response = self.TABLE.update_item(
             Key=key_dict,
-            AttributeUpdates=data_formatted,
+            AttributeUpdates=_float_to_decimal(data_formatted),
             ReturnValues="ALL_NEW",
         )
         return response
 
     @RetryHandler(
         (ClientError),
-        max_retries=10,
+        max_retries=3,
         wait_time=0,
         err_callbacks={"ClientError": (_client_error, {})},
     ).wrap
@@ -152,17 +152,17 @@ class DDBCache:
             start_key = response.get("LastEvaluatedKey", None)
             done = start_key is None
 
-        return items
+        return _decimal_to_float(items)
 
     @RetryHandler(
         (ClientError),
-        max_retries=10,
+        max_retries=3,
         wait_time=0,
         err_callbacks={"ClientError": (_client_error, {})},
     ).wrap
     def query_items(self, query_conditions) -> list[dict[str, Any]]:
         response = self.TABLE.query(**query_conditions)
-        return response["Items"]
+        return _decimal_to_float(response["Items"])
 
     @RetryHandler(
         (ClientError),
@@ -178,7 +178,7 @@ class DDBCache:
                 self.update_item(key, cache)
             if cache.get("ttl", None):
                 del cache["ttl"]
-            return _decimal_to_float(cache)
+            return cache
         else:
             return {}
 
@@ -189,31 +189,32 @@ class DDBCache:
         err_callbacks={"ClientError": (_client_error, {})},
     ).wrap
     def put_cache(self, cache: dict[str, Any], with_ttl=True):
-        cache_for_db = _float_to_decimal(cache)
         if with_ttl:
-            cache_for_db["ttl"] = self._get_item_ttl()
-        self.put_item(data=cache_for_db)
-        if with_ttl and cache_for_db.get("ttl", None):
-            del cache_for_db["ttl"]
+            cache["ttl"] = self._get_item_ttl()
+        self.put_item(data=cache)
+        if with_ttl and cache.get("ttl", None):
+            del cache["ttl"]
 
     def _get_item_ttl(self):
         return int(time()) + int(60 * 60 * 24 * self.TTL_DAYS)
 
 
 def _float_to_decimal(obj: Any):
-    if not obj or type(obj) not in [dict, list]:
-        return obj
-    else:
-        return json.loads(json.dumps(obj), parse_float=Decimal)
+    if not obj:
+        return None
+    return json.loads(json.dumps(obj, cls=_DecimalEncoder), parse_float=Decimal, parse_int=int)
 
 
 def _decimal_to_float(obj: Any):
     if not obj:
-        return obj
-    if type(obj) is Decimal:
-        return float(obj)
-    if type(obj) is dict:
-        return {k: _decimal_to_float(v) for k, v in obj.items()}
-    if type(obj) is list:
-        return [_decimal_to_float(o) for o in obj]
-    return obj
+        return None
+    return json.loads(json.dumps(obj, cls=_DecimalEncoder), parse_float=float, parse_int=int)
+
+
+class _DecimalEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, int):
+            return json.JSONEncoder.default(self, obj)
+        if isinstance(obj, Decimal):
+            return float(obj)
+        return json.JSONEncoder.default(self, obj)
