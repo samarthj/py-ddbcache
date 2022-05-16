@@ -11,7 +11,6 @@ dependencies = [
 description = "A simple interface for caching items in DynamoDB"
 license = {text = "GPL-3.0-or-later"}
 name = "ddb-cache"
-package-dir = "src"
 readme = "README.md"
 requires-python = ">=3.9"
 version = "0.5.0"
