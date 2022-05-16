@@ -14,7 +14,7 @@ name = "ddb-cache"
 package-dir = "src"
 readme = "README.md"
 requires-python = ">=3.9"
-version = "0.4.99"
+version = "0.5.0"
 
 [project.urls]
 "Bug Tracker" = "https://github.com/samarthj/py-ddbcache/issues"
