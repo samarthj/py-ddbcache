@@ -65,6 +65,7 @@ jobs:
           pdm config parallel_install true
           pdm config
           pdm info
+          echo "::endgroup::"
 
           echo "::group::Run pdm update"
           echo "=============================="
