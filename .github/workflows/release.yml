@@ -123,8 +123,6 @@ jobs:
         if: ${{ steps.update.outcome == 'success' }}
         id: git
         run: |
-          echo "::set-output name=diff::$(git diff FETCH_HEAD --stat)"
-
           echo "::group::Setup git config"
           echo "=============================="
           git config user.name "Sam"
