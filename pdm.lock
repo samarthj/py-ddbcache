@@ -360,7 +360,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "3.1.12.dev7"
+version = "3.1.12"
 requires_python = ">=3.6"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
@@ -1101,8 +1101,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
     {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
 ]
-"moto 3.1.12.dev7" = [
-    {file = "moto-3.1.12.dev7-py3-none-any.whl", hash = "sha256:57dfeb0a34e1e24197b86e5cdde6149b32e3da1cfa3b383e4040487de596866a"},
+"moto 3.1.12" = [
+    {file = "moto-3.1.12-py3-none-any.whl", hash = "sha256:726ca7d9f0694c86620a6cf0436b0fd89db1f3cee58b4f3cbb03f7b69b585f90"},
+    {file = "moto-3.1.12.tar.gz", hash = "sha256:c6f407715b7babd1ff7796576ba8d873870d9fe6aa4d32664554a6116cc55afb"},
 ]
 "mr-proper 0.0.7" = [
     {file = "mr_proper-0.0.7-py3-none-any.whl", hash = "sha256:74a1b60240c46f10ba518707ef72811a01e5c270da0a78b5dd2dd923d99fdb14"},
