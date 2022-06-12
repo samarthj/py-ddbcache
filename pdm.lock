@@ -770,6 +770,7 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
 ]
 "botocore 1.27.7" = [
     {file = "botocore-1.27.7-py3-none-any.whl", hash = "sha256:3e0cbe26f08fe9a3f6df5de4dcc3bef686e01ba5f79ad03ffbe79d92f51ecea5"},
+    {file = "botocore-1.27.7.tar.gz", hash = "sha256:dc83ef991c730ab0f06b51fcefda74f493b990903b882452aff78c123e3040e2"},
 ]
 "certifi 2022.5.18.1" = [
     {file = "certifi-2022.5.18.1-py3-none-any.whl", hash = "sha256:f1d53542ee8cbedbe2118b5686372fb33c297fcd6379b050cca0ef13a597382a"},
@@ -1102,6 +1103,7 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
 ]
 "moto 3.1.13.dev14" = [
     {file = "moto-3.1.13.dev14-py3-none-any.whl", hash = "sha256:60b2a0913986bee9f5759775d0c0a672ca35cea7486f77623532caffbd7808d1"},
+    {file = "moto-3.1.13.dev14.tar.gz", hash = "sha256:30d9a8b3143ec924febe756e74eabc997643e1e35b1d45d6390bd1ffd1151075"},
 ]
 "mr-proper 0.0.7" = [
     {file = "mr_proper-0.0.7-py3-none-any.whl", hash = "sha256:74a1b60240c46f10ba518707ef72811a01e5c270da0a78b5dd2dd923d99fdb14"},
