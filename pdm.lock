@@ -71,18 +71,18 @@ dependencies = [
 
 [[package]]
 name = "boto3"
-version = "1.24.10"
+version = "1.24.12"
 requires_python = ">= 3.7"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore<1.28.0,>=1.27.10",
+    "botocore<1.28.0,>=1.27.12",
     "jmespath<2.0.0,>=0.7.1",
     "s3transfer<0.7.0,>=0.6.0",
 ]
 
 [[package]]
 name = "botocore"
-version = "1.27.10"
+version = "1.27.12"
 requires_python = ">= 3.7"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -122,7 +122,7 @@ dependencies = [
 
 [[package]]
 name = "colorama"
-version = "0.4.5rc1"
+version = "0.4.5"
 requires_python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 summary = "Cross-platform colored terminal text."
 
@@ -360,7 +360,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "3.1.14.dev11"
+version = "3.1.14.dev17"
 requires_python = ">=3.6"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
@@ -482,7 +482,7 @@ summary = "passive checker of Python programs"
 
 [[package]]
 name = "pylib-helpers"
-version = "0.3.85"
+version = "0.3.87"
 requires_python = ">=3.9,<4.0"
 summary = "Helpers for common functional work done across several projects"
 dependencies = [
@@ -764,13 +764,13 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {file = "black-22.3.0-py3-none-any.whl", hash = "sha256:bc58025940a896d7e5356952228b68f793cf5fcb342be703c3a2669a1488cb72"},
     {file = "black-22.3.0.tar.gz", hash = "sha256:35020b8886c022ced9282b51b5a875b6d1ab0c387b31a065b84db7c33085ca79"},
 ]
-"boto3 1.24.10" = [
-    {file = "boto3-1.24.10-py3-none-any.whl", hash = "sha256:32ffc0fd50408acc710cf5ce40037aa3c14926d6e3f6fbf61ed5990fb63cd881"},
-    {file = "boto3-1.24.10.tar.gz", hash = "sha256:88fd816274d4b64bcf90889441d4efa5f16a0048ed670bc33cbd0f5a678313a6"},
+"boto3 1.24.12" = [
+    {file = "boto3-1.24.12-py3-none-any.whl", hash = "sha256:0b9757575b8003928defc5fb6e816936fa1bdb1384d0edec6622bb9fb104e96c"},
+    {file = "boto3-1.24.12.tar.gz", hash = "sha256:f39b91a4c3614db8e44912ee82426fb4b16d5df2cd66883f3aff6f76d7f5d310"},
 ]
-"botocore 1.27.10" = [
-    {file = "botocore-1.27.10-py3-none-any.whl", hash = "sha256:24ec42b4f29a50f7ef78f9f863c3c25e00f65b5a48db669c8068457789a90803"},
-    {file = "botocore-1.27.10.tar.gz", hash = "sha256:b39da97452c9e2c856e7778d8c908252394da81e2e5792f1d4cb0ece4ce1043a"},
+"botocore 1.27.12" = [
+    {file = "botocore-1.27.12-py3-none-any.whl", hash = "sha256:b8ac156e55267da6e728ea0b806bfcd97adf882801cffe7849c4b88ce4780326"},
+    {file = "botocore-1.27.12.tar.gz", hash = "sha256:17d3ec9f684d21e06b64d9cb224934557bcd95031e2ecb551bf16271e8722fec"},
 ]
 "certifi 2022.5.18.1" = [
     {file = "certifi-2022.5.18.1-py3-none-any.whl", hash = "sha256:f1d53542ee8cbedbe2118b5686372fb33c297fcd6379b050cca0ef13a597382a"},
@@ -836,9 +836,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {file = "click-8.1.3-py3-none-any.whl", hash = "sha256:bb4d8133cb15a609f44e8213d9b391b0809795062913b383c62be0ee95b1db48"},
     {file = "click-8.1.3.tar.gz", hash = "sha256:7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e"},
 ]
-"colorama 0.4.5rc1" = [
-    {file = "colorama-0.4.5rc1-py2.py3-none-any.whl", hash = "sha256:5db2995a1536da6577ddd34d22bd2ed9bf7c4f34803b8463884c2ca369b53aaa"},
-    {file = "colorama-0.4.5rc1.tar.gz", hash = "sha256:19a3722f1c0435feda6db09486df81625a19393a171e5496dea08c876436daa5"},
+"colorama 0.4.5" = [
+    {file = "colorama-0.4.5-py2.py3-none-any.whl", hash = "sha256:854bf444933e37f5824ae7bfc1e98d5bce2ebe4160d46b5edf346a89358e99da"},
+    {file = "colorama-0.4.5.tar.gz", hash = "sha256:e6c6b4334fc50988a639d9b98aa429a0b57da6e17b9a44f0451f930b6967b7a4"},
 ]
 "coverage 6.4" = [
     {file = "coverage-6.4-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:50ed480b798febce113709846b11f5d5ed1e529c88d8ae92f707806c50297abf"},
@@ -1101,9 +1101,8 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
     {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
 ]
-"moto 3.1.14.dev11" = [
-    {file = "moto-3.1.14.dev11-py3-none-any.whl", hash = "sha256:f9d9fe40f22f829ae25f55c1b8834e66fcd52c18df2c9c1b89f491bf4f5b932f"},
-    {file = "moto-3.1.14.dev11.tar.gz", hash = "sha256:701d8876390ba433959ddae6a02aa53cb58752576f049ad7b69924e5489119c2"},
+"moto 3.1.14.dev17" = [
+    {file = "moto-3.1.14.dev17-py3-none-any.whl", hash = "sha256:1e63a956a16fc763b7bb2233ff7e04caac1f24cde64a5f80dabea3c9beb49e61"},
 ]
 "mr-proper 0.0.7" = [
     {file = "mr_proper-0.0.7-py3-none-any.whl", hash = "sha256:74a1b60240c46f10ba518707ef72811a01e5c270da0a78b5dd2dd923d99fdb14"},
@@ -1182,9 +1181,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {file = "pyflakes-2.4.0-py2.py3-none-any.whl", hash = "sha256:3bb3a3f256f4b7968c9c788781e4ff07dce46bdf12339dcda61053375426ee2e"},
     {file = "pyflakes-2.4.0.tar.gz", hash = "sha256:05a85c2872edf37a4ed30b0cce2f6093e1d0581f8c19d7393122da7e25b2b24c"},
 ]
-"pylib-helpers 0.3.85" = [
-    {file = "pylib_helpers-0.3.85-py3-none-any.whl", hash = "sha256:63472e591f1c08a576705923a6c2256d511f8ccbce47f9c22f948a5ac6e066e4"},
-    {file = "pylib-helpers-0.3.85.tar.gz", hash = "sha256:443aae7faea1dad29052b2c0651b2e2b424c4d1166fedb27406de5412699e772"},
+"pylib-helpers 0.3.87" = [
+    {file = "pylib_helpers-0.3.87-py3-none-any.whl", hash = "sha256:4cd655bf241639c2b486c08063c66ef906bbe4c5942a70aaa8d91ca96f7822df"},
+    {file = "pylib-helpers-0.3.87.tar.gz", hash = "sha256:0b06a61ac0abf26512fcb9ef7ac4a69917de3143824edf014d77d0b185a262bc"},
 ]
 "pylint 3.0.0a5" = [
     {file = "pylint-3.0.0a5-py3-none-any.whl", hash = "sha256:add6bc6380143af0f7a1ab15b5b5f54a8d9d25afc99fc7e2d86fd66f6c3e1ad9"},
