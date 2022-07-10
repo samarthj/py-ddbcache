@@ -482,7 +482,7 @@ summary = "passive checker of Python programs"
 
 [[package]]
 name = "pylib-helpers"
-version = "0.3.98"
+version = "0.3.99"
 requires_python = ">=3.9,<4.0"
 summary = "Helpers for common functional work done across several projects"
 dependencies = [
@@ -735,6 +735,10 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
 "astroid 2.11.5" = [
     {file = "astroid-2.11.5-py3-none-any.whl", hash = "sha256:14ffbb4f6aa2cf474a0834014005487f7ecd8924996083ab411e7fa0b508ce0b"},
     {file = "astroid-2.11.5.tar.gz", hash = "sha256:f4e4ec5294c4b07ac38bab9ca5ddd3914d4bf46f9006eb5c0ae755755061044e"},
+]
+"atomicwrites 1.4.0" = [
+    {file = "atomicwrites-1.4.0-py2.py3-none-any.whl", hash = "sha256:6d1784dea7c0c8d4a5172b6c620f40b6e4cbfdf96d783691f2e1302a7b88e197"},
+    {file = "atomicwrites-1.4.0.tar.gz", hash = "sha256:ae70396ad1a434f9c7046fd2dd196fc04b12f9e91ffb859164193be8b6168a7a"},
 ]
 "attrs 21.4.0" = [
     {file = "attrs-21.4.0-py2.py3-none-any.whl", hash = "sha256:2d27e3784d7a565d36ab851fe94887c5eccd6a463168875832a1be79c82828b4"},
@@ -1191,9 +1195,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {file = "pyflakes-2.4.0-py2.py3-none-any.whl", hash = "sha256:3bb3a3f256f4b7968c9c788781e4ff07dce46bdf12339dcda61053375426ee2e"},
     {file = "pyflakes-2.4.0.tar.gz", hash = "sha256:05a85c2872edf37a4ed30b0cce2f6093e1d0581f8c19d7393122da7e25b2b24c"},
 ]
-"pylib-helpers 0.3.98" = [
-    {file = "pylib_helpers-0.3.98-py3-none-any.whl", hash = "sha256:7770b97b147f931862ffc97ffa7c363614c330199907c882231ce5318084160e"},
-    {file = "pylib-helpers-0.3.98.tar.gz", hash = "sha256:94efba45450c7fa1bb77c7f9fe73be07a1b04a63ab8df48f88beb193ad43320b"},
+"pylib-helpers 0.3.99" = [
+    {file = "pylib_helpers-0.3.99-py3-none-any.whl", hash = "sha256:832f2b195a6eeacfb04aa6f1547192ba7e7b26a8e8da71b9065014b374c8c16e"},
+    {file = "pylib-helpers-0.3.99.tar.gz", hash = "sha256:f1d2474e69d649da5b3b97bf77200a6900c25b18f1f046e9ae9c54b584bbd8f8"},
 ]
 "pylint 3.0.0a5" = [
     {file = "pylint-3.0.0a5-py3-none-any.whl", hash = "sha256:add6bc6380143af0f7a1ab15b5b5f54a8d9d25afc99fc7e2d86fd66f6c3e1ad9"},
