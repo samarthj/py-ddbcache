@@ -71,18 +71,18 @@ dependencies = [
 
 [[package]]
 name = "boto3"
-version = "1.24.29"
+version = "1.24.31"
 requires_python = ">= 3.7"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore<1.28.0,>=1.27.29",
+    "botocore<1.28.0,>=1.27.31",
     "jmespath<2.0.0,>=0.7.1",
     "s3transfer<0.7.0,>=0.6.0",
 ]
 
 [[package]]
 name = "botocore"
-version = "1.27.29"
+version = "1.27.31"
 requires_python = ">= 3.7"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -360,7 +360,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "3.1.17.dev9"
+version = "3.1.17.dev10"
 requires_python = ">=3.6"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
@@ -426,7 +426,7 @@ summary = "Python Build Reasonableness"
 
 [[package]]
 name = "pep8-naming"
-version = "0.13.0"
+version = "0.13.1"
 summary = "Check PEP-8 naming conventions, plugin for flake8"
 dependencies = [
     "flake8>=3.9.1",
@@ -777,13 +777,13 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {file = "black-22.6.0-py3-none-any.whl", hash = "sha256:ac609cf8ef5e7115ddd07d85d988d074ed00e10fbc3445aee393e70164a2219c"},
     {file = "black-22.6.0.tar.gz", hash = "sha256:6c6d39e28aed379aec40da1c65434c77d75e65bb59a1e1c283de545fb4e7c6c9"},
 ]
-"boto3 1.24.29" = [
-    {file = "boto3-1.24.29-py3-none-any.whl", hash = "sha256:c5806000038747591197c35000a0176803803450c3af6a4ee4724fac00cad138"},
-    {file = "boto3-1.24.29.tar.gz", hash = "sha256:c6f419a79c816297646d228dd07599859df6ee701c6f65a6dd4a35015269eb38"},
+"boto3 1.24.31" = [
+    {file = "boto3-1.24.31-py3-none-any.whl", hash = "sha256:d4685e2fe2c436e558a94c7f68f1a6d4a6c7519d2b25a88fdf855d9a928889ad"},
+    {file = "boto3-1.24.31.tar.gz", hash = "sha256:de067346942c6d1730b513783385620519b8b2935f5b0ee2e66d565ffb57ce12"},
 ]
-"botocore 1.27.29" = [
-    {file = "botocore-1.27.29-py3-none-any.whl", hash = "sha256:31b5cdb44017478b6a323d9622b94f6db58704e696c910892ddb123d9ccaf2d2"},
-    {file = "botocore-1.27.29.tar.gz", hash = "sha256:7bbd1ef1ef0083d5def197d40cf557509f5fd80d5d0f29e1ae32857832592bc7"},
+"botocore 1.27.31" = [
+    {file = "botocore-1.27.31-py3-none-any.whl", hash = "sha256:cbe87fa791aa4e8c3da64b1ccbaca7f809f6d1fba8d0b1855de2989815ef8736"},
+    {file = "botocore-1.27.31.tar.gz", hash = "sha256:b0cc79fb5a37a0e2b6befe86efd027b92101d819f1fdc56cfff39f2eb239f232"},
 ]
 "certifi 2022.5.18.1" = [
     {file = "certifi-2022.5.18.1-py3-none-any.whl", hash = "sha256:f1d53542ee8cbedbe2118b5686372fb33c297fcd6379b050cca0ef13a597382a"},
@@ -1114,9 +1114,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {file = "mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
     {file = "mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
 ]
-"moto 3.1.17.dev9" = [
-    {file = "moto-3.1.17.dev9-py3-none-any.whl", hash = "sha256:dc85d8245335d954650e702f984556500ab3cb537c83918e2dc17b5c7d81ea04"},
-    {file = "moto-3.1.17.dev9.tar.gz", hash = "sha256:bacc8c0d78cd9de2b41e7b317dadb4478f1f9a4681665a2d0503da1ab90ab61b"},
+"moto 3.1.17.dev10" = [
+    {file = "moto-3.1.17.dev10-py3-none-any.whl", hash = "sha256:e5d867a3a33eabc1540cdcf9d3344e2fcf3224098c0ad95e9645b24a2a92d2a7"},
+    {file = "moto-3.1.17.dev10.tar.gz", hash = "sha256:59e738e1e38d4217200998a1b35017be1b03c6388a4392893e8914f2b04bbb51"},
 ]
 "mr-proper 0.0.7" = [
     {file = "mr_proper-0.0.7-py3-none-any.whl", hash = "sha256:74a1b60240c46f10ba518707ef72811a01e5c270da0a78b5dd2dd923d99fdb14"},
@@ -1163,9 +1163,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {file = "pbr-5.9.0-py2.py3-none-any.whl", hash = "sha256:e547125940bcc052856ded43be8e101f63828c2d94239ffbe2b327ba3d5ccf0a"},
     {file = "pbr-5.9.0.tar.gz", hash = "sha256:e8dca2f4b43560edef58813969f52a56cef023146cbb8931626db80e6c1c4308"},
 ]
-"pep8-naming 0.13.0" = [
-    {file = "pep8_naming-0.13.0-py3-none-any.whl", hash = "sha256:069ea20e97f073b3e6d4f789af2a57816f281ca64b86210c7d471117a4b6bfd0"},
-    {file = "pep8-naming-0.13.0.tar.gz", hash = "sha256:9f38e6dcf867a1fb7ad47f5ff72c0ddae544a6cf64eb9f7600b7b3c0bb5980b5"},
+"pep8-naming 0.13.1" = [
+    {file = "pep8_naming-0.13.1-py3-none-any.whl", hash = "sha256:f7867c1a464fe769be4f972ef7b79d6df1d9aff1b1f04ecf738d471963d3ab9c"},
+    {file = "pep8-naming-0.13.1.tar.gz", hash = "sha256:3af77cdaa9c7965f7c85a56cd579354553c9bbd3fdf3078a776f12db54dd6944"},
 ]
 "platformdirs 2.5.2" = [
     {file = "platformdirs-2.5.2-py3-none-any.whl", hash = "sha256:027d8e83a2d7de06bbac4e5ef7e023c02b863d7ea5d079477e722bb41ab25788"},
