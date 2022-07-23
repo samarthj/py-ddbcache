@@ -1,5 +1,10 @@
 <!--next-version-placeholder-->
 
+## v0.5.41 (2022-07-23)
+### Other
+* Fix(build): old lock file is incompatible  ([`43a0a7a`](https://github.com/samarthj/py-ddbcache/commit/43a0a7a942869d4c9f3f5d04da681470ac0ba394))
+* Ci: update worflows to function with pdm 2.0  ([`2a058ce`](https://github.com/samarthj/py-ddbcache/commit/2a058cec2a2df1cff368cd631cee665e5ecd6aa2))
+
 ## v0.5.40 (2022-07-21)
 
 
