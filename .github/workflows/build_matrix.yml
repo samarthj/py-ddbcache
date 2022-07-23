@@ -1,12 +1,16 @@
 name: Build Matrix
 
 on:
+  schedule:
+    - cron: '0 0 * * */2'
   pull_request:
     branches:
       - main
-  schedule:
-    - cron: '0 0 * * 1'
   workflow_dispatch:
+
+concurrency:
+  group: ${{ github.repository }}
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -37,13 +41,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-pdm
       - name: Install system dependencies
-        shell: bash
         run: |
           python -m pip install --upgrade pip
           pip install --upgrade pdm
       - name: Get pdm cache dir
         id: pdm-cache-dir
-        shell: bash
         run: |
           echo "::set-output name=dir::$(pdm config cache_dir)"
       - name: Load pdm cache
@@ -56,16 +58,29 @@ jobs:
           key: ${{ runner.os }}-pdm-${{ hashFiles('pdm.lock') }}
           restore-keys: |
             ${{ runner.os }}-pdm-
-      - name: Update the dependencies using pdm
+
+      - name: Update the project
+        id: update
         run: |
-          pdm config parallel_install true
-          pdm sync -dG:all --no-self --clean
-          pdm update --no-self
+          echo "::group::Configure pdm"
+          echo "=============================="
+          pdm config install.parallel true
+          pdm config install.cache on
           pdm config
           pdm info
+          echo "::endgroup::"
 
-      - name: Test with pytest
-        run: pdm run test
+          echo "::group::Run pdm update"
+          echo "=============================="
+          pdm sync -dG:all --no-self --clean
+          pdm update --no-self
+          pdm cache info
+          echo "::endgroup::"
+
+          echo "::group::Run pytest"
+          echo "=============================="
+          pdm run test
+          echo "::endgroup::"
 
       - name: Build with pdm
         run: pdm build

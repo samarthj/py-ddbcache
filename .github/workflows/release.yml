@@ -35,13 +35,13 @@ jobs:
         uses: actions/cache@main
         with:
           path: ${{ steps.pip-cache-dir.outputs.dir }}
-          key: ${{ runner.os }}-pip-pdm-publish
+          key: ${{ runner.os }}-pip-pdm
           restore-keys: |
-            ${{ runner.os }}-pip-pdm-publish
+            ${{ runner.os }}-pip-pdm
       - name: Install system dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install --upgrade pdm pdm-publish
+          pip install --upgrade pdm
       - name: Get pdm cache dir
         id: pdm-cache-dir
         run: |
@@ -62,7 +62,8 @@ jobs:
         run: |
           echo "::group::Configure pdm"
           echo "=============================="
-          pdm config parallel_install true
+          pdm config install.parallel true
+          pdm config install.cache on
           pdm config
           pdm info
           echo "::endgroup::"
@@ -71,6 +72,7 @@ jobs:
           echo "=============================="
           pdm sync -dG:all --no-self --clean
           pdm update --no-self
+          pdm cache info
           echo "::endgroup::"
 
           echo "::group::Run pycln"
@@ -117,7 +119,6 @@ jobs:
         with:
           gpg-private-key: ${{ secrets.PGP_PRIVATE_KEY }}
           git-user-signingkey: true
-          # git-commit-gpgsign: true
 
       - name: Setup git config
         if: ${{ steps.update.outcome == 'success' }}
@@ -139,25 +140,29 @@ jobs:
           git commit -S -m "ci(github-actions): :construction_worker: update, format, lint, test" || true
           echo "::endgroup::"
 
-      - name: Python Semantic Release
+      - name: Github Release
         id: github_release
         if: ${{ steps.git.outcome == 'success' }}
         uses: relekang/python-semantic-release@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # pypi_token: ${{ secrets.PYPI_API_TOKEN }}
+
+      - name: Build with pdm
+        id: build
+        if: ${{ steps.github_release.outcome == 'success' }}
+        continue-on-error: false
+        run: pdm build
 
       - name: Publish distribution 📦 to Test PyPI
         id: test_pypi
-        if: ${{ steps.github_release.outcome == 'success' }}
-        continue-on-error: true
+        if: ${{ steps.build.outcome == 'success' }}
+        continue-on-error: false
         run: |
-          pdm build
-          pdm publish -r testpypi --password ${{ secrets.TEST_PYPI_TOKEN }}
+          pdm publish --no-build -r testpypi --password ${{ secrets.TEST_PYPI_TOKEN }}
 
       - name: Publish distribution 📦 to PyPI
         id: pypi
         if: ${{ steps.test_pypi.outcome == 'success' }}
-        continue-on-error: true
+        continue-on-error: false
         run: |
-          pdm publish --password ${{ secrets.PYPI_API_TOKEN }}
+          pdm publish --no-build --password ${{ secrets.PYPI_API_TOKEN }}
