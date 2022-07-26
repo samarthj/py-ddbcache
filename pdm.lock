@@ -71,18 +71,18 @@ dependencies = [
 
 [[package]]
 name = "boto3"
-version = "1.24.36"
+version = "1.24.37"
 requires_python = ">= 3.7"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore<1.28.0,>=1.27.36",
+    "botocore<1.28.0,>=1.27.37",
     "jmespath<2.0.0,>=0.7.1",
     "s3transfer<0.7.0,>=0.6.0",
 ]
 
 [[package]]
 name = "botocore"
-version = "1.27.36"
+version = "1.27.37"
 requires_python = ">= 3.7"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -222,12 +222,11 @@ dependencies = [
 
 [[package]]
 name = "flake8-isort"
-version = "4.1.1"
+version = "4.1.2.post0"
 summary = "flake8 plugin that integrates isort ."
 dependencies = [
     "flake8<5,>=3.2.1",
     "isort<6,>=4.3.5",
-    "testfixtures<7,>=6.8.0",
 ]
 
 [[package]]
@@ -360,7 +359,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "3.1.17.dev10"
+version = "3.1.17.dev14"
 requires_python = ">=3.6"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
@@ -373,7 +372,7 @@ dependencies = [
     "pytz",
     "requests>=2.5",
     "responses>=0.9.0",
-    "werkzeug>=0.5",
+    "werkzeug<2.2.0,>=0.5",
     "xmltodict",
 ]
 
@@ -650,11 +649,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "testfixtures"
-version = "6.18.5"
-summary = "A collection of helpers and mock objects for unit tests and doc tests."
-
-[[package]]
 name = "toml"
 version = "0.10.2"
 requires_python = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
@@ -704,12 +698,9 @@ summary = "HTTP library with thread-safe connection pooling, file post, and more
 
 [[package]]
 name = "werkzeug"
-version = "2.2.0"
+version = "2.1.2"
 requires_python = ">=3.7"
 summary = "The comprehensive WSGI web application library."
-dependencies = [
-    "MarkupSafe>=2.1.1",
-]
 
 [[package]]
 name = "wrapt"
@@ -780,13 +771,12 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/e7/fe/4533d110ddced851a359cbbb162685814719690ee01939a34be023410854/black-22.6.0-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:6c1734ab264b8f7929cef8ae5f900b85d579e6cbfde09d7387da8f04771b51c6"},
     {url = "https://files.pythonhosted.org/packages/fc/37/032c45b55f901ee3fe780fbc17fe2dc262c809d94de1288201350d8d680b/black-22.6.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c9a3ac16efe9ec7d7381ddebcc022119794872abce99475345c5a61aa18c45ad"},
 ]
-"boto3 1.24.36" = [
-    {url = "https://files.pythonhosted.org/packages/44/6a/3ee157df7195e5b64680e0fe27c0edb93551f7192c6cc65fee09e960fa95/boto3-1.24.36.tar.gz", hash = "sha256:b1855ede59e725b968d6336908ffc864b65985ca441d730625b09c43ccd6413b"},
-    {url = "https://files.pythonhosted.org/packages/99/b4/8223246975101c9195e9ba1349028234e6ec0bc0dd510a6cba2cf2389f93/boto3-1.24.36-py3-none-any.whl", hash = "sha256:8844bbcb69ac0afc68225b58abe105852231cf1b562e6c8c9eb6b2b97fd4757a"},
+"boto3 1.24.37" = [
+    {url = "https://files.pythonhosted.org/packages/40/36/41f4a54070314d899cef60a0c43e69a10929d68642bf2f1ae7c28017cddd/boto3-1.24.37.tar.gz", hash = "sha256:c5f0b44a77d01d6f714f91f181b1e0819fed9b99423234cd4c2cce6704e915b3"},
+    {url = "https://files.pythonhosted.org/packages/4f/58/77317cf781021dd4e72855472d5e8f180a038a272b68b15addae921a4e5f/boto3-1.24.37-py3-none-any.whl", hash = "sha256:801c64aa3dbeabbf2e06e27bc3530245ebc6b14b6d7e8bcff08ff67ec6e60c88"},
 ]
-"botocore 1.27.36" = [
-    {url = "https://files.pythonhosted.org/packages/33/76/96e059520e226a75723896dafd9cc325721f616e0bc89acbd4616fb0d796/botocore-1.27.36.tar.gz", hash = "sha256:8109526f55742539d2311d742b40c89e65781ad18966e577dda360cd55c9d047"},
-    {url = "https://files.pythonhosted.org/packages/9d/6f/888a9673d1a6fd4fe2094c458f8814c4523c3569fc4fe83d207815b4be84/botocore-1.27.36-py3-none-any.whl", hash = "sha256:3119ce186053b9bf6bd0bd0ad19a8cedeb626b205ce6ad26ea0894634f702cd5"},
+"botocore 1.27.37" = [
+    {url = "https://files.pythonhosted.org/packages/e4/f5/5e95e99d847252b08554ffcc268d5d0d88de153efd85644d9fc8fa5e889a/botocore-1.27.37-py3-none-any.whl", hash = "sha256:4616a7bb869b890c4b582460423e04447dd24b4af76ac761ec68236b6cb0ef7a"},
 ]
 "certifi 2022.6.15" = [
     {url = "https://files.pythonhosted.org/packages/cc/85/319a8a684e8ac6d87a1193090e06b6bbb302717496380e225ee10487c888/certifi-2022.6.15.tar.gz", hash = "sha256:84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d"},
@@ -965,9 +955,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/33/73/bb25cd466206e74e86fdc560fda528d09d2df057da491797b5317932de75/flake8_functions-0.0.7-py3-none-any.whl", hash = "sha256:f2f75545c2b0df9eeba0ad316e2ac38c101676970b4441300fc07af3226a44f6"},
     {url = "https://files.pythonhosted.org/packages/4a/70/2a48ea285819d89303f6e7f2bd113f7cc031d71c691d516b3d862a760aae/flake8_functions-0.0.7.tar.gz", hash = "sha256:40584b05d57e5ab185545bcfa08aa0edca52b04646d0df266e2b1667d6437184"},
 ]
-"flake8-isort 4.1.1" = [
-    {url = "https://files.pythonhosted.org/packages/cc/57/ff77211417cf7ddcf8a21b15e8e2acbe887ba40a71a3215679aeccf78214/flake8-isort-4.1.1.tar.gz", hash = "sha256:d814304ab70e6e58859bc5c3e221e2e6e71c958e7005239202fee19c24f82717"},
-    {url = "https://files.pythonhosted.org/packages/da/92/c469d5773b89229bea01f3743cfcb7f6330b7826f874e7d3e4e215bb007a/flake8_isort-4.1.1-py3-none-any.whl", hash = "sha256:c4e8b6dcb7be9b71a02e6e5d4196cefcef0f3447be51e82730fb336fff164949"},
+"flake8-isort 4.1.2.post0" = [
+    {url = "https://files.pythonhosted.org/packages/05/40/12a636b47ebceb52f0dfcc94c3ec9af78da8718e05b93d24ce57c10a8dfa/flake8-isort-4.1.2.post0.tar.gz", hash = "sha256:dee69bc3c09f0832df88acf795845db8a6673b79237371a05fa927ce095248e5"},
+    {url = "https://files.pythonhosted.org/packages/46/ca/2c8d3b58da6b796e94789dc06bb54f2d720721f653ac66c13fb3528bc3f0/flake8_isort-4.1.2.post0-py3-none-any.whl", hash = "sha256:4f95b40706dbb507cff872b34683283662e945d6028d3c8257e69de5fc6b7446"},
 ]
 "flake8-plugin-utils 1.3.2" = [
     {url = "https://files.pythonhosted.org/packages/c7/98/c5578cb38ec12898eded60c790535972eeff3e40d068271ac09cf30d0ec1/flake8-plugin-utils-1.3.2.tar.gz", hash = "sha256:20fa2a8ca2decac50116edb42e6af0a1253ef639ad79941249b840531889c65a"},
@@ -1131,9 +1121,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/06/18/fa675aa501e11d6d6ca0ae73a101b2f3571a565e0f7d38e062eec18a91ee/mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
     {url = "https://files.pythonhosted.org/packages/87/89/479dc97e18549e21354893e4ee4ef36db1d237534982482c3681ee6e7b57/mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
 ]
-"moto 3.1.17.dev10" = [
-    {url = "https://files.pythonhosted.org/packages/38/d2/a0005e37124756e7e0cf2d1058f6e3aa0cdeb6858e1cd1a183ca51f78fb0/moto-3.1.17.dev10.tar.gz", hash = "sha256:59e738e1e38d4217200998a1b35017be1b03c6388a4392893e8914f2b04bbb51"},
-    {url = "https://files.pythonhosted.org/packages/3d/21/e974f0d4f4b04b55beba8e96e8a132026d4802010fa2e19b5814ffc10a25/moto-3.1.17.dev10-py3-none-any.whl", hash = "sha256:e5d867a3a33eabc1540cdcf9d3344e2fcf3224098c0ad95e9645b24a2a92d2a7"},
+"moto 3.1.17.dev14" = [
+    {url = "https://files.pythonhosted.org/packages/08/e5/b9bf529ad37992b6a676ddd44280b907a41ce502e9174a517684538ec0b5/moto-3.1.17.dev14-py3-none-any.whl", hash = "sha256:c5903037a6cb76abccbbe2e0987907ba9a2bdf78379bb90d9dad380cafafa01d"},
+    {url = "https://files.pythonhosted.org/packages/77/6f/5d0c2ba2a180f43bf386e5b8be688f041fd1c8f0e6c4d1f07fc79aeeded6/moto-3.1.17.dev14.tar.gz", hash = "sha256:ae3ba831547327ba79c1e7bd704e112b01f67135339bac76913207c6b9e740d5"},
 ]
 "mr-proper 0.0.7" = [
     {url = "https://files.pythonhosted.org/packages/e3/35/a50ba9e3097ee0d71232c996c626a17f80424140b365122c8f1bc9933118/mr_proper-0.0.7.tar.gz", hash = "sha256:03b517b19e617537f711ce418b125e5f2efd82ec881539cdee83195c78c14a02"},
@@ -1319,10 +1309,6 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/d5/f7/7593812b0687e8aaf01b10f7f07bf59e5a6bbfcd9d657cefdeb48a72cd06/stevedore-4.0.0-py3-none-any.whl", hash = "sha256:87e4d27fe96d0d7e4fc24f0cbe3463baae4ec51e81d95fbe60d2474636e0c7d8"},
     {url = "https://files.pythonhosted.org/packages/f5/70/7953626fd19faa7a0852779c1949650e825f650ee6060f68658a84584c26/stevedore-4.0.0.tar.gz", hash = "sha256:f82cc99a1ff552310d19c379827c2c64dd9f85a38bcd5559db2470161867b786"},
 ]
-"testfixtures 6.18.5" = [
-    {url = "https://files.pythonhosted.org/packages/51/4a/0a7ecce32e82affce0ce7381955fa379779007033cd72e9bf3e50a0d31e8/testfixtures-6.18.5-py2.py3-none-any.whl", hash = "sha256:7de200e24f50a4a5d6da7019fb1197aaf5abd475efb2ec2422fdcf2f2eb98c1d"},
-    {url = "https://files.pythonhosted.org/packages/b1/87/d2e5ba12f5a429327f415ddb38ec4bd712ac8ea1c4047fe21b7729fbfbe3/testfixtures-6.18.5.tar.gz", hash = "sha256:02dae883f567f5b70fd3ad3c9eefb95912e78ac90be6c7444b5e2f46bf572c84"},
-]
 "toml 0.10.2" = [
     {url = "https://files.pythonhosted.org/packages/44/6f/7120676b6d73228c96e17f1f794d8ab046fc910d781c8d151120c3f1569e/toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
     {url = "https://files.pythonhosted.org/packages/be/ba/1f744cdc819428fc6b5084ec34d9b30660f6f9daaf70eead706e3203ec3c/toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
@@ -1352,9 +1338,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/25/36/f056e5f1389004cf886bb7a8514077f24224238a7534497c014a6b9ac770/urllib3-1.26.10.tar.gz", hash = "sha256:879ba4d1e89654d9769ce13121e0f94310ea32e8d2f8cf587b77c08bbcdb30d6"},
     {url = "https://files.pythonhosted.org/packages/68/47/93d3d28e97c7577f563903907912f4b3804054e4877a5ba6651f7182c53b/urllib3-1.26.10-py2.py3-none-any.whl", hash = "sha256:8298d6d56d39be0e3bc13c1c97d133f9b45d797169a0e11cdd0e0489d786f7ec"},
 ]
-"werkzeug 2.2.0" = [
-    {url = "https://files.pythonhosted.org/packages/d3/63/0e4cb01bc4fe5c62ce63587c9471645afdb8a1a3dc2fa1fe2b6a3fbb78f5/Werkzeug-2.2.0-py3-none-any.whl", hash = "sha256:81806f8a5b35e6cb1b39a6f28dabf0e123f069c8596119a1a9a43838870016cd"},
-    {url = "https://files.pythonhosted.org/packages/dc/db/598e5986e8cc1eeb14ecff2c1590dc59f95153cdb757196b0980b3ad0763/Werkzeug-2.2.0.tar.gz", hash = "sha256:fe8bcdcef40275ed915fc734c2527a39d705b57a716d4f09e790296abbd16a7f"},
+"werkzeug 2.1.2" = [
+    {url = "https://files.pythonhosted.org/packages/10/cf/97eb1a3847c01ae53e8376bc21145555ac95279523a935963dc8ff96c50b/Werkzeug-2.1.2.tar.gz", hash = "sha256:1ce08e8093ed67d638d63879fd1ba3735817f7a80de3674d293f5984f25fb6e6"},
+    {url = "https://files.pythonhosted.org/packages/c4/44/f50f2d22cdfb6d56c03d1b4cc3cfa03ebee2f21b59a7768f151e43415ba5/Werkzeug-2.1.2-py3-none-any.whl", hash = "sha256:72a4b735692dd3135217911cbeaa1be5fa3f62bffb8745c5215420a03dc55255"},
 ]
 "wrapt 1.14.1" = [
     {url = "https://files.pythonhosted.org/packages/00/61/04422b7469534650b622d5baa1dd335c4b91d35c8d33548b272f33060519/wrapt-1.14.1-cp36-cp36m-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:5b02d65b9ccf0ef6c34cba6cf5bf2aab1bb2f49c6090bafeecc9cd81ad4ea1c1"},
