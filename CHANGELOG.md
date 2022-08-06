@@ -1,5 +1,11 @@
 <!--next-version-placeholder-->
 
+## v0.5.46 (2022-08-06)
+### Other
+* Ci: use project level pdm cache ([`1c75080`](https://github.com/samarthj/py-ddbcache/commit/1c750800d076fd2dd37982bf46f985f7293aacf1))
+* Ci: add test user to publish command ([`c47df4b`](https://github.com/samarthj/py-ddbcache/commit/c47df4bb77f3f975da37b31c229dfc8e3394e399))
+* Ci: print verbose output for pdm build ([`38da11f`](https://github.com/samarthj/py-ddbcache/commit/38da11f1d033bd50abe39748bcf2fd2ad6e8b5ea))
+
 ## v0.5.45 (2022-08-06)
 
 
