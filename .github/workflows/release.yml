@@ -152,19 +152,19 @@ jobs:
       - name: Build with pdm
         id: build
         if: ${{ steps.github_release.outcome == 'success' }}
-        continue-on-error: false
-        run: pdm build -v
+        continue-on-error: true
+        run: pdm build -v --no-clean
 
       - name: Publish distribution 📦 to Test PyPI
         id: test_pypi
         if: ${{ steps.build.outcome == 'success' }}
-        continue-on-error: false
+        continue-on-error: true
         run: |
           pdm publish --no-build -r testpypi -u ${{ secrets.TEST_PYPI_USER }} --password ${{ secrets.TEST_PYPI_TOKEN }}
 
       - name: Publish distribution 📦 to PyPI
         id: pypi
         if: ${{ steps.test_pypi.outcome == 'success' }}
-        continue-on-error: false
+        continue-on-error: true
         run: |
           pdm publish --no-build --password ${{ secrets.PYPI_API_TOKEN }}
