@@ -6,7 +6,7 @@ from time import sleep
 from boto3.dynamodb import types
 from boto3.dynamodb.conditions import Key
 from botocore.exceptions import ClientError
-from moto import mock_dynamodb2
+from moto import mock_dynamodb
 import pytest
 
 from src.ddbcache import DDBCache
@@ -23,7 +23,7 @@ def aws_credentials():  # noqa: PT004
 
 @pytest.fixture()
 def ddb_cache(aws_credentials):
-    with mock_dynamodb2():
+    with mock_dynamodb():
         cache = DDBCache(
             table_name="Testing",
             access_key=os.environ["AWS_ACCESS_KEY_ID"],
