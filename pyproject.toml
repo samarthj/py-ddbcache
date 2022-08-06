@@ -9,11 +9,14 @@ dependencies = [
     "pylib-helpers; python_version>='3.9'",
 ]
 description = "A simple interface for caching items in DynamoDB"
-license = {text = "GPL-3.0-or-later"}
 name = "ddb-cache"
 readme = "README.md"
 requires-python = ">=3.9"
 version = "0.5.52"
+
+[project.license]
+file = "LICENSE"
+text = "LGPL-3.0-or-later"
 
 [project.urls]
 "Bug Tracker" = "https://github.com/samarthj/py-ddbcache/issues"
