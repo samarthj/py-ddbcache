@@ -17,7 +17,7 @@ A simple interface for caching items in DynamoDB
 
 ## Example Usage
 
-Samples can be found here in the [tests](https://github.com/samarthj/py-ddbcache/blob/main/tests/test_db.py)
+Samples can be found here in the [tests](https://github.com/samarthj/py-ddbcache/blob/main/tests/test_ddbcache.py)
 
 The library can also be used for crud operations since it implement `get`, `put`, `update`, `delete`, `scan` and `query`. Along with `create_backup`.
 
