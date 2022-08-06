@@ -158,7 +158,7 @@ jobs:
         if: ${{ steps.build.outcome == 'success' }}
         continue-on-error: false
         run: |
-          pdm publish --no-build -r testpypi --password ${{ secrets.TEST_PYPI_TOKEN }}
+          pdm publish --no-build -r testpypi -u ${{ secrets.TEST_PYPI_USER }} --password ${{ secrets.TEST_PYPI_TOKEN }}
 
       - name: Publish distribution 📦 to PyPI
         id: pypi
