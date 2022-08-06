@@ -151,7 +151,7 @@ jobs:
         id: build
         if: ${{ steps.github_release.outcome == 'success' }}
         continue-on-error: false
-        run: pdm build
+        run: pdm build -v
 
       - name: Publish distribution 📦 to Test PyPI
         id: test_pypi
