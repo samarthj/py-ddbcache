@@ -24,10 +24,7 @@ jobs:
       - uses: actions/checkout@v3
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
-          # fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
-          fetch-depth: 1
-          ref: ${{ github.ref }}
-
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
       - uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
@@ -147,6 +144,7 @@ jobs:
           git add .
           git status
           git commit -S -m "ci(github-actions): :construction_worker: update, format, lint, test" || true
+          git pull --rebase
           echo "::endgroup::"
 
       - name: Github Release
