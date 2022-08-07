@@ -1,5 +1,13 @@
 <!--next-version-placeholder-->
 
+## v0.5.47 (2022-08-07)
+### Other
+* Ci: try an explicit pull after setup  ([`387fa79`](https://github.com/samarthj/py-ddbcache/commit/387fa79570a11174151d298256384390be8c7e29))
+* Ci: try fetch-depth 1  ([`b1cb5d7`](https://github.com/samarthj/py-ddbcache/commit/b1cb5d7de27f8aba276e56abb9cd0b772a9afb56))
+* Ci: update checkout and setup-python  ([`32e5a7d`](https://github.com/samarthj/py-ddbcache/commit/32e5a7dcad475e614b658f43c270f3d8b7c39155))
+* Ci: add api user for pypi release  ([`ae9a0cc`](https://github.com/samarthj/py-ddbcache/commit/ae9a0cc309cfc8512421e0efe5e366089bb55d3d))
+* Ci: remove cleanup on build  ([`ca1e754`](https://github.com/samarthj/py-ddbcache/commit/ca1e754006855086a3759ec5480e2030da870c11))
+
 ## v0.5.46 (2022-08-06)
 ### Other
 * Ci: use project level pdm cache ([`1c75080`](https://github.com/samarthj/py-ddbcache/commit/1c750800d076fd2dd37982bf46f985f7293aacf1))
