@@ -360,7 +360,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "3.1.17.dev42"
+version = "3.1.17.dev44"
 requires_python = ">=3.6"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
@@ -1124,9 +1124,8 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/27/1a/1f68f9ba0c207934b35b86a8ca3aad8395a3d6dd7921c0686e23853ff5a9/mccabe-0.7.0-py2.py3-none-any.whl", hash = "sha256:6c2d30ab6be0e4a46919781807b4f0d834ebdd6c6e3dca0bda5a15f863427b6e"},
     {url = "https://files.pythonhosted.org/packages/e7/ff/0ffefdcac38932a54d2b5eed4e0ba8a408f215002cd178ad1df0f2806ff8/mccabe-0.7.0.tar.gz", hash = "sha256:348e0240c33b60bbdf4e523192ef919f28cb2c3d7d5c7794f74009290f236325"},
 ]
-"moto 3.1.17.dev42" = [
-    {url = "https://files.pythonhosted.org/packages/3b/94/d1e8f6423fe197be059a9c68679049103447564f5743fc37d31c58666760/moto-3.1.17.dev42.tar.gz", hash = "sha256:90fd5e1d9ad8dd513f3013542823bf6b9eb4f22af1248ecc6fe05cb777e96c15"},
-    {url = "https://files.pythonhosted.org/packages/98/c7/01b9e6d43e2d8c3ff7ca0bae35dc48fc7d1503f0369befa96131cc4dcabe/moto-3.1.17.dev42-py3-none-any.whl", hash = "sha256:65764901ec036f250039327363770da742b5c44d4efa0c797416ae3d6fa7bf45"},
+"moto 3.1.17.dev44" = [
+    {url = "https://files.pythonhosted.org/packages/3e/cb/075a749fa74625d1f557ae0937aa511017f6501c34c6dd72ce2d4f6f63e9/moto-3.1.17.dev44-py3-none-any.whl", hash = "sha256:299c2d76e9a0f83c372f9e61fa137b3813bee620241ec2b3b11c6e94dfc3887c"},
 ]
 "mr-proper 0.0.7" = [
     {url = "https://files.pythonhosted.org/packages/e3/35/a50ba9e3097ee0d71232c996c626a17f80424140b365122c8f1bc9933118/mr_proper-0.0.7.tar.gz", hash = "sha256:03b517b19e617537f711ce418b125e5f2efd82ec881539cdee83195c78c14a02"},
