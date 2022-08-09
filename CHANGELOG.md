@@ -1,5 +1,8 @@
 <!--next-version-placeholder-->
 
+## v0.5.48 (2022-08-09)
+
+
 ## v0.5.47 (2022-08-07)
 ### Other
 * Ci: try an explicit pull after setup  ([`387fa79`](https://github.com/samarthj/py-ddbcache/commit/387fa79570a11174151d298256384390be8c7e29))
