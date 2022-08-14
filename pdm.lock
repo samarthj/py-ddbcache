@@ -359,7 +359,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "3.1.18"
+version = "4.0.0.dev3"
 requires_python = ">=3.6"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
@@ -1123,9 +1123,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/06/18/fa675aa501e11d6d6ca0ae73a101b2f3571a565e0f7d38e062eec18a91ee/mccabe-0.6.1.tar.gz", hash = "sha256:dd8d182285a0fe56bace7f45b5e7d1a6ebcbf524e8f3bd87eb0f125271b8831f"},
     {url = "https://files.pythonhosted.org/packages/87/89/479dc97e18549e21354893e4ee4ef36db1d237534982482c3681ee6e7b57/mccabe-0.6.1-py2.py3-none-any.whl", hash = "sha256:ab8a6258860da4b6677da4bd2fe5dc2c659cff31b3ee4f7f5d64e79735b80d42"},
 ]
-"moto 3.1.18" = [
-    {url = "https://files.pythonhosted.org/packages/36/ec/ca59c9466ccdf2c1d3ccbd6d06c2de58e1d7fccc96abddd75a7dd07efbbe/moto-3.1.18.tar.gz", hash = "sha256:1e05276a62aa5a4aa821b441647c2cbaa2ea175388980b10d5de88d41b327cf7"},
-    {url = "https://files.pythonhosted.org/packages/f5/ea/80589adb5f1db38d56fc48ff5e50451483ef195618229d2cdd1390f59357/moto-3.1.18-py3-none-any.whl", hash = "sha256:b6eb096e7880c46ac44d6d90988c0043e31462115cfdc913a0ee8f470bd9555c"},
+"moto 4.0.0.dev3" = [
+    {url = "https://files.pythonhosted.org/packages/73/cf/d38b3b03e7ad2b387d9e1c5d0e37d118cce7abe56667db781a8718b72446/moto-4.0.0.dev3.tar.gz", hash = "sha256:de6ed83763668741988f9e684e19c13156f0e11b839d2fbda130ce28fdf98d6e"},
+    {url = "https://files.pythonhosted.org/packages/8c/9b/936bfbd89ef0c65e52de31e181737aa15a7fd13e6ccdea014a495a2f803f/moto-4.0.0.dev3-py3-none-any.whl", hash = "sha256:bf8ff4da043a2de673e28b0b2652ad6ad2273005f8b952a790f94a1f3a4d6bc2"},
 ]
 "mr-proper 0.0.7" = [
     {url = "https://files.pythonhosted.org/packages/e3/35/a50ba9e3097ee0d71232c996c626a17f80424140b365122c8f1bc9933118/mr_proper-0.0.7.tar.gz", hash = "sha256:03b517b19e617537f711ce418b125e5f2efd82ec881539cdee83195c78c14a02"},
