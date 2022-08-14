@@ -1,6 +1,8 @@
-# ddbcache
+# ddb-cache
 
 A simple interface for caching items in DynamoDB
+
+![License](https://img.shields.io/github/license/samarthj/py-ddbcache)
 
 [![Release](https://github.com/samarthj/py-ddbcache/actions/workflows/release.yml/badge.svg)](https://github.com/samarthj/py-ddbcache/actions/workflows/release.yml)
 [![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/samarthj/py-ddbcache?sort=semver)](https://github.com/samarthj/py-ddbcache/releases)
