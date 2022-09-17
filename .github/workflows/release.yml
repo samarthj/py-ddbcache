@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          # persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
           fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
       - uses: actions/setup-python@v4
         with:
@@ -38,7 +38,7 @@ jobs:
         uses: actions/cache@main
         with:
           path: ${{ steps.pip-cache-dir.outputs.dir }}
-          key: ${{ runner.os }}-${{ matrix.python-version }}-pip-pdm-
+          key: ${{ runner.os }}-${{ matrix.python-version }}-pip-pdm-pipx
           restore-keys: |
             ${{ runner.os }}-${{ matrix.python-version }}-pip-pdm-
             ${{ runner.os }}-${{ matrix.python-version }}-pip-
@@ -46,6 +46,8 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install --upgrade pdm
+          pip install --upgrade pipx
+          pipx install python-semantic-release
       - name: Get pdm cache dir
         id: pdm-cache-dir
         run: |
@@ -58,7 +60,6 @@ jobs:
             ${{ steps.pdm-cache-dir.outputs.dir }}
           key: ${{ runner.os }}-${{ matrix.python-version }}-pdm-${{ github.repository }}-${{ hashFiles('pyproject.toml') }}-${{ hashFiles('pdm.lock') }}
           restore-keys: |
-            ${{ runner.os }}-${{ matrix.python-version }}-pdm-${{ github.repository }}-${{ hashFiles('pyproject.toml') }}-${{ hashFiles('pdm.lock') }}
             ${{ runner.os }}-${{ matrix.python-version }}-pdm-${{ github.repository }}-${{ hashFiles('pyproject.toml') }}
             ${{ runner.os }}-${{ matrix.python-version }}-pdm-${{ github.repository }}
 
@@ -66,7 +67,6 @@ jobs:
         id: update
         run: |
           echo "::group::Configure pdm"
-          echo "=============================="
           pdm config install.parallel true
           pdm config install.cache on
           pdm config
@@ -75,32 +75,27 @@ jobs:
           echo "::endgroup::"
 
           echo "::group::Run pdm update"
-          echo "=============================="
           pdm sync -dG:all --no-self --clean
           pdm update --no-self
           pdm cache info
           echo "::endgroup::"
 
           echo "::group::Run pycln"
-          echo "=============================="
           pdm run style-pycln
           pdm run format-pycln
           echo "::endgroup::"
 
           echo "::group::Run isort"
-          echo "=============================="
           pdm run style-imports
           pdm run format-imports
           echo "::endgroup::"
 
           echo "::group::Run black"
-          echo "=============================="
           pdm run style
           pdm run format
           echo "::endgroup::"
 
           echo "::group::Run pytest"
-          echo "=============================="
           pdm run test
           echo "::endgroup::"
 
@@ -121,10 +116,11 @@ jobs:
 
       - name: Import GPG key
         if: ${{ steps.update.outcome == 'success' }}
-        uses: crazy-max/ghaction-import-gpg@v3
+        uses: crazy-max/ghaction-import-gpg@v5
         with:
-          gpg-private-key: ${{ secrets.PGP_PRIVATE_KEY }}
-          git-user-signingkey: true
+          gpg_private_key: ${{ secrets.PGP_PRIVATE_KEY }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
 
       - name: Setup git config
         if: ${{ steps.update.outcome == 'success' }}
@@ -132,18 +128,18 @@ jobs:
         run: |
           echo "::group::Setup git config"
           echo "=============================="
-          git config user.name "Sam"
-          git config user.email dev@samarthj.com
-          git config user.signkey dev@samarthj.com
+          git config user.name "Github Action"
+          git config user.email action@github.com
+          # git config user.signkey dev@samarthj.com
           # git config commit.gpgsign true
           git config init.defaultBranch main
-          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
+          # git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
           echo "::endgroup::"
 
           echo "::group::Commit changes"
           git add .
           git status
-          git commit -S -m "ci(github-actions): :construction_worker: update, format, lint, test" || true
+          git commit -m "ci(github-actions): :construction_worker: update, format, lint, test" || true
           git pull --rebase
           echo "::endgroup::"
 
@@ -165,11 +161,11 @@ jobs:
         if: ${{ steps.build.outcome == 'success' }}
         continue-on-error: true
         run: |
-          pdm publish --no-build -r testpypi -u ${{ secrets.TEST_PYPI_USER }} -P ${{ secrets.TEST_PYPI_TOKEN }}
+          pdm publish --no-build -r testpypi -u __token__ -P ${{ secrets.TEST_PYPI_TOKEN }}
 
       - name: Publish distribution 📦 to PyPI
         id: pypi
         if: ${{ steps.test_pypi.outcome == 'success' }}
         continue-on-error: true
         run: |
-          pdm publish --no-build -u ${{ secrets.PYPI_API_USER }} -P ${{ secrets.PYPI_API_TOKEN }}
+          pdm publish --no-build -u __token__ -P ${{ secrets.PYPI_API_TOKEN }}

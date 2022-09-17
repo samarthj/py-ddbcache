@@ -35,12 +35,11 @@ jobs:
           echo "::set-output name=dir::$(pip cache dir)"
       - name: Load pip cache
         id: pip-cache
-        uses: actions/cache@main
+        uses: actions/cache@v3
         with:
           path: ${{ steps.pip-cache-dir.outputs.dir }}
           key: ${{ runner.os }}-${{ matrix.python-version }}-pip-pdm-
           restore-keys: |
-            ${{ runner.os }}-${{ matrix.python-version }}-pip-pdm-
             ${{ runner.os }}-${{ matrix.python-version }}-pip-
       - name: Install system dependencies
         run: |
@@ -52,13 +51,12 @@ jobs:
           echo "::set-output name=dir::$(pdm config cache_dir)"
       - name: Load pdm cache
         id: pdm-cache
-        uses: actions/cache@main
+        uses: actions/cache@v3
         with:
           path: |
             ${{ steps.pdm-cache-dir.outputs.dir }}
           key: ${{ runner.os }}-${{ matrix.python-version }}-pdm-${{ github.repository }}-${{ hashFiles('pyproject.toml') }}-${{ hashFiles('pdm.lock') }}
           restore-keys: |
-            ${{ runner.os }}-${{ matrix.python-version }}-pdm-${{ github.repository }}-${{ hashFiles('pyproject.toml') }}-${{ hashFiles('pdm.lock') }}
             ${{ runner.os }}-${{ matrix.python-version }}-pdm-${{ github.repository }}-${{ hashFiles('pyproject.toml') }}
             ${{ runner.os }}-${{ matrix.python-version }}-pdm-${{ github.repository }}
 
@@ -66,7 +64,6 @@ jobs:
         id: update
         run: |
           echo "::group::Configure pdm"
-          echo "=============================="
           pdm config install.parallel true
           pdm config install.cache on
           pdm config
@@ -75,14 +72,12 @@ jobs:
           echo "::endgroup::"
 
           echo "::group::Run pdm update"
-          echo "=============================="
           pdm sync -dG:all --no-self --clean
           pdm update --no-self
           pdm cache info
           echo "::endgroup::"
 
           echo "::group::Run pytest"
-          echo "=============================="
           pdm run test
           echo "::endgroup::"
 
