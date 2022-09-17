@@ -72,12 +72,23 @@ style-pycln    = {cmd = "pycln --diff --config pyproject.toml .", help = "Check 
 test           = {cmd = "pytest --cov=src --cov-report=xml", help = "Run the tests"}
 test-local     = {cmd = "pytest tests -r A", help = "Run the tests with cred access"}
 
+clean = """
+rm -rf .mypy_cache
+       .pytest_cache
+       .venv
+       poetry.lock
+       dist
+       build
+       ./**/__pycache__
+       __pypackages__
+"""
+
 [tool.black]
 line_length = 120
 
 [tool.isort]
 ensure_newline_before_comments = true
-extend_skip                    = [".vscode", "__pypackages__"]
+extend_skip                    = [".vscode", ".venv", "__pypackages__"]
 force_grid_wrap                = 0
 force_sort_within_sections     = true
 group_by_package               = true
@@ -113,7 +124,7 @@ testpaths  = ["tests"]
 
 [tool.pycln]
 all          = true
-exclude      = '(__pypackages__|__pycache__|\.pytest_cache|\.github|\.git)'
+exclude      = '(__pypackages__|__pycache__|\.pytest_cache|\.github|\.git|\.venv|\.mypy_cache|\.vscode)'
 expand_stars = true
 include      = '.*\.py$'
 no_gitignore = false
@@ -121,17 +132,21 @@ paths        = ["src", "tests"]
 verbose      = true
 
 [tool.semantic_release]
-branch             = "main"
-build_command      = "pip install pdm && pdm build -v"
-changelog_file     = "CHANGELOG.md"
-commit_author      = "dev@samarthj.com"
-commit_parser      = "semantic_release.history.emoji_parser"
-commit_subject     = "{version} via python-semantic-release"
-major_emoji        = ":boom:"
-major_on_zero      = false
-minor_emoji        = ":sparkles:, :children_crossing:, :lipstick:, :iphone:, :egg:, :chart_with_upwards_trend:"
-patch_emoji        = ":ambulance:, :lock:, :bug:, :zap:, :goal_net:, :alien:, :wheelchair:, :speech_balloon:, :mag:, :apple:, :penguin:, :checkered_flag:, :robot:, :green_apple:, :bookmark:, :construction_worker:"
-pre_commit_command = "git commit -v -a --no-edit --amend"
-remove_dist        = true
-upload_to_pypi     = false
-version_variable   = ['pyproject.toml:version']
+branch                = "main"
+build_command         = "pip install pdm && pdm build -v"
+changelog_capitalize  = false
+changelog_components  = "semantic_release.changelog.changelog_headers,semantic_release.changelog.compare_url"
+changelog_file        = "CHANGELOG.md"
+changelog_sections    = "feature,fix,breaking,documentation,performance,revert,test,build"
+commit_author         = "Github Action <action@github.com>"
+commit_parser         = "semantic_release.history.angular_parser"
+commit_subject        = "ci: {version}"
+ignore_token_for_push = true
+major_on_zero         = false
+pre_commit_command    = "git status && git commit -v -a --no-edit --amend"
+remove_dist           = true
+tag_commit            = true
+upload_to_pypi        = false
+upload_to_release     = true
+# version_source        = "tag"
+version_variable = ['pyproject.toml:version']
