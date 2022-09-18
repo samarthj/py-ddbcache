@@ -20,7 +20,7 @@ description = "A simple interface for caching items in DynamoDB"
 name = "ddb-cache"
 readme = "README.md"
 requires-python = ">=3.9"
-version = "0.5.52"
+version = "0.6.0"
 
 [[project.authors]]
 email = "dev@samarthj.com"
@@ -130,23 +130,23 @@ no_gitignore = false
 paths        = ["src", "tests"]
 verbose      = true
 
-[tool.semantic_release]
-branch                = "main"
-build_command         = "pdm build -v"
-changelog_capitalize  = false
-changelog_components  = "semantic_release.changelog.changelog_headers,semantic_release.changelog.compare_url"
-changelog_file        = "CHANGELOG.md"
-changelog_sections    = "feature,fix,breaking,documentation,performance,revert,test,build"
-commit_author         = "Github Action <action@github.com>"
-commit_parser         = "semantic_release.history.angular_parser"
-commit_subject        = "ci(github-actions): v{version} via python_semantic_release"
-ignore_token_for_push = true
-major_on_zero         = false
-# pre_commit_command    = "git status && gpg -K && git commit -S -v -a --no-edit --amend"
-remove_dist       = false
-tag_commit        = false # otherwise creates tag before the release commit
-upload_to_pypi    = false
-upload_to_release = true
-version_source    = "tag"
-# version_pattern  = '{version}'
-version_variable = ['pyproject.toml:version']
+# [tool.semantic_release]
+# branch                = "main"
+# build_command         = "pdm build -v"
+# changelog_capitalize  = false
+# changelog_components  = "semantic_release.changelog.changelog_headers,semantic_release.changelog.compare_url"
+# changelog_file        = "CHANGELOG.md"
+# changelog_sections    = "feature,fix,breaking,documentation,performance,revert,test,build"
+# commit_author         = "Github Action <action@github.com>"
+# commit_parser         = "semantic_release.history.angular_parser"
+# commit_subject        = "ci(github-actions): v{version} via python_semantic_release"
+# ignore_token_for_push = true
+# major_on_zero         = false
+# # pre_commit_command    = "git status && gpg -K && git commit -S -v -a --no-edit --amend"
+# remove_dist       = false
+# tag_commit        = false # otherwise creates tag before the release commit
+# upload_to_pypi    = false
+# upload_to_release = true
+# version_source    = "tag"
+# # version_pattern  = '{version}'
+# version_variable = ['pyproject.toml:version']

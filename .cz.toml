@@ -1,0 +1,127 @@
+[tool.commitizen]
+annotated_tag = true
+# changelog_incremental = true
+gpg_sign = true
+name = "cz_customize"
+style = [
+  [
+    "qmark",
+    "fg:#ff9d00 bold",
+  ],
+  [
+    "question",
+    "bold",
+  ],
+  [
+    "answer",
+    "fg:#ff9d00 bold",
+  ],
+  [
+    "pointer",
+    "fg:#ff9d00 bold",
+  ],
+  [
+    "highlighted",
+    "fg:#ff9d00 bold",
+  ],
+  [
+    "selected",
+    "fg:#cc5454",
+  ],
+  [
+    "separator",
+    "fg:#cc5454",
+  ],
+  [
+    "instruction",
+    "",
+  ],
+  [
+    "text",
+    "",
+  ],
+  [
+    "disabled",
+    "fg:#858585 italic",
+  ],
+]
+tag_format = "v$major.$minor.$patch$prerelease"
+update_changelog_on_bump = true
+version = "0.6.0"
+version_files = ["pyproject.toml:project.version"]
+
+[tool.commitizen.customize]
+bump_pattern = "^(break|feat|fix|refactor|perf|docs|build|test|ci|chore|choru|ci\\(github-actions\\)|BREAKING CHANGE)"
+change_type_order = [
+  "BREAKING CHANGE",
+  "Features / Improvements",
+  "Bug Fixes",
+  "Code Refactor",
+  "Performance improvements",
+  "Documentation",
+  "Build / Dependencies",
+  "Tests",
+  "Chore",
+  "CI/CD",
+  "Automation",
+]
+changelog_pattern = "^(break|feat|fix|refactor|perf|docs|build|test|chore|choru|ci\\(github-actions\\)|ci|BREAKING CHANGE)"
+commit_parser = "^(?P<change_type>break|feat|fix|refactor|perf|docs|build|test|chore|choru|ci\\(github-actions\\)|ci|BREAKING CHANGE)(?:\\((?P<scope>[^()\r\n]*)\\)|\\()?(?P<breaking>!)?:\\s(?P<message>.*)?"
+message_template = "{{change_type}}:{% if show_message %} {{message}}{% endif %}"
+schema = """
+<type>(<scope>): <subject>
+<BLANK LINE>
+<body>
+<BLANK LINE>
+(BREAKING CHANGE: )<footer>"""
+schema_pattern = "^(?P<change_type>break|feat|fix|refactor|perf|docs|build|test|chore|choru|ci\\(github-actions\\)|ci|BREAKING CHANGE)(?:\\((?P<scope>[^()\r\n]*)\\)|\\()?(?P<breaking>!)?:\\s(?P<message>.*)?"
+
+[tool.commitizen.customize.bump_map]
+break  = "MAJOR"
+build  = "PATCH"
+chore  = "PATCH"
+feat   = "MINOR"
+fix    = "PATCH"
+hotfix = "PATCH"
+new    = "MINOR"
+perf   = "MINOR"
+test   = "PATCH"
+
+[tool.commitizen.customize.change_type_map]
+break                = "BREAKING CHANGE"
+build                = "Build / Dependencies"
+chore                = "Chore"
+choru                = "Chore"
+ci                   = "CI/CD"
+"ci(github-actions)" = "Automation"
+docs                 = "Documentation"
+feat                 = "Features / Improvements"
+fix                  = "Bug Fixes"
+perf                 = "Performance improvements"
+refactor             = "Code Refactor"
+test                 = "Tests"
+
+[[tool.commitizen.customize.questions]]
+message = "Select the type of change you are committing"
+name    = "change_type"
+type    = "list"
+
+[[tool.commitizen.customize.questions.choices]]
+key   = "f"
+name  = "feat: A new feature. Correlates with MINOR in SemVer"
+value = "feat"
+
+[[tool.commitizen.customize.questions.choices]]
+key   = "x"
+name  = "fix: A bug fix. Correlates with PATCH in SemVer"
+value = "fix"
+
+[[tool.commitizen.customize.questions]]
+message = "Body."
+name    = "message"
+type    = "input"
+
+[[tool.commitizen.customize.questions]]
+message = "Do you want to add body message in commit?"
+name    = "show_message"
+type    = "confirm"

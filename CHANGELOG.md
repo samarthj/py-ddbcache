@@ -1,27 +1,89 @@
-<!--next-version-placeholder-->
+## v0.6.0 (2022-09-18)
+
+### Features / Improvements
+
+- **license**: Switched from AGPLv3+ to LGPLv3+
+
+### Bug Fixes
+
+- **build**: project.license.file is not supported
+
+### Documentation
+
+- add license to README
+- fix the path to test file
+
+### Build / Dependencies
+
+- **pdm**: updated the build-system + project attributes
+
+### Tests
+
+- **lib**: switched from deprecated mock_dynamodb2 -> mock_dynamodb
+
+### Chore
+
+- **lint**: exclude .venv from linter
+- update project and changelog
+
+### CI/CD
+
+- **release**: ffs why is a release error a warning
+- **release**: force release version pickup from tag
+- **release**: setting the release gh_token
+- **build**: don't need to re-install pdm
+- **release**: use local pkg for git release
+- **test**: enable version tag variable
+- update build scripts
+
+### Automation
+
+- :construction_worker: update, format, lint, test
 
 ## v0.5.52 (2022-08-16)
 
+### Automation
+
+- :construction_worker: update, format, lint, test
 
 ## v0.5.51 (2022-08-14)
 
+### Automation
+
+- :construction_worker: update, format, lint, test
 
 ## v0.5.50 (2022-08-13)
 
+### Automation
+
+- :construction_worker: update, format, lint, test
 
 ## v0.5.49 (2022-08-11)
 
+### Automation
+
+- :construction_worker: update, format, lint, test
 
 ## v0.5.48 (2022-08-09)
 
+### Automation
+
+- :construction_worker: update, format, lint, test
 
 ## v0.5.47 (2022-08-07)
-### Other
-* Ci: try an explicit pull after setup  ([`387fa79`](https://github.com/samarthj/py-ddbcache/commit/387fa79570a11174151d298256384390be8c7e29))
-* Ci: try fetch-depth 1  ([`b1cb5d7`](https://github.com/samarthj/py-ddbcache/commit/b1cb5d7de27f8aba276e56abb9cd0b772a9afb56))
-* Ci: update checkout and setup-python  ([`32e5a7d`](https://github.com/samarthj/py-ddbcache/commit/32e5a7dcad475e614b658f43c270f3d8b7c39155))
-* Ci: add api user for pypi release  ([`ae9a0cc`](https://github.com/samarthj/py-ddbcache/commit/ae9a0cc309cfc8512421e0efe5e366089bb55d3d))
-* Ci: remove cleanup on build  ([`ca1e754`](https://github.com/samarthj/py-ddbcache/commit/ca1e754006855086a3759ec5480e2030da870c11))
+
+### CI/CD
+
+- try an explicit pull after setup
+- try fetch-depth 1
+- update checkout and setup-python
+- :checkered_flag: finalizing build scripts
+- add api user for pypi release
+- remove cleanup on build
+
+### Automation
+
+- :construction_worker: update, format, lint, test
 
 ## v0.5.46 (2022-08-06)
 
