@@ -119,8 +119,10 @@ jobs:
         uses: crazy-max/ghaction-import-gpg@v5
         with:
           gpg_private_key: ${{ secrets.PGP_PRIVATE_KEY }}
+          git_config_global: true
           git_user_signingkey: true
           git_commit_gpgsign: true
+          git_tag_gpgsign: true
 
       - name: Setup git config
         if: ${{ steps.update.outcome == 'success' }}
@@ -130,8 +132,6 @@ jobs:
           echo "=============================="
           git config user.name "Github Action"
           git config user.email action@github.com
-          # git config user.signkey dev@samarthj.com
-          # git config commit.gpgsign true
           git config init.defaultBranch main
           # git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
           echo "::endgroup::"
@@ -139,33 +139,23 @@ jobs:
           echo "::group::Commit changes"
           git add .
           git status
-          git commit -m "ci(github-actions): :construction_worker: update, format, lint, test" || true
+          git commit -S -m "ci(github-actions): :construction_worker: update, format, lint, test" || true
           git pull --rebase
           echo "::endgroup::"
 
       - name: Github Release
         id: github_release
         if: ${{ steps.git.outcome == 'success' }}
-        uses: relekang/python-semantic-release@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build with pdm
-        id: build
-        if: ${{ steps.github_release.outcome == 'success' }}
-        continue-on-error: true
-        run: pdm build -v --no-clean
+        run: semantic-release publish
 
       - name: Publish distribution 📦 to Test PyPI
         id: test_pypi
         if: ${{ steps.build.outcome == 'success' }}
         continue-on-error: true
-        run: |
-          pdm publish --no-build -r testpypi -u __token__ -P ${{ secrets.TEST_PYPI_TOKEN }}
+        run: pdm publish --no-build -r testpypi -u __token__ -P ${{ secrets.TEST_PYPI_TOKEN }}
 
       - name: Publish distribution 📦 to PyPI
         id: pypi
         if: ${{ steps.test_pypi.outcome == 'success' }}
         continue-on-error: true
-        run: |
-          pdm publish --no-build -u __token__ -P ${{ secrets.PYPI_API_TOKEN }}
+        run: pdm publish --no-build -u __token__ -P ${{ secrets.PYPI_API_TOKEN }}
