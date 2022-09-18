@@ -132,7 +132,7 @@ verbose      = true
 
 [tool.semantic_release]
 branch                = "main"
-build_command         = "pip install pdm && pdm build -v"
+build_command         = "pdm build -v"
 changelog_capitalize  = false
 changelog_components  = "semantic_release.changelog.changelog_headers,semantic_release.changelog.compare_url"
 changelog_file        = "CHANGELOG.md"
