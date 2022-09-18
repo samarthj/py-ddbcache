@@ -27,7 +27,6 @@ email = "dev@samarthj.com"
 name  = "Sam"
 
 [project.license]
-file = "LICENSE"
 text = "LGPL-3.0-or-later"
 
 [project.urls]
