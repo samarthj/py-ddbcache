@@ -138,6 +138,7 @@ jobs:
           git status
           git commit -S -m "ci(github-actions): :construction_worker: update, format, lint, test" || true
           git pull --rebase
+          git push
           echo "::endgroup::"
 
       # - name: Github Release
