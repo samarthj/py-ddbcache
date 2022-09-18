@@ -381,7 +381,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "4.0.4.dev10"
+version = "4.0.4.dev12"
 requires_python = ">=3.6"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
@@ -496,6 +496,7 @@ summary = "Python style guide checker"
 [[package]]
 name = "pycparser"
 version = "2.21"
+requires_python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 summary = "C parser in Python"
 
 [[package]]
@@ -1161,9 +1162,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/27/1a/1f68f9ba0c207934b35b86a8ca3aad8395a3d6dd7921c0686e23853ff5a9/mccabe-0.7.0-py2.py3-none-any.whl", hash = "sha256:6c2d30ab6be0e4a46919781807b4f0d834ebdd6c6e3dca0bda5a15f863427b6e"},
     {url = "https://files.pythonhosted.org/packages/e7/ff/0ffefdcac38932a54d2b5eed4e0ba8a408f215002cd178ad1df0f2806ff8/mccabe-0.7.0.tar.gz", hash = "sha256:348e0240c33b60bbdf4e523192ef919f28cb2c3d7d5c7794f74009290f236325"},
 ]
-"moto 4.0.4.dev10" = [
-    {url = "https://files.pythonhosted.org/packages/2d/f4/669309a9efce7ef476a9134539c6f3519c7e580e2a377cce549d84c3855f/moto-4.0.4.dev10.tar.gz", hash = "sha256:6f78e809757621a2630ad977f30a7cecd57d2b697b5eeed3b9ab64bb08616b72"},
-    {url = "https://files.pythonhosted.org/packages/8a/8e/da64fabef4efff7be98695308d7a272f1213dca4619f54d2e3f491c12611/moto-4.0.4.dev10-py3-none-any.whl", hash = "sha256:6da52fc3161f1685adb517f3a96410926393d1b3d5dd7dcfbd9966c8582cbddb"},
+"moto 4.0.4.dev12" = [
+    {url = "https://files.pythonhosted.org/packages/60/09/aaf0802f8804a2934adb2ecdd5b17d45a12b3dd2056896b56b418e8b1154/moto-4.0.4.dev12.tar.gz", hash = "sha256:a4f498c69bf522f5f1f9f7dffd638112b26e8e50740492e99b44d6d7a1cf6f41"},
+    {url = "https://files.pythonhosted.org/packages/ee/85/6e97b4139d6fbc4d0a817a117ae9e4701124979551ff9c037210ae013614/moto-4.0.4.dev12-py3-none-any.whl", hash = "sha256:d5b8fc339671049ece1259de74275503cff4e36c1d8b4fc1a2b0feef97dc6a3c"},
 ]
 "mr-proper 0.0.7" = [
     {url = "https://files.pythonhosted.org/packages/e3/35/a50ba9e3097ee0d71232c996c626a17f80424140b365122c8f1bc9933118/mr_proper-0.0.7.tar.gz", hash = "sha256:03b517b19e617537f711ce418b125e5f2efd82ec881539cdee83195c78c14a02"},
