@@ -146,17 +146,17 @@ jobs:
         id: github_release
         if: ${{ steps.git.outcome == 'success' }}
         env:
-          GH_TOKEN: ${GITHUB_TOKEN}
+          GH_TOKEN: ${{ secrets.RELEASE_PAT }}
         run: semantic-release publish
 
-      - name: Publish distribution 📦 to Test PyPI
-        id: test_pypi
-        if: ${{ steps.github_release.outcome == 'success' }}
-        continue-on-error: true
-        run: pdm publish --no-build -r testpypi -u __token__ -P ${{ secrets.TEST_PYPI_TOKEN }}
+      # - name: Publish distribution 📦 to Test PyPI
+      #   id: test_pypi
+      #   if: ${{ steps.github_release.outcome == 'success' }}
+      #   continue-on-error: true
+      #   run: pdm publish --no-build -r testpypi -u __token__ -P ${{ secrets.TEST_PYPI_TOKEN }}
 
-      - name: Publish distribution 📦 to PyPI
-        id: pypi
-        if: ${{ steps.test_pypi.outcome == 'success' }}
-        continue-on-error: true
-        run: pdm publish --no-build -u __token__ -P ${{ secrets.PYPI_API_TOKEN }}
+      # - name: Publish distribution 📦 to PyPI
+      #   id: pypi
+      #   if: ${{ steps.test_pypi.outcome == 'success' }}
+      #   continue-on-error: true
+      #   run: pdm publish --no-build -u __token__ -P ${{ secrets.PYPI_API_TOKEN }}
