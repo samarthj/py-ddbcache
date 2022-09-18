@@ -103,7 +103,7 @@ use_parentheses                = true
 
 [tool.flake8]
 black-config              = 'pyproject.toml'
-extend-exclude            = ["__pypackages__"]
+extend-exclude            = [".vscode", ".venv", "__pypackages__"]
 extend-ignore             = "E203,E501,W503,C0330,C0326,S101,S603,E722"
 indent-size               = 4
 max-complexity            = 10
