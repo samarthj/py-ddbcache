@@ -105,7 +105,7 @@ jobs:
           # exit-zero treats all errors as warnings.
           pdm run lint --count --exit-zero --statistics || true
 
-      - uses: codecov/codecov-action@master
+      - uses: codecov/codecov-action@v3
         with:
           # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
           files: ./coverage.xml # optional
