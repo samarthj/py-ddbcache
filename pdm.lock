@@ -70,18 +70,18 @@ dependencies = [
 
 [[package]]
 name = "boto3"
-version = "1.26.20"
+version = "1.26.22"
 requires_python = ">= 3.7"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore<1.30.0,>=1.29.20",
+    "botocore<1.30.0,>=1.29.22",
     "jmespath<2.0.0,>=0.7.1",
     "s3transfer<0.7.0,>=0.6.0",
 ]
 
 [[package]]
 name = "botocore"
-version = "1.29.20"
+version = "1.29.22"
 requires_python = ">= 3.7"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -356,7 +356,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "4.0.12.dev2"
+version = "4.0.12.dev4"
 requires_python = ">=3.6"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
@@ -713,7 +713,7 @@ requires_python = ">=3.4"
 summary = "Makes working with XML feel like you are working with JSON"
 
 [metadata]
-lock_version = "4.0"
+lock_version = "4.1"
 content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda0d5eb13"
 
 [metadata.files]
@@ -768,13 +768,13 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/f2/23/f4278377cabf882298b4766e977fd04377f288d1ccef706953076a1e0598/black-22.10.0-1fixedarch-cp39-cp39-macosx_11_0_x86_64.whl", hash = "sha256:e41a86c6c650bcecc6633ee3180d80a025db041a8e2398dcc059b3afa8382cd4"},
     {url = "https://files.pythonhosted.org/packages/ff/ce/22281871536b3d79474fd44d48dad48f7cbc5c3982bddf6a7495e7079d00/black-22.10.0-cp310-cp310-win_amd64.whl", hash = "sha256:819dc789f4498ecc91438a7de64427c73b45035e2e3680c92e18795a839ebb66"},
 ]
-"boto3 1.26.20" = [
-    {url = "https://files.pythonhosted.org/packages/07/76/f06912e38fac6dded06e22cf200295a33fe3d452e10f9877dd65be3dd262/boto3-1.26.20.tar.gz", hash = "sha256:0d61243999adaddee22855ada1fdf7fe3d89cc95821e82f3b3a9dbe56c1589ba"},
-    {url = "https://files.pythonhosted.org/packages/f3/b9/b9f4423e932f291a2a5919ac68769e50c624f13e839b210de35189131f07/boto3-1.26.20-py3-none-any.whl", hash = "sha256:6b2e04ea415f375f607e6c633f7699e6a56bdc35c294116c5a6dc02da6aaa2ba"},
+"boto3 1.26.22" = [
+    {url = "https://files.pythonhosted.org/packages/bf/05/c256c7936520cc265f7561b5180920e986321916d341e7399fc5de5bea6b/boto3-1.26.22.tar.gz", hash = "sha256:f16c3aef1432c5083a9e1c36ac08b70b9072e87205e970f8d7520b10b964858f"},
+    {url = "https://files.pythonhosted.org/packages/e8/b5/0797650e5361963027d902d5976d46d36af79ded1ec7e4225152c602f44c/boto3-1.26.22-py3-none-any.whl", hash = "sha256:a4cf7fe649b0202f2f2307eb982ca215edcf9c87b6e65f5b3405f66c289603f2"},
 ]
-"botocore 1.29.20" = [
-    {url = "https://files.pythonhosted.org/packages/4a/2e/98977bb2ed68d0b8fb8fccadc5f7e7b30c3147f49d55465d2cdd1fc7a976/botocore-1.29.20.tar.gz", hash = "sha256:806dab6358b0b44d7b283f133aadd26846f31fab12c97d348a1849b3b5a36c74"},
-    {url = "https://files.pythonhosted.org/packages/57/1c/ed36cf8c0b938ffb28a6837486083bc7836544d6c65c93f55fc1246d30a7/botocore-1.29.20-py3-none-any.whl", hash = "sha256:7c26cb870d0cae26349df2926a7bf6277c1326db6d42c650807a519d50a83786"},
+"botocore 1.29.22" = [
+    {url = "https://files.pythonhosted.org/packages/2f/b0/9531a5e9aeb3defcc57fc400724c32d94ebdc7e7b7da0a25eae82c187ad7/botocore-1.29.22-py3-none-any.whl", hash = "sha256:d3029e81f0112a74e5c83c6eebcdcf8d221e996f062d5e2b715963976ae4895f"},
+    {url = "https://files.pythonhosted.org/packages/9f/4b/3fa75a66e5b21cf49793fd96b9fd5d91b5e1758258849bbd0800ef872f39/botocore-1.29.22.tar.gz", hash = "sha256:ce637e3537388200775d80c5a3170df4810ddf7afbd7883db5673279b2584f68"},
 ]
 "certifi 2022.6.15" = [
     {url = "https://files.pythonhosted.org/packages/cc/85/319a8a684e8ac6d87a1193090e06b6bbb302717496380e225ee10487c888/certifi-2022.6.15.tar.gz", hash = "sha256:84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d"},
@@ -1119,9 +1119,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/27/1a/1f68f9ba0c207934b35b86a8ca3aad8395a3d6dd7921c0686e23853ff5a9/mccabe-0.7.0-py2.py3-none-any.whl", hash = "sha256:6c2d30ab6be0e4a46919781807b4f0d834ebdd6c6e3dca0bda5a15f863427b6e"},
     {url = "https://files.pythonhosted.org/packages/e7/ff/0ffefdcac38932a54d2b5eed4e0ba8a408f215002cd178ad1df0f2806ff8/mccabe-0.7.0.tar.gz", hash = "sha256:348e0240c33b60bbdf4e523192ef919f28cb2c3d7d5c7794f74009290f236325"},
 ]
-"moto 4.0.12.dev2" = [
-    {url = "https://files.pythonhosted.org/packages/1d/0e/cfd1dcc5ea46f791af0b825ed6dc62b135760939ed8ed927665eaf2a4e9a/moto-4.0.12.dev2-py3-none-any.whl", hash = "sha256:bd278b4c78b19c971b78c8ef9b8ab7369880d624e0fc5744bf7cea7176b17227"},
-    {url = "https://files.pythonhosted.org/packages/85/66/2ed2b65cba2841b838ddf0a849904442a2d1987e488409902890320fc66e/moto-4.0.12.dev2.tar.gz", hash = "sha256:1076e0eb70fb981dc4ea9556b624dd2dcae139f4d17a9f78ebc67eebc2fbe313"},
+"moto 4.0.12.dev4" = [
+    {url = "https://files.pythonhosted.org/packages/97/e2/5667fe9a9f2d77051f6eb02b234e641d44f0e02767740b7b108eaf69c306/moto-4.0.12.dev4.tar.gz", hash = "sha256:5567b6e9b413efce180cbf1090f0ffee4aa80597e0f79393cff9a13db4ea6c57"},
+    {url = "https://files.pythonhosted.org/packages/e8/91/58cada9bfd7f341d83c84437a328673d946170deba3f3e3ea8dd4ce243d6/moto-4.0.12.dev4-py3-none-any.whl", hash = "sha256:393303aa5c8deb68315002aec4a74125bd58d00d75f61a53c4707cd410d41317"},
 ]
 "mr-proper 0.0.7" = [
     {url = "https://files.pythonhosted.org/packages/e3/35/a50ba9e3097ee0d71232c996c626a17f80424140b365122c8f1bc9933118/mr_proper-0.0.7.tar.gz", hash = "sha256:03b517b19e617537f711ce418b125e5f2efd82ec881539cdee83195c78c14a02"},
