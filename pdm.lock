@@ -356,7 +356,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "4.0.12.dev4"
+version = "4.0.12.dev6"
 requires_python = ">=3.6"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
@@ -1119,9 +1119,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/27/1a/1f68f9ba0c207934b35b86a8ca3aad8395a3d6dd7921c0686e23853ff5a9/mccabe-0.7.0-py2.py3-none-any.whl", hash = "sha256:6c2d30ab6be0e4a46919781807b4f0d834ebdd6c6e3dca0bda5a15f863427b6e"},
     {url = "https://files.pythonhosted.org/packages/e7/ff/0ffefdcac38932a54d2b5eed4e0ba8a408f215002cd178ad1df0f2806ff8/mccabe-0.7.0.tar.gz", hash = "sha256:348e0240c33b60bbdf4e523192ef919f28cb2c3d7d5c7794f74009290f236325"},
 ]
-"moto 4.0.12.dev4" = [
-    {url = "https://files.pythonhosted.org/packages/97/e2/5667fe9a9f2d77051f6eb02b234e641d44f0e02767740b7b108eaf69c306/moto-4.0.12.dev4.tar.gz", hash = "sha256:5567b6e9b413efce180cbf1090f0ffee4aa80597e0f79393cff9a13db4ea6c57"},
-    {url = "https://files.pythonhosted.org/packages/e8/91/58cada9bfd7f341d83c84437a328673d946170deba3f3e3ea8dd4ce243d6/moto-4.0.12.dev4-py3-none-any.whl", hash = "sha256:393303aa5c8deb68315002aec4a74125bd58d00d75f61a53c4707cd410d41317"},
+"moto 4.0.12.dev6" = [
+    {url = "https://files.pythonhosted.org/packages/67/ad/1d8f04878a6dc38e41302d8ad239ab4d0e1156fae54cf8887dc394094886/moto-4.0.12.dev6-py3-none-any.whl", hash = "sha256:a8cc58341055558c999fdc193e57f06da7da5bc1987078a0a14e56aa7e7069f7"},
+    {url = "https://files.pythonhosted.org/packages/6e/2c/884901c908454c48f4ad0f04e88c19bce65ecc03a4c0d1f5a287fca619b0/moto-4.0.12.dev6.tar.gz", hash = "sha256:97b5de3ad74afd14373996da463cc09a0498e397d432fffe92c4f434edd7ea13"},
 ]
 "mr-proper 0.0.7" = [
     {url = "https://files.pythonhosted.org/packages/e3/35/a50ba9e3097ee0d71232c996c626a17f80424140b365122c8f1bc9933118/mr_proper-0.0.7.tar.gz", hash = "sha256:03b517b19e617537f711ce418b125e5f2efd82ec881539cdee83195c78c14a02"},
