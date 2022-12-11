@@ -356,7 +356,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "4.0.12.dev17"
+version = "4.0.12.dev21"
 requires_python = ">=3.6"
 summary = "A library that allows your python tests to easily mock out the boto library"
 dependencies = [
@@ -366,7 +366,6 @@ dependencies = [
     "botocore>=1.12.201",
     "cryptography>=3.3.1",
     "python-dateutil<3.0.0,>=2.1",
-    "pytz",
     "requests>=2.5",
     "responses>=0.13.0",
     "werkzeug!=2.2.0,!=2.2.1,>=0.5",
@@ -568,11 +567,6 @@ dependencies = [
     "appdirs>=1.4.4",
     "pytoolconfig==1.2.2",
 ]
-
-[[package]]
-name = "pytz"
-version = "2022.1"
-summary = "World timezone definitions, modern and historical"
 
 [[package]]
 name = "pyyaml"
@@ -1110,9 +1104,8 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/27/1a/1f68f9ba0c207934b35b86a8ca3aad8395a3d6dd7921c0686e23853ff5a9/mccabe-0.7.0-py2.py3-none-any.whl", hash = "sha256:6c2d30ab6be0e4a46919781807b4f0d834ebdd6c6e3dca0bda5a15f863427b6e"},
     {url = "https://files.pythonhosted.org/packages/e7/ff/0ffefdcac38932a54d2b5eed4e0ba8a408f215002cd178ad1df0f2806ff8/mccabe-0.7.0.tar.gz", hash = "sha256:348e0240c33b60bbdf4e523192ef919f28cb2c3d7d5c7794f74009290f236325"},
 ]
-"moto 4.0.12.dev17" = [
-    {url = "https://files.pythonhosted.org/packages/9a/32/17d7ad04e0219fadc11359e050cf3adf00e3a63330f99e9a905eb7c24249/moto-4.0.12.dev17.tar.gz", hash = "sha256:e3155816996310826b979cc4bb19c98e0a1a2aec74f8424a0c538bb978739f27"},
-    {url = "https://files.pythonhosted.org/packages/c9/94/cd9dde02ee41902d7beffae1c6d0a0b07914b1fbdf2b9ebb028afb327e11/moto-4.0.12.dev17-py3-none-any.whl", hash = "sha256:d27d65250571cc912a8408cdcae7430e143accd45ebb634b52587dfe06bc791d"},
+"moto 4.0.12.dev21" = [
+    {url = "https://files.pythonhosted.org/packages/a1/4c/e71d4d502500752cf6b1d9cbbdb81ebbd64d3559eb069fd5a9aefdc30276/moto-4.0.12.dev21-py3-none-any.whl", hash = "sha256:165204cd0f0d10273ec8115f35e117b88c4e90c2d7cbccf2d87ce1a06f196e24"},
 ]
 "mr-proper 0.0.7" = [
     {url = "https://files.pythonhosted.org/packages/e3/35/a50ba9e3097ee0d71232c996c626a17f80424140b365122c8f1bc9933118/mr_proper-0.0.7.tar.gz", hash = "sha256:03b517b19e617537f711ce418b125e5f2efd82ec881539cdee83195c78c14a02"},
@@ -1225,10 +1218,6 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
 "pytoolconfig 1.2.2" = [
     {url = "https://files.pythonhosted.org/packages/26/15/e21a7c063c29c0b782be090df589b25fdc62ea3b5e5687a94a217851944e/pytoolconfig-1.2.2-py3-none-any.whl", hash = "sha256:825d97b052e58b609c2684b04efeb543075588d33a4916a6dc2ae39676458c7d"},
     {url = "https://files.pythonhosted.org/packages/9b/20/f6327067e79d7f36c89cb6b52b83befb6918672b3d8eb432d8793b08a967/pytoolconfig-1.2.2.tar.gz", hash = "sha256:2512a1f261a40e73cef2e58e786184261b60c802ae7ed01249342b1949ec3aa2"},
-]
-"pytz 2022.1" = [
-    {url = "https://files.pythonhosted.org/packages/2f/5f/a0f653311adff905bbcaa6d3dfaf97edcf4d26138393c6ccd37a484851fb/pytz-2022.1.tar.gz", hash = "sha256:1e760e2fe6a8163bc0b3d9a19c4f84342afa0a2affebfaa84b01b978a02ecaa7"},
-    {url = "https://files.pythonhosted.org/packages/60/2e/dec1cc18c51b8df33c7c4d0a321b084cf38e1733b98f9d15018880fb4970/pytz-2022.1-py2.py3-none-any.whl", hash = "sha256:e68985985296d9a66a881eb3193b0906246245294a881e7c8afe623866ac6a5c"},
 ]
 "pyyaml 6.0" = [
     {url = "https://files.pythonhosted.org/packages/02/25/6ba9f6bb50a3d4fbe22c1a02554dc670682a07c8701d1716d19ddea2c940/PyYAML-6.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl", hash = "sha256:f84fbc98b019fef2ee9a1cb3ce93e3187a6df0b2538a651bfb890254ba9f90b5"},
