@@ -116,7 +116,6 @@ class DDBCache:
         err_callbacks={"ClientError": (_client_error, {})},
     ).wrap
     def update_item(self, key_dict: dict[str, Any], data_dict: dict[str, Any]):
-
         data_formatted = {key: {"Value": value, "Action": "PUT"} for (key, value) in data_dict.items()}
         for k in key_dict.keys():
             del data_formatted[k]
