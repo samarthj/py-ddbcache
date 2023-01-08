@@ -357,12 +357,11 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "4.1.0.dev3"
+version = "4.1.0.dev6"
 requires_python = ">=3.7"
-summary = "A library that allows your python tests to easily mock out the boto library"
+summary = ""
 dependencies = [
     "Jinja2>=2.10.1",
-    "MarkupSafe!=2.0.0a1",
     "boto3>=1.9.201",
     "botocore>=1.12.201",
     "cryptography>=3.3.1",
@@ -1105,9 +1104,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/27/1a/1f68f9ba0c207934b35b86a8ca3aad8395a3d6dd7921c0686e23853ff5a9/mccabe-0.7.0-py2.py3-none-any.whl", hash = "sha256:6c2d30ab6be0e4a46919781807b4f0d834ebdd6c6e3dca0bda5a15f863427b6e"},
     {url = "https://files.pythonhosted.org/packages/e7/ff/0ffefdcac38932a54d2b5eed4e0ba8a408f215002cd178ad1df0f2806ff8/mccabe-0.7.0.tar.gz", hash = "sha256:348e0240c33b60bbdf4e523192ef919f28cb2c3d7d5c7794f74009290f236325"},
 ]
-"moto 4.1.0.dev3" = [
-    {url = "https://files.pythonhosted.org/packages/3a/dd/b9b245852658ac1a549bffc68bc87e817919711cf0a1f850a4eaff12d22d/moto-4.1.0.dev3.tar.gz", hash = "sha256:05b50ea6d9f5675f9c5a175fbac20f2c22e4242a9ddb206b984eaab8151e0fe3"},
-    {url = "https://files.pythonhosted.org/packages/de/9d/bd095c1b4eaf8d7b0c364fc03a39196ce8a56b58d898ea125ce2b84b1c58/moto-4.1.0.dev3-py3-none-any.whl", hash = "sha256:2437fff3e85d002bdd59ad5231abe15121825aeb5920aa2353c5d7e93d7c4d1d"},
+"moto 4.1.0.dev6" = [
+    {url = "https://files.pythonhosted.org/packages/00/db/7e278d13b1d1930c71e71df7c161c0e2e5f93ec74c3e0e0d9b2af1d4177f/moto-4.1.0.dev6.tar.gz", hash = "sha256:e6b8a8e7d18def61543eb415c66554f2279c41e07225f5cb6e02dcb63e134180"},
+    {url = "https://files.pythonhosted.org/packages/c0/43/851ee577b3dc43866b268fcaf4954790821d05643ab17d381db052525929/moto-4.1.0.dev6-py2.py3-none-any.whl", hash = "sha256:9d8d837fb0fb0bc30e8bd46b1e4b68e7f1e644bc178f244cc4e4f67827ebbe4d"},
 ]
 "mr-proper 0.0.7" = [
     {url = "https://files.pythonhosted.org/packages/e3/35/a50ba9e3097ee0d71232c996c626a17f80424140b365122c8f1bc9933118/mr_proper-0.0.7.tar.gz", hash = "sha256:03b517b19e617537f711ce418b125e5f2efd82ec881539cdee83195c78c14a02"},
