@@ -71,18 +71,18 @@ dependencies = [
 
 [[package]]
 name = "boto3"
-version = "1.26.46"
+version = "1.26.48"
 requires_python = ">= 3.7"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore<1.30.0,>=1.29.46",
+    "botocore<1.30.0,>=1.29.48",
     "jmespath<2.0.0,>=0.7.1",
     "s3transfer<0.7.0,>=0.6.0",
 ]
 
 [[package]]
 name = "botocore"
-version = "1.29.46"
+version = "1.29.48"
 requires_python = ">= 3.7"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -753,13 +753,13 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/c2/f2/60ef34243ef31f4a9b0161aaeec03c21997f4d8ad020d01da3cea3acd96a/black-23.1a1-cp39-cp39-win_amd64.whl", hash = "sha256:793c9176beb2adf295f6b863d9a4dc953fe2ac359ca3da108d71d14cb2c09e52"},
     {url = "https://files.pythonhosted.org/packages/fb/49/b82746d6ba5def2283b015eb77237246655692b6cc7f46de4a0d476f1663/black-23.1a1-cp38-cp38-win_amd64.whl", hash = "sha256:ddbf9da228726d46f45c29024263e160d41030a415097254817d65127012d1a2"},
 ]
-"boto3 1.26.46" = [
-    {url = "https://files.pythonhosted.org/packages/2f/eb/57fe689d9e47c98a06f34ddea4fcaa292b1230f8ded8f8c7bb59aff15f58/boto3-1.26.46-py3-none-any.whl", hash = "sha256:96055651f7be882175aa334ad46528e1ad79fb8ca33fa9c3998cc1d985b34eab"},
-    {url = "https://files.pythonhosted.org/packages/e5/c0/763f924ea24f55b8041232fd778305418518b82a10285af4e190d1c24450/boto3-1.26.46.tar.gz", hash = "sha256:e24d65c31780c208768ebcd152d8a0181591c9c8e7d971e23f318d7f41910ba1"},
+"boto3 1.26.48" = [
+    {url = "https://files.pythonhosted.org/packages/03/8f/c00eb7a30922b48716f738e1e55b505d578ef81f49f43b475bf8f6f8a8d6/boto3-1.26.48.tar.gz", hash = "sha256:8aa3fd453a815240b85c01190ed0d9924622a1a061c93423b1443379eadd3c43"},
+    {url = "https://files.pythonhosted.org/packages/e9/2f/c9385aaeb55a3ba3b3a52b0636c491e6ec92903b932b5258db7800807b57/boto3-1.26.48-py3-none-any.whl", hash = "sha256:a23fe87e9bafca736620dd9d7e5977eeaaa27c3abf5800f7d8b7b7d08b4ad736"},
 ]
-"botocore 1.29.46" = [
-    {url = "https://files.pythonhosted.org/packages/84/92/b57eba96fdfa0b4a80d9c5b0671f820d3b44b2f45cb8bbdd9a7554976ca8/botocore-1.29.46-py3-none-any.whl", hash = "sha256:dbac2fde265f13beb9191ec3ff63b90b515e9ed63875edc3afbd72c5f585e48b"},
-    {url = "https://files.pythonhosted.org/packages/bb/96/298f61ff79e6608596a5c74fd9641faba36dd8f6cc2519d4e74603262e67/botocore-1.29.46.tar.gz", hash = "sha256:78bf25933e35eb6354a9e80fe156f86dce4d346a92afe364dfce25c17ab0639f"},
+"botocore 1.29.48" = [
+    {url = "https://files.pythonhosted.org/packages/73/e9/31224958d7702f27e9a01306ab9a90393d6beeac263a0e665c930f4fec42/botocore-1.29.48.tar.gz", hash = "sha256:c5f57c1f694e67c29c870426c0a7ebffce90099e794025e3d283db7f1ad7a65b"},
+    {url = "https://files.pythonhosted.org/packages/b7/18/d282cd78f9e3f84ccc2d78e8596202110971a0b03bd935afca32e8acface/botocore-1.29.48-py3-none-any.whl", hash = "sha256:17eeb963b3ae4a3ea4a972bdf78c9925c3efd9e2232875bfc19043640d3dac14"},
 ]
 "certifi 2022.6.15" = [
     {url = "https://files.pythonhosted.org/packages/cc/85/319a8a684e8ac6d87a1193090e06b6bbb302717496380e225ee10487c888/certifi-2022.6.15.tar.gz", hash = "sha256:84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d"},
