@@ -360,7 +360,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "4.1.1.dev11"
+version = "4.1.1.dev16"
 requires_python = ">=3.7"
 summary = ""
 dependencies = [
@@ -518,7 +518,7 @@ dependencies = [
 
 [[package]]
 name = "pytest"
-version = "7.2.0"
+version = "7.2.1"
 requires_python = ">=3.7"
 summary = "pytest: simple powerful testing with Python"
 dependencies = [
@@ -1107,9 +1107,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/27/1a/1f68f9ba0c207934b35b86a8ca3aad8395a3d6dd7921c0686e23853ff5a9/mccabe-0.7.0-py2.py3-none-any.whl", hash = "sha256:6c2d30ab6be0e4a46919781807b4f0d834ebdd6c6e3dca0bda5a15f863427b6e"},
     {url = "https://files.pythonhosted.org/packages/e7/ff/0ffefdcac38932a54d2b5eed4e0ba8a408f215002cd178ad1df0f2806ff8/mccabe-0.7.0.tar.gz", hash = "sha256:348e0240c33b60bbdf4e523192ef919f28cb2c3d7d5c7794f74009290f236325"},
 ]
-"moto 4.1.1.dev11" = [
-    {url = "https://files.pythonhosted.org/packages/52/b6/052b82215683b83b3ede72cfe9482b72a8e973523e91f56b692fa84d62c6/moto-4.1.1.dev11-py2.py3-none-any.whl", hash = "sha256:6189e44b89d2f06515b5982807732d9db4dbfc15fc574ac3605db5166d595636"},
-    {url = "https://files.pythonhosted.org/packages/b6/4f/5ec68da3476813bdae4515161d6b13c1bb0f2bd95bec0a0fe43abbcb3f01/moto-4.1.1.dev11.tar.gz", hash = "sha256:8c8fc3d9b677940df3227def463603ea6e887a332c08eecaecc9b8f5911deb14"},
+"moto 4.1.1.dev16" = [
+    {url = "https://files.pythonhosted.org/packages/0b/5d/3dfba46455ee15dd1df6b647ee9fd19731c8536494bd2aebec69cf1c10fe/moto-4.1.1.dev16-py2.py3-none-any.whl", hash = "sha256:d7493d77e776687858f22cc4976992cacb81d9b5f9b3a4c0a5729972452801bb"},
+    {url = "https://files.pythonhosted.org/packages/e2/f0/94fdfe62d80eb6fc725e6971ea1102e20d24033609186af45a7b6ab6a368/moto-4.1.1.dev16.tar.gz", hash = "sha256:1b18bcd039095e0cf268fb1c16c4b51c6c984e89a97a4b6433ac20472ee5c38f"},
 ]
 "mr-proper 0.0.7" = [
     {url = "https://files.pythonhosted.org/packages/e3/35/a50ba9e3097ee0d71232c996c626a17f80424140b365122c8f1bc9933118/mr_proper-0.0.7.tar.gz", hash = "sha256:03b517b19e617537f711ce418b125e5f2efd82ec881539cdee83195c78c14a02"},
@@ -1207,9 +1207,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/2a/79/6573e26a8fa610c8859332af55bb40d0aad9da1079046996b0e34a1ad40f/pyproject-flake8-6.0.0.post1.tar.gz", hash = "sha256:d43421caca0ef8a672874405fe63c722b0333e3c22c41648c6df60f21bab2b6b"},
     {url = "https://files.pythonhosted.org/packages/4d/9c/8fb3ccebcb9be09b0b2e205f15a3a1051ef8c3a7f536fd3a256c45554221/pyproject_flake8-6.0.0.post1-py3-none-any.whl", hash = "sha256:bdc7ca9b967b9724983903489b8943b72c668178fb69f03e8774ec74f6a13782"},
 ]
-"pytest 7.2.0" = [
-    {url = "https://files.pythonhosted.org/packages/0b/21/055f39bf8861580b43f845f9e8270c7786fe629b2f8562ff09007132e2e7/pytest-7.2.0.tar.gz", hash = "sha256:c4014eb40e10f11f355ad4e3c2fb2c6c6d1919c73f3b5a433de4708202cade59"},
-    {url = "https://files.pythonhosted.org/packages/67/68/a5eb36c3a8540594b6035e6cdae40c1ef1b6a2bfacbecc3d1a544583c078/pytest-7.2.0-py3-none-any.whl", hash = "sha256:892f933d339f068883b6fd5a459f03d85bfcb355e4981e146d2c7616c21fef71"},
+"pytest 7.2.1" = [
+    {url = "https://files.pythonhosted.org/packages/cc/02/8f59bf194c9a1ceac6330850715e9ec11e21e2408a30a596c65d54cf4d2a/pytest-7.2.1-py3-none-any.whl", hash = "sha256:c7c6ca206e93355074ae32f7403e8ea12163b1163c976fee7d4d84027c162be5"},
+    {url = "https://files.pythonhosted.org/packages/e5/6c/f3a15217ac72912c28c5d7a7a8e87ff6d6475c9530595ae9f0f8dedd8dd8/pytest-7.2.1.tar.gz", hash = "sha256:d45e0952f3727241918b8fd0f376f5ff6b301cc0777c6f9a556935c92d8a7d42"},
 ]
 "pytest-cov 4.0.0" = [
     {url = "https://files.pythonhosted.org/packages/ea/70/da97fd5f6270c7d2ce07559a19e5bf36a76f0af21500256f005a69d9beba/pytest-cov-4.0.0.tar.gz", hash = "sha256:996b79efde6433cdbd0088872dbc5fb3ed7fe1578b68cdbba634f14bb8dd0470"},
