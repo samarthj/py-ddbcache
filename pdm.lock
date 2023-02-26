@@ -361,7 +361,7 @@ summary = "McCabe checker, plugin for flake8"
 
 [[package]]
 name = "moto"
-version = "4.1.4.dev13"
+version = "4.1.4.dev21"
 requires_python = ">=3.7"
 summary = ""
 dependencies = [
@@ -1112,9 +1112,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/27/1a/1f68f9ba0c207934b35b86a8ca3aad8395a3d6dd7921c0686e23853ff5a9/mccabe-0.7.0-py2.py3-none-any.whl", hash = "sha256:6c2d30ab6be0e4a46919781807b4f0d834ebdd6c6e3dca0bda5a15f863427b6e"},
     {url = "https://files.pythonhosted.org/packages/e7/ff/0ffefdcac38932a54d2b5eed4e0ba8a408f215002cd178ad1df0f2806ff8/mccabe-0.7.0.tar.gz", hash = "sha256:348e0240c33b60bbdf4e523192ef919f28cb2c3d7d5c7794f74009290f236325"},
 ]
-"moto 4.1.4.dev13" = [
-    {url = "https://files.pythonhosted.org/packages/66/89/527833e6770cda21464e0833e8308bda68df781ca1e5776ff93367d168d4/moto-4.1.4.dev13.tar.gz", hash = "sha256:65f54065c4f82258eec00e1d65c1df1f869b9a229901e6fb432d52e4a1db840a"},
-    {url = "https://files.pythonhosted.org/packages/eb/90/ea07f7be24fa8d6ed4c71d9af9bcbc9505cd63a82d8cbd0769ae84b25a91/moto-4.1.4.dev13-py2.py3-none-any.whl", hash = "sha256:125c356812be1d94a33239eaa0e7775178518c6fdfea0b78913679350ee3d0e1"},
+"moto 4.1.4.dev21" = [
+    {url = "https://files.pythonhosted.org/packages/93/5e/9e8aaf4e214414075f555515ed5414b2e2cd5c8603dfba6dccc41750969b/moto-4.1.4.dev21.tar.gz", hash = "sha256:be00d043050b085679f9e3e65b8a8859a64ee9e0c28e522b294d2949ba606501"},
+    {url = "https://files.pythonhosted.org/packages/e8/95/ead48312ebc577888d95179153d8606b4e45a0369440e90055f20d8121b7/moto-4.1.4.dev21-py2.py3-none-any.whl", hash = "sha256:68b7bd64931a9b02a104c8323e8d5d6c7d84bdb0117edaecf54005b6d213fcf1"},
 ]
 "mr-proper 0.0.7" = [
     {url = "https://files.pythonhosted.org/packages/e3/35/a50ba9e3097ee0d71232c996c626a17f80424140b365122c8f1bc9933118/mr_proper-0.0.7.tar.gz", hash = "sha256:03b517b19e617537f711ce418b125e5f2efd82ec881539cdee83195c78c14a02"},
