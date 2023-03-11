@@ -48,13 +48,14 @@ dependencies = [
 
 [[package]]
 name = "bandit"
-version = "1.7.4"
+version = "1.7.5"
 requires_python = ">=3.7"
 summary = "Security oriented static analyser for python code."
 dependencies = [
     "GitPython>=1.0.1",
     "PyYAML>=5.3.1",
     "colorama>=0.3.9; platform_system == \"Windows\"",
+    "rich",
     "stevedore>=1.20.0",
 ]
 
@@ -75,18 +76,18 @@ dependencies = [
 
 [[package]]
 name = "boto3"
-version = "1.26.87"
+version = "1.26.89"
 requires_python = ">= 3.7"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore<1.30.0,>=1.29.87",
+    "botocore<1.30.0,>=1.29.89",
     "jmespath<2.0.0,>=0.7.1",
     "s3transfer<0.7.0,>=0.6.0",
 ]
 
 [[package]]
 name = "botocore"
-version = "1.29.87"
+version = "1.29.89"
 requires_python = ">= 3.7"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -348,6 +349,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "markdown-it-py"
+version = "2.2.0"
+requires_python = ">=3.7"
+summary = "Python port of markdown-it. Markdown parsing, done right!"
+dependencies = [
+    "mdurl~=0.1",
+]
+
+[[package]]
 name = "markupsafe"
 version = "2.1.1"
 requires_python = ">=3.7"
@@ -360,8 +370,14 @@ requires_python = ">=3.6"
 summary = "McCabe checker, plugin for flake8"
 
 [[package]]
+name = "mdurl"
+version = "0.1.2"
+requires_python = ">=3.7"
+summary = "Markdown URL utilities"
+
+[[package]]
 name = "moto"
-version = "4.1.5.dev8"
+version = "4.1.5.dev13"
 requires_python = ">=3.7"
 summary = ""
 dependencies = [
@@ -472,6 +488,12 @@ name = "pyflakes"
 version = "3.0.1"
 requires_python = ">=3.6"
 summary = "passive checker of Python programs"
+
+[[package]]
+name = "pygments"
+version = "2.14.0"
+requires_python = ">=3.6"
+summary = "Pygments is a syntax highlighting package written in Python."
 
 [[package]]
 name = "pylib-helpers"
@@ -590,6 +612,16 @@ summary = "A utility library for mocking out the `requests` Python library."
 dependencies = [
     "requests<3.0,>=2.0",
     "urllib3>=1.25.10",
+]
+
+[[package]]
+name = "rich"
+version = "13.3.2"
+requires_python = ">=3.7.0"
+summary = "Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal"
+dependencies = [
+    "markdown-it-py<3.0.0,>=2.2.0",
+    "pygments<3.0.0,>=2.13.0",
 ]
 
 [[package]]
@@ -731,9 +763,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/3c/24/4eadb64c81c10b354b0c2b6a54a3542c3ce112954cc4effff038beafb009/autopep8-2.0.2-py2.py3-none-any.whl", hash = "sha256:86e9303b5e5c8160872b2f5ef611161b2893e9bfe8ccc7e2f76385947d57a2f1"},
     {url = "https://files.pythonhosted.org/packages/b2/03/49cb49b37a4d51721ece9c628eb9441f9a4e26ee98ad6e5505238d5b2d7a/autopep8-2.0.2.tar.gz", hash = "sha256:f9849cdd62108cb739dbcdbfb7fdcc9a30d1b63c4cc3e1c1f893b5360941b61c"},
 ]
-"bandit 1.7.4" = [
-    {url = "https://files.pythonhosted.org/packages/39/36/a37a2f6f8d0ed8c3bc616616ed5019e1df2680bd8b7df49ceae80fd457de/bandit-1.7.4.tar.gz", hash = "sha256:2d63a8c573417bae338962d4b9b06fbc6080f74ecd955a092849e1e65c717bd2"},
-    {url = "https://files.pythonhosted.org/packages/da/eb/ff828f4ec32c85e10d9c344e6b7f11bcacfb5d70f2fd16bea6fc1ae6df06/bandit-1.7.4-py3-none-any.whl", hash = "sha256:412d3f259dab4077d0e7f0c11f50f650cc7d10db905d98f6520a95a18049658a"},
+"bandit 1.7.5" = [
+    {url = "https://files.pythonhosted.org/packages/02/37/e06b8f1e2d45a2fe43ec80c4591d963b7bc1f351e6e1b8c094350d03b973/bandit-1.7.5-py3-none-any.whl", hash = "sha256:75665181dc1e0096369112541a056c59d1c5f66f9bb74a8d686c3c362b83f549"},
+    {url = "https://files.pythonhosted.org/packages/5e/67/997278e785edf155bd57163ae7030f979a0907857365cb30815d93b5354b/bandit-1.7.5.tar.gz", hash = "sha256:bdfc739baa03b880c2d15d0431b31c658ffc348e907fe197e54e0389dd59e11e"},
 ]
 "black 23.1.0" = [
     {url = "https://files.pythonhosted.org/packages/01/8a/065d0a59c1ebe13186b12a2fa3965a41fc1588828709995e2630004d216e/black-23.1.0-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8178318cb74f98bc571eef19068f6ab5613b3e59d4f47771582f04e175570ed8"},
@@ -762,13 +794,13 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/e6/0a/9a5fca4a2ca07d4dbc3b00445c9353f05ea182b000f68c9ad6ba1da87a47/black-23.1.0-cp38-cp38-macosx_10_16_universal2.whl", hash = "sha256:0052dba51dec07ed029ed61b18183942043e00008ec65d5028814afaab9a22fd"},
     {url = "https://files.pythonhosted.org/packages/f1/89/ccc28cb74a66c094b609295b009b5e0350c10b75661d2450eeed2f60ce37/black-23.1.0-cp311-cp311-macosx_10_16_x86_64.whl", hash = "sha256:382998821f58e5c8238d3166c492139573325287820963d2f7de4d518bd76958"},
 ]
-"boto3 1.26.87" = [
-    {url = "https://files.pythonhosted.org/packages/7e/60/8778d71c827e14965a141e1b605d67da9e9b9924ec837bdff4e60d4c54f7/boto3-1.26.87.tar.gz", hash = "sha256:b0f7e801d6d5cb96ed89e1d39326bb072b5d9175bb6c986850c77b640474d297"},
-    {url = "https://files.pythonhosted.org/packages/81/d8/6f30c492400e6ba37446f7c92be965e3daab3072749779d228909c07cfaa/boto3-1.26.87-py3-none-any.whl", hash = "sha256:7cf46d6aa67487ae5dc43a7bd10e1ebe9b8c442c7f32f7fea259cd3df6eeb52d"},
+"boto3 1.26.89" = [
+    {url = "https://files.pythonhosted.org/packages/b5/aa/b4b3dc6e6572976308729d6e99cb73c4326b5fbb78cc55514a0721d0a1dc/boto3-1.26.89.tar.gz", hash = "sha256:e819812f16fab46fadf9b2853a46aaa126e108e7f038502dde555ebbbfc80133"},
+    {url = "https://files.pythonhosted.org/packages/db/5e/6f40e00267b854e181311e00de4f21cb1bcc1b3402112d48d3e9b3b5ae2b/boto3-1.26.89-py3-none-any.whl", hash = "sha256:09929b24aaec4951e435d53d31f800e2ca52244af049dc11e5385ce062e106e9"},
 ]
-"botocore 1.29.87" = [
-    {url = "https://files.pythonhosted.org/packages/90/e8/19b4b72b31265cefd4fe2498b91ce7556171f0e4b2a2cb640ca9be576554/botocore-1.29.87.tar.gz", hash = "sha256:2b981c3ebb347bdf2a8c3c0ce7e7712c76bfe43ae87d30776a3ab469e305f469"},
-    {url = "https://files.pythonhosted.org/packages/91/19/49be9aff84e0031b07d9c70fb568da5bc30fd3fa62ae57385f93fccb7dde/botocore-1.29.87-py3-none-any.whl", hash = "sha256:f4066e1ce1fd8790e872c70deede5d7abd94c87dcdb12892b4359245fed927f9"},
+"botocore 1.29.89" = [
+    {url = "https://files.pythonhosted.org/packages/2a/cf/4aa2f7a9c9b8b20ebc24578acfd3684f4aecf4f9cddbe1a716125fb88d11/botocore-1.29.89-py3-none-any.whl", hash = "sha256:b757e59feca82ac62934f658918133116b4535cf66f1d72ff4935fa24e522527"},
+    {url = "https://files.pythonhosted.org/packages/3b/50/6e2a2e639f0de8bdb57315f02e49c8f600a17bd225bfd4618bbea94b5e6e/botocore-1.29.89.tar.gz", hash = "sha256:ac8da651f73a9d5759cf5d80beba68deda407e56aaaeb10d249fd557459f3b56"},
 ]
 "certifi 2022.6.15" = [
     {url = "https://files.pythonhosted.org/packages/cc/85/319a8a684e8ac6d87a1193090e06b6bbb302717496380e225ee10487c888/certifi-2022.6.15.tar.gz", hash = "sha256:84c85a9078b11105f04f3036a9482ae10e4621616db313fe045dd24743a0820d"},
@@ -1067,6 +1099,10 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/f4/14/b3d31bae1f09d6a32ee6f265f5c8c51c529f2fcaf86d930d6f2870ba969c/libcst-0.4.7-cp310-cp310-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:71b2e2c5e33e53669c20de0853cecfac1ffb8657ee727ab8527140f39049b820"},
     {url = "https://files.pythonhosted.org/packages/f5/c6/5cbf023dbf1efe8a49cb50075f599f6fc73906253053dbfea5b79dcba86e/libcst-0.4.7-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:234293aa8681a3d47fef1716c5622797a81cbe85a9381fe023815468cfe20eed"},
 ]
+"markdown-it-py 2.2.0" = [
+    {url = "https://files.pythonhosted.org/packages/bf/25/2d88e8feee8e055d015343f9b86e370a1ccbec546f2865c98397aaef24af/markdown_it_py-2.2.0-py3-none-any.whl", hash = "sha256:5a35f8d1870171d9acc47b99612dc146129b631baf04970128b568f190d0cc30"},
+    {url = "https://files.pythonhosted.org/packages/e4/c0/59bd6d0571986f72899288a95d9d6178d0eebd70b6650f1bb3f0da90f8f7/markdown-it-py-2.2.0.tar.gz", hash = "sha256:7c9a5e412688bc771c67432cbfebcdd686c93ce6484913dccf06cb5a0bea35a1"},
+]
 "markupsafe 2.1.1" = [
     {url = "https://files.pythonhosted.org/packages/06/7f/d5e46d7464360b6ac39c5b0b604770dba937e3d7cab485d2f3298454717b/MarkupSafe-2.1.1-cp39-cp39-macosx_10_9_universal2.whl", hash = "sha256:e04e26803c9c3851c931eac40c695602c6295b8d432cbe78609649ad9bd2da8a"},
     {url = "https://files.pythonhosted.org/packages/0f/53/b14de4ede9c2bd76d28e7911033b065ac42896f1cfb258d3ff65cf0332d2/MarkupSafe-2.1.1-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:8e3dcf21f367459434c18e71b2a9532d96547aef8a871872a5bd69a715c15f96"},
@@ -1113,9 +1149,13 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/27/1a/1f68f9ba0c207934b35b86a8ca3aad8395a3d6dd7921c0686e23853ff5a9/mccabe-0.7.0-py2.py3-none-any.whl", hash = "sha256:6c2d30ab6be0e4a46919781807b4f0d834ebdd6c6e3dca0bda5a15f863427b6e"},
     {url = "https://files.pythonhosted.org/packages/e7/ff/0ffefdcac38932a54d2b5eed4e0ba8a408f215002cd178ad1df0f2806ff8/mccabe-0.7.0.tar.gz", hash = "sha256:348e0240c33b60bbdf4e523192ef919f28cb2c3d7d5c7794f74009290f236325"},
 ]
-"moto 4.1.5.dev8" = [
-    {url = "https://files.pythonhosted.org/packages/67/01/6b6f335ae6e08ef157f86949286124002c0d7bbc726e78a6a31858f4d3b5/moto-4.1.5.dev8.tar.gz", hash = "sha256:9333c295019c594ca15c7c67ad58af0a56e00f0829917641b659de9641f87c1f"},
-    {url = "https://files.pythonhosted.org/packages/c9/37/cd5b4927b47e00867ae3d37fcbc9c636e4bb0b83055124be09d745c3db00/moto-4.1.5.dev8-py2.py3-none-any.whl", hash = "sha256:2a9f7470d5d1e96328dd9ef8b7fae4fbba1b7fbca38b5ac33f75ed35e7405c82"},
+"mdurl 0.1.2" = [
+    {url = "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8"},
+    {url = "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz", hash = "sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"},
+]
+"moto 4.1.5.dev13" = [
+    {url = "https://files.pythonhosted.org/packages/21/de/68b763d1f14e4b0190da23650a33a73026d7bbc52301ffb9444ff04fab55/moto-4.1.5.dev13-py2.py3-none-any.whl", hash = "sha256:c34e9c89767bb816718fccdf24c86f834432b3d75ee7c425e4a9519b20aafb59"},
+    {url = "https://files.pythonhosted.org/packages/aa/b5/7c3c4ffa3316c88e737939c0a9d557c404360aaab320fc0672e1961e3851/moto-4.1.5.dev13.tar.gz", hash = "sha256:1e4cb2346d3a982e4a28964c3a2db7938081514d32e3fbc98247a23a6c6dff0b"},
 ]
 "mr-proper 0.0.7" = [
     {url = "https://files.pythonhosted.org/packages/e3/35/a50ba9e3097ee0d71232c996c626a17f80424140b365122c8f1bc9933118/mr_proper-0.0.7.tar.gz", hash = "sha256:03b517b19e617537f711ce418b125e5f2efd82ec881539cdee83195c78c14a02"},
@@ -1192,6 +1232,10 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
 "pyflakes 3.0.1" = [
     {url = "https://files.pythonhosted.org/packages/af/4c/b1c7008aa7788b3e26c06c60aa18da7d3aa1f00e344aa3f18ac92768854b/pyflakes-3.0.1-py2.py3-none-any.whl", hash = "sha256:ec55bf7fe21fff7f1ad2f7da62363d749e2a470500eab1b555334b67aa1ef8cf"},
     {url = "https://files.pythonhosted.org/packages/f2/51/506ddcfab10d708e8460554cc1cf37c727a6a2cccbad8dfe57766cfce33c/pyflakes-3.0.1.tar.gz", hash = "sha256:ec8b276a6b60bd80defed25add7e439881c19e64850afd9b346283d4165fd0fd"},
+]
+"pygments 2.14.0" = [
+    {url = "https://files.pythonhosted.org/packages/0b/42/d9d95cc461f098f204cd20c85642ae40fbff81f74c300341b8d0e0df14e0/Pygments-2.14.0-py3-none-any.whl", hash = "sha256:fa7bd7bd2771287c0de303af8bfdfc731f51bd2c6a47ab69d117138893b82717"},
+    {url = "https://files.pythonhosted.org/packages/da/6a/c427c06913204e24de28de5300d3f0e809933f376e0b7df95194b2bb3f71/Pygments-2.14.0.tar.gz", hash = "sha256:b3ed06a9e8ac9a9aae5a6f5dbe78a8a58655d17b43b93c078f094ddc476ae297"},
 ]
 "pylib-helpers 0.3.126" = [
     {url = "https://files.pythonhosted.org/packages/ba/62/fa68150a4ae2e28bf6799cb865eb2aee96c79bee2c189c5d8002d95021c4/pylib_helpers-0.3.126-py3-none-any.whl", hash = "sha256:3e635905ef75c83ed473f6a08940efd2a87ad5de9303c9387e71805d124b7106"},
@@ -1270,6 +1314,10 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
 "responses 0.21.0" = [
     {url = "https://files.pythonhosted.org/packages/6d/db/b949a6bf2a75c64caea0a6b39d05e433aa2e51bea78ae9d5dda1110b31a5/responses-0.21.0.tar.gz", hash = "sha256:b82502eb5f09a0289d8e209e7bad71ef3978334f56d09b444253d5ad67bf5253"},
     {url = "https://files.pythonhosted.org/packages/bb/ad/fdd56219f0e320293c513ef0b3cdd018802a1bcfdb29ed9bc0c3bcb97f31/responses-0.21.0-py3-none-any.whl", hash = "sha256:2dcc863ba63963c0c3d9ee3fa9507cbe36b7d7b0fccb4f0bdfd9e96c539b1487"},
+]
+"rich 13.3.2" = [
+    {url = "https://files.pythonhosted.org/packages/5e/0e/ef0a49be56dbc4052a086888cd2490e15fcc95b0eda79e9d0e737b1ab93d/rich-13.3.2.tar.gz", hash = "sha256:91954fe80cfb7985727a467ca98a7618e5dd15178cc2da10f553b36a93859001"},
+    {url = "https://files.pythonhosted.org/packages/6b/f0/79df8eaa345ece1d33d8dfeec46ea166028da37b314dc44ead18c058a126/rich-13.3.2-py3-none-any.whl", hash = "sha256:a104f37270bf677148d8acb07d33be1569eeee87e2d1beb286a4e9113caf6f2f"},
 ]
 "rope 1.7.0" = [
     {url = "https://files.pythonhosted.org/packages/90/75/06c55cdb16309cc829a6dd36d2bce4ea3757e4665a01bd5977808e0864dd/rope-1.7.0.tar.gz", hash = "sha256:ba39581d0f8dee4ae8b5b5e82e35d03cebad965ccb127b7eaab9755cdc85e85a"},
