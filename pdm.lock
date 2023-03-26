@@ -377,7 +377,7 @@ summary = "Markdown URL utilities"
 
 [[package]]
 name = "moto"
-version = "4.1.6.dev29"
+version = "4.1.6.dev30"
 requires_python = ">=3.7"
 summary = ""
 dependencies = [
@@ -1153,9 +1153,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8"},
     {url = "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz", hash = "sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"},
 ]
-"moto 4.1.6.dev29" = [
-    {url = "https://files.pythonhosted.org/packages/8d/40/8ccd03504b32fdd912e231bce1bf30b1a4e0698bcbcb39cdabf3f20195bd/moto-4.1.6.dev29.tar.gz", hash = "sha256:6affdc4464bd26ff6d8f1585fd2cb941e11ae7007846468221b466b35af194e6"},
-    {url = "https://files.pythonhosted.org/packages/e4/01/91a4a9dcc157390ae11a0bbfe6d3325d62734f5d64f554a8a921daf26ed6/moto-4.1.6.dev29-py2.py3-none-any.whl", hash = "sha256:ec4be0512b058470e719459b61c798a763f643fa90c2a7dbb78bb64c7ff94530"},
+"moto 4.1.6.dev30" = [
+    {url = "https://files.pythonhosted.org/packages/79/7d/4fc5cc98cc13b61cceee18f04d6c7987c97ee02f2199f468d089855040cf/moto-4.1.6.dev30.tar.gz", hash = "sha256:6f3ee4c38599268828b77f3ce6044677854b6f0159de1a2697184f821d9151a2"},
+    {url = "https://files.pythonhosted.org/packages/b6/d5/b82975477134fdb683b61622c2d1102ebeb06e71ee1d8372bc21e1b7d500/moto-4.1.6.dev30-py2.py3-none-any.whl", hash = "sha256:bf0ab72d146990bd8c465f732bcc32740c66e86aaf10bc2da1e21583d6a43537"},
 ]
 "mr-proper 0.0.7" = [
     {url = "https://files.pythonhosted.org/packages/e3/35/a50ba9e3097ee0d71232c996c626a17f80424140b365122c8f1bc9933118/mr_proper-0.0.7.tar.gz", hash = "sha256:03b517b19e617537f711ce418b125e5f2efd82ec881539cdee83195c78c14a02"},
