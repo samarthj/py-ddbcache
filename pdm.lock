@@ -31,12 +31,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "attrs"
-version = "21.4.0"
-requires_python = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-summary = "Classes Without Boilerplate"
-
-[[package]]
 name = "autopep8"
 version = "2.0.2"
 requires_python = ">=3.6"
@@ -377,7 +371,7 @@ summary = "Markdown URL utilities"
 
 [[package]]
 name = "moto"
-version = "4.1.7.dev37"
+version = "4.1.7.dev40"
 requires_python = ">=3.7"
 summary = ""
 dependencies = [
@@ -534,11 +528,10 @@ dependencies = [
 
 [[package]]
 name = "pytest"
-version = "7.2.2"
+version = "7.3.0"
 requires_python = ">=3.7"
 summary = "pytest: simple powerful testing with Python"
 dependencies = [
-    "attrs>=19.2.0",
     "colorama; sys_platform == \"win32\"",
     "exceptiongroup>=1.0.0rc8; python_version < \"3.11\"",
     "iniconfig",
@@ -755,10 +748,6 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
 "astroid 2.15.1" = [
     {url = "https://files.pythonhosted.org/packages/41/f3/59c0681702d99348a8f8aa33166fe00957f3999b1042f49a67f08d0c0dc7/astroid-2.15.1-py3-none-any.whl", hash = "sha256:89860bda98fe2bbd1f5d262229be7629d778ce280de68d95d4a73d1f592ad268"},
     {url = "https://files.pythonhosted.org/packages/94/02/aa9c9ca14e8e6aad685953726ce273da130ca82835a63404ddefd710dd3a/astroid-2.15.1.tar.gz", hash = "sha256:af4e0aff46e2868218502789898269ed95b663fba49e65d91c1e09c966266c34"},
-]
-"attrs 21.4.0" = [
-    {url = "https://files.pythonhosted.org/packages/be/be/7abce643bfdf8ca01c48afa2ddf8308c2308b0c3b239a44e57d020afa0ef/attrs-21.4.0-py2.py3-none-any.whl", hash = "sha256:2d27e3784d7a565d36ab851fe94887c5eccd6a463168875832a1be79c82828b4"},
-    {url = "https://files.pythonhosted.org/packages/d7/77/ebb15fc26d0f815839ecd897b919ed6d85c050feeb83e100e020df9153d2/attrs-21.4.0.tar.gz", hash = "sha256:626ba8234211db98e869df76230a137c4c40a12d72445c45d5f5b716f076e2fd"},
 ]
 "autopep8 2.0.2" = [
     {url = "https://files.pythonhosted.org/packages/3c/24/4eadb64c81c10b354b0c2b6a54a3542c3ce112954cc4effff038beafb009/autopep8-2.0.2-py2.py3-none-any.whl", hash = "sha256:86e9303b5e5c8160872b2f5ef611161b2893e9bfe8ccc7e2f76385947d57a2f1"},
@@ -1154,9 +1143,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl", hash = "sha256:84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8"},
     {url = "https://files.pythonhosted.org/packages/d6/54/cfe61301667036ec958cb99bd3efefba235e65cdeb9c84d24a8293ba1d90/mdurl-0.1.2.tar.gz", hash = "sha256:bb413d29f5eea38f31dd4754dd7377d4465116fb207585f97bf925588687c1ba"},
 ]
-"moto 4.1.7.dev37" = [
-    {url = "https://files.pythonhosted.org/packages/6d/58/df90a153cde9249e5a7d1e19ae009dcc3c5f3320a7a81ad9440b39789a17/moto-4.1.7.dev37-py2.py3-none-any.whl", hash = "sha256:a4c64dce654c0407eb54aba84507663be54f78e4d36cbfbfdc6be14c6bbd17bb"},
-    {url = "https://files.pythonhosted.org/packages/7b/51/6b5b3468a935afa32e48de9440977e24d839c6db6b4cf954b121f34a8d6f/moto-4.1.7.dev37.tar.gz", hash = "sha256:020668e46a1a280ef2e5ba59f4b19b0339e3474280d5b1db97b012d925d8937c"},
+"moto 4.1.7.dev40" = [
+    {url = "https://files.pythonhosted.org/packages/4d/4b/192cd8a6e3707481720f74922f939fa3205e4019c66c0db6b94de2b8c912/moto-4.1.7.dev40-py2.py3-none-any.whl", hash = "sha256:6deafb9b7f66dc2840d45de2da62562762a4875f70e00180c2e492e6d439aa06"},
+    {url = "https://files.pythonhosted.org/packages/b8/32/62536155506946c7c5f81b734ae545afde504870eafb872e79db3b465426/moto-4.1.7.dev40.tar.gz", hash = "sha256:ada1490ead3523cb11a0b8a050ca3d7503369ae691e91f225f4af2e829c0f27d"},
 ]
 "mr-proper 0.0.7" = [
     {url = "https://files.pythonhosted.org/packages/e3/35/a50ba9e3097ee0d71232c996c626a17f80424140b365122c8f1bc9933118/mr_proper-0.0.7.tar.gz", hash = "sha256:03b517b19e617537f711ce418b125e5f2efd82ec881539cdee83195c78c14a02"},
@@ -1250,9 +1239,9 @@ content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda
     {url = "https://files.pythonhosted.org/packages/2a/79/6573e26a8fa610c8859332af55bb40d0aad9da1079046996b0e34a1ad40f/pyproject-flake8-6.0.0.post1.tar.gz", hash = "sha256:d43421caca0ef8a672874405fe63c722b0333e3c22c41648c6df60f21bab2b6b"},
     {url = "https://files.pythonhosted.org/packages/4d/9c/8fb3ccebcb9be09b0b2e205f15a3a1051ef8c3a7f536fd3a256c45554221/pyproject_flake8-6.0.0.post1-py3-none-any.whl", hash = "sha256:bdc7ca9b967b9724983903489b8943b72c668178fb69f03e8774ec74f6a13782"},
 ]
-"pytest 7.2.2" = [
-    {url = "https://files.pythonhosted.org/packages/b2/68/5321b5793bd506961bd40bdbdd0674e7de4fb873ee7cab33dd27283ad513/pytest-7.2.2-py3-none-any.whl", hash = "sha256:130328f552dcfac0b1cec75c12e3f005619dc5f874f0a06e8ff7263f0ee6225e"},
-    {url = "https://files.pythonhosted.org/packages/b9/29/311895d9cd3f003dd58e8fdea36dd895ba2da5c0c90601836f7de79f76fe/pytest-7.2.2.tar.gz", hash = "sha256:c99ab0c73aceb050f68929bc93af19ab6db0558791c6a0715723abe9d0ade9d4"},
+"pytest 7.3.0" = [
+    {url = "https://files.pythonhosted.org/packages/2b/a6/22c1138c2a7b60c9eb9ddeac017d82a58dfd9661651c721e7466af648764/pytest-7.3.0.tar.gz", hash = "sha256:58ecc27ebf0ea643ebfdf7fb1249335da761a00c9f955bcd922349bcb68ee57d"},
+    {url = "https://files.pythonhosted.org/packages/83/b8/345f25e35406da60b5cb0cb9de9f92a96f44eae618dc2cc4a00a2bf416f9/pytest-7.3.0-py3-none-any.whl", hash = "sha256:933051fa1bfbd38a21e73c3960cebdad4cf59483ddba7696c48509727e17f201"},
 ]
 "pytest-cov 4.0.0" = [
     {url = "https://files.pythonhosted.org/packages/ea/70/da97fd5f6270c7d2ce07559a19e5bf36a76f0af21500256f005a69d9beba/pytest-cov-4.0.0.tar.gz", hash = "sha256:996b79efde6433cdbd0088872dbc5fb3ed7fe1578b68cdbba634f14bb8dd0470"},
