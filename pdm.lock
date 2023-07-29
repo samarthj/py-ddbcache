@@ -120,22 +120,22 @@ files = [
 
 [[package]]
 name = "boto3"
-version = "1.28.12"
+version = "1.28.15"
 requires_python = ">= 3.7"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore<1.32.0,>=1.31.12",
+    "botocore<1.32.0,>=1.31.15",
     "jmespath<2.0.0,>=0.7.1",
     "s3transfer<0.7.0,>=0.6.0",
 ]
 files = [
-    {file = "boto3-1.28.12-py3-none-any.whl", hash = "sha256:cfcb20d5784428f31d89889e68b26efeda90f231c3119eef4af8b25ad405c55f"},
-    {file = "boto3-1.28.12.tar.gz", hash = "sha256:d5ac6599951fdd519ed26c6fe15c41a7aa4021cb9adce33167344f8ce5cdb07b"},
+    {file = "boto3-1.28.15-py3-none-any.whl", hash = "sha256:84b7952858e9319968b0348d9894a91a6bb5f31e81a45c68044d040a12362abe"},
+    {file = "boto3-1.28.15.tar.gz", hash = "sha256:a6e711e0b6960c3a5b789bd30c5a18eea7263f2a59fc07f85efa5e04804e49d2"},
 ]
 
 [[package]]
 name = "botocore"
-version = "1.31.12"
+version = "1.31.15"
 requires_python = ">= 3.7"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -144,8 +144,8 @@ dependencies = [
     "urllib3<1.27,>=1.25.4",
 ]
 files = [
-    {file = "botocore-1.31.12-py3-none-any.whl", hash = "sha256:86380672151866b5e425636e3ebad74f2b83e7163e36ef5d38d11a04b9cba33b"},
-    {file = "botocore-1.31.12.tar.gz", hash = "sha256:7e5db466c762a071bb58c9a39d070f1333ce4f4ba6fdf9820ba21e87bd4c7e29"},
+    {file = "botocore-1.31.15-py3-none-any.whl", hash = "sha256:b3a0f787f275711875476cbe12a0123b2e6570b2f505e2fa509dcec3c5410b57"},
+    {file = "botocore-1.31.15.tar.gz", hash = "sha256:b46d1ce4e0cf42d28fdf61ce0c999904645d38b51cb809817a361c0cec16d487"},
 ]
 
 [[package]]
@@ -823,7 +823,7 @@ files = [
 
 [[package]]
 name = "moto"
-version = "4.1.14.dev31"
+version = "4.1.14.dev36"
 requires_python = ">=3.7"
 summary = ""
 dependencies = [
@@ -838,8 +838,8 @@ dependencies = [
     "xmltodict",
 ]
 files = [
-    {file = "moto-4.1.14.dev31-py2.py3-none-any.whl", hash = "sha256:c5537ef4b5bdfe01ac9e6c98a45c19f6a54d8ef1c4e3e51ecf76dddb0a302d5a"},
-    {file = "moto-4.1.14.dev31.tar.gz", hash = "sha256:5dd38cb1ff51dfcaaaa838022d7ab221c05d2a9fc68c9f7f4900459a9672bad9"},
+    {file = "moto-4.1.14.dev36-py2.py3-none-any.whl", hash = "sha256:a5231aba75b57d4423f616b537c8cf5ab94fed19ecd8e18c70a1818c8c54c9cf"},
+    {file = "moto-4.1.14.dev36.tar.gz", hash = "sha256:236788f315e7b1a533c0e89ed4b34e38724a5709f36ade4102182c4bbfd50f7c"},
 ]
 
 [[package]]
@@ -961,19 +961,19 @@ files = [
 
 [[package]]
 name = "pycln"
-version = "2.1.6"
+version = "2.1.7"
 requires_python = ">=3.6.2,<4"
 summary = "A formatter for finding and removing unused import statements."
 dependencies = [
-    "libcst<0.5.0,>=0.3.10; python_version >= \"3.7\"",
+    "libcst<1.1.0,>=0.3.10; python_version >= \"3.7\"",
     "pathspec<0.12.0,>=0.9.0",
     "pyyaml<7.0.0,>=5.3.1",
     "tomlkit<0.12.0,>=0.11.1",
     "typer<0.10.0,>=0.4.1",
 ]
 files = [
-    {file = "pycln-2.1.6-py3-none-any.whl", hash = "sha256:2fc4d6fa9e4e1cc71818073122927f6a7a237c8dec47cb579ea79c8756297eab"},
-    {file = "pycln-2.1.6.tar.gz", hash = "sha256:59aed29811614865d88adc3242eb88fee8db711efa9e15f55f4259e88c8f7554"},
+    {file = "pycln-2.1.7-py3-none-any.whl", hash = "sha256:9da51af133a406ce19b179646871cd96be6b04c323232d0d2cbb8d1ef4d0fa63"},
+    {file = "pycln-2.1.7.tar.gz", hash = "sha256:204be6151e305eecd87a282f2bb5555296e234067efc62a2b3d2d53fdb922553"},
 ]
 
 [[package]]
