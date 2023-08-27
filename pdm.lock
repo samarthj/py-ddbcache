@@ -52,7 +52,7 @@ files = [
 
 [[package]]
 name = "autopep8"
-version = "2.0.3"
+version = "2.0.4"
 requires_python = ">=3.6"
 summary = "A tool that automatically formats Python code to conform to the PEP 8 style guide"
 dependencies = [
@@ -60,8 +60,8 @@ dependencies = [
     "tomli; python_version < \"3.11\"",
 ]
 files = [
-    {file = "autopep8-2.0.3-py2.py3-none-any.whl", hash = "sha256:ca72bd1e3bf0aa40636860fa07e3f1a762a18d0943cf359b3de09221059ffbd9"},
-    {file = "autopep8-2.0.3.tar.gz", hash = "sha256:ba4901621c7f94c6fce134437d577009886d5e3bfa46ee64e1d1d864a5b93cc2"},
+    {file = "autopep8-2.0.4-py2.py3-none-any.whl", hash = "sha256:067959ca4a07b24dbd5345efa8325f5f58da4298dab0dde0443d5ed765de80cb"},
+    {file = "autopep8-2.0.4.tar.gz", hash = "sha256:2913064abd97b3419d1cc83ea71f042cb821f87e45b9c88cad5ad3c4ea87fe0c"},
 ]
 
 [[package]]
@@ -775,7 +775,7 @@ files = [
 
 [[package]]
 name = "moto"
-version = "4.2.1.dev7"
+version = "4.2.1.dev16"
 requires_python = ">=3.7"
 summary = ""
 dependencies = [
@@ -790,8 +790,8 @@ dependencies = [
     "xmltodict",
 ]
 files = [
-    {file = "moto-4.2.1.dev7-py2.py3-none-any.whl", hash = "sha256:8d04366810534fb07cd0060552640c791c2a35a05e98b61cc833e5f885c3e657"},
-    {file = "moto-4.2.1.dev7.tar.gz", hash = "sha256:e21b776c1709f01360b00f4bac16da8007cd1f3ce760af96b9e40cde9c6c9ca0"},
+    {file = "moto-4.2.1.dev16-py2.py3-none-any.whl", hash = "sha256:46420a39f71350c0f9a6c6784cdcba7b86bb70fd14ea525d48ebcfefb7bcba6a"},
+    {file = "moto-4.2.1.dev16.tar.gz", hash = "sha256:5599a60721400127f746ff2bc738b607886df941cf400bc37e6d62893d806ef5"},
 ]
 
 [[package]]
