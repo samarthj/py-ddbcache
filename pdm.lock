@@ -775,7 +775,7 @@ files = [
 
 [[package]]
 name = "moto"
-version = "4.2.2"
+version = "4.2.3.dev8"
 requires_python = ">=3.7"
 summary = ""
 dependencies = [
@@ -790,8 +790,8 @@ dependencies = [
     "xmltodict",
 ]
 files = [
-    {file = "moto-4.2.2-py2.py3-none-any.whl", hash = "sha256:2a9cbcd9da1a66b23f95d62ef91968284445233a606b4de949379395056276fb"},
-    {file = "moto-4.2.2.tar.gz", hash = "sha256:ee34c4c3f53900d953180946920c9dba127a483e2ed40e6dbf93d4ae2e760e7c"},
+    {file = "moto-4.2.3.dev8-py2.py3-none-any.whl", hash = "sha256:dc54734f2fb2400bf49c7c111b35493047c42afc2a4b90911f88283c55f4ba89"},
+    {file = "moto-4.2.3.dev8.tar.gz", hash = "sha256:55d65469dd1262f81a3a97f090e98a04a0b64234d538832b778cbe1f46c7f573"},
 ]
 
 [[package]]
