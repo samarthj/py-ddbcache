@@ -117,22 +117,22 @@ files = [
 
 [[package]]
 name = "boto3"
-version = "1.28.47"
+version = "1.28.49"
 requires_python = ">= 3.7"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore<1.32.0,>=1.31.47",
+    "botocore<1.32.0,>=1.31.49",
     "jmespath<2.0.0,>=0.7.1",
     "s3transfer<0.7.0,>=0.6.0",
 ]
 files = [
-    {file = "boto3-1.28.47-py3-none-any.whl", hash = "sha256:27560da44099e7e2ee961d3971d8ea659de2e0dc24e78043d1c3027d89b2d8a2"},
-    {file = "boto3-1.28.47.tar.gz", hash = "sha256:be69cd28e3732b63ad61f6d2429b1eac92428588911a5a7367faa4e129a4738d"},
+    {file = "boto3-1.28.49-py3-none-any.whl", hash = "sha256:519639859a3c829ccf7073a58b3716cb26cb5906e306fe63eb4beab68bf9bfab"},
+    {file = "boto3-1.28.49.tar.gz", hash = "sha256:c9fad1b01a1d7e7bd51150b3175b4c32b79d699ce94708082611f59fde2e097a"},
 ]
 
 [[package]]
 name = "botocore"
-version = "1.31.47"
+version = "1.31.49"
 requires_python = ">= 3.7"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -141,8 +141,8 @@ dependencies = [
     "urllib3<1.27,>=1.25.4",
 ]
 files = [
-    {file = "botocore-1.31.47-py3-none-any.whl", hash = "sha256:6a60f9601270458102529b17fdcba5551b918f9eedc32bbc2f467e63edfb2662"},
-    {file = "botocore-1.31.47.tar.gz", hash = "sha256:a0ba5629eb17a37bf449bccda9df6ae652d5755f73145519d5eb244f6963b31b"},
+    {file = "botocore-1.31.49-py3-none-any.whl", hash = "sha256:7d64cb45154e4f34f3a45f551e118caad7379ae831565639e0afe5b2af126c61"},
+    {file = "botocore-1.31.49.tar.gz", hash = "sha256:95e9716f27f67d4207f260ab0ea157603ca544d3b82c5f21728b1c732bec1817"},
 ]
 
 [[package]]
@@ -504,16 +504,15 @@ files = [
 
 [[package]]
 name = "flake8-isort"
-version = "6.0.0"
-requires_python = ">=3.7"
+version = "6.1.0"
+requires_python = ">=3.8"
 summary = "flake8 plugin that integrates isort ."
 dependencies = [
     "flake8",
     "isort<6,>=5.0.0",
 ]
 files = [
-    {file = "flake8-isort-6.0.0.tar.gz", hash = "sha256:537f453a660d7e903f602ecfa36136b140de279df58d02eb1b6a0c84e83c528c"},
-    {file = "flake8_isort-6.0.0-py3-none-any.whl", hash = "sha256:aa0cac02a62c7739e370ce6b9c31743edac904bae4b157274511fc8a19c75bbc"},
+    {file = "flake8-isort-6.1.0.tar.gz", hash = "sha256:d4639343bac540194c59fb1618ac2c285b3e27609f353bef6f50904d40c1643e"},
 ]
 
 [[package]]
@@ -775,7 +774,7 @@ files = [
 
 [[package]]
 name = "moto"
-version = "4.2.3.dev35"
+version = "4.2.3.dev46"
 requires_python = ">=3.7"
 summary = ""
 dependencies = [
@@ -790,8 +789,8 @@ dependencies = [
     "xmltodict",
 ]
 files = [
-    {file = "moto-4.2.3.dev35-py2.py3-none-any.whl", hash = "sha256:dd76d07cc77a0f8e3e38f99f9e4b0f34da77d3ac15729eba89519191dd0f80be"},
-    {file = "moto-4.2.3.dev35.tar.gz", hash = "sha256:977f30eda1d241ac849a0a90dc16b1e38f1f644e221eae27c687fb668f1f7c74"},
+    {file = "moto-4.2.3.dev46-py2.py3-none-any.whl", hash = "sha256:f64e1ce86369154abb6214a0f55cd215aa7d87a28364febc608ddf8e42e450d2"},
+    {file = "moto-4.2.3.dev46.tar.gz", hash = "sha256:213fbf19fd21c2360ba183ee894c8e465c62cd9a106aa6481f6fbb17ed9aabfc"},
 ]
 
 [[package]]
