@@ -39,15 +39,15 @@ files = [
 
 [[package]]
 name = "astroid"
-version = "3.0.0a9"
+version = "3.0.0"
 requires_python = ">=3.8.0"
 summary = "An abstract syntax tree for Python with inference support."
 dependencies = [
     "typing-extensions>=4.0.0; python_version < \"3.11\"",
 ]
 files = [
-    {file = "astroid-3.0.0a9-py3-none-any.whl", hash = "sha256:7d96dc59067c955b2912bb9a2f117f07ed05117d56ee03b1ceb1a1d2ed326252"},
-    {file = "astroid-3.0.0a9.tar.gz", hash = "sha256:3507fcab3bbb054c28ba3bcd1dd9532cb2d077101aaf3fabd8d670102944dca2"},
+    {file = "astroid-3.0.0-py3-none-any.whl", hash = "sha256:f2510e7fdcd6cfda4ec50014726d4857abf79acfc010084ce8c26091913f1b25"},
+    {file = "astroid-3.0.0.tar.gz", hash = "sha256:1defdbca052635dd29657ea674edfc45e4b5be9cd53630c5b084fcfed94344a8"},
 ]
 
 [[package]]
@@ -774,7 +774,7 @@ files = [
 
 [[package]]
 name = "moto"
-version = "4.2.5.dev12"
+version = "4.2.5"
 requires_python = ">=3.7"
 summary = ""
 dependencies = [
@@ -789,8 +789,8 @@ dependencies = [
     "xmltodict",
 ]
 files = [
-    {file = "moto-4.2.5.dev12-py2.py3-none-any.whl", hash = "sha256:7be61d1b8cfc4458c1138dda50a19983f1cfec41f1e1b00d8c94ffdd1d3700ce"},
-    {file = "moto-4.2.5.dev12.tar.gz", hash = "sha256:98eae83a4a120128abc421c5e1c18bf9267968f8e61ba2dd3fab7c7922525fd0"},
+    {file = "moto-4.2.5-py2.py3-none-any.whl", hash = "sha256:4440bc86d5a7bb77043d8031022f549e0c1e2869f1218b0939dbbbdc10776932"},
+    {file = "moto-4.2.5.tar.gz", hash = "sha256:cc9650747088a72db810ed0fd96f852b6fa296ca4b5e7818d17d9e7fdaf5dde6"},
 ]
 
 [[package]]
@@ -987,11 +987,11 @@ files = [
 
 [[package]]
 name = "pylint"
-version = "3.0.0a7"
+version = "3.0.0b0"
 requires_python = ">=3.8.0"
 summary = "python code static checker"
 dependencies = [
-    "astroid<=3.1.0-dev0,>=3.0.0a9",
+    "astroid<=3.1.0-dev0,>=3.0.0",
     "colorama>=0.4.5; sys_platform == \"win32\"",
     "dill>=0.2; python_version < \"3.11\"",
     "dill>=0.3.6; python_version >= \"3.11\"",
@@ -1004,8 +1004,8 @@ dependencies = [
     "typing-extensions>=3.10.0; python_version < \"3.10\"",
 ]
 files = [
-    {file = "pylint-3.0.0a7-py3-none-any.whl", hash = "sha256:24ba9feb4bbb0ff8afda5e999da1869c9c246de09234dfd9b9793b4cc700e3ad"},
-    {file = "pylint-3.0.0a7.tar.gz", hash = "sha256:f104548bec604f98b44ef7cff637aab4271781493a538da84d5544d85d8e8f76"},
+    {file = "pylint-3.0.0b0-py3-none-any.whl", hash = "sha256:41d732d49c8dcebf6977ba97ed56e75d94286ac9d7ab71934dc853897f231fe1"},
+    {file = "pylint-3.0.0b0.tar.gz", hash = "sha256:ceabb50c763cf898be9efbf0c058358054279fb00ab9f659c49205e68a328911"},
 ]
 
 [[package]]
