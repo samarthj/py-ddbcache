@@ -3,9 +3,8 @@
 
 [metadata]
 groups = ["default", "code-style", "formatting", "lint", "other", "security", "test"]
-cross_platform = true
-static_urls = false
-lock_version = "4.3"
+strategy = ["cross_platform"]
+lock_version = "4.4"
 content_hash = "sha256:29a82b7124a7082ffad35d9d260a730e92586a3c3a4945e98c6101fda0d5eb13"
 
 [[package]]
@@ -114,22 +113,22 @@ files = [
 
 [[package]]
 name = "boto3"
-version = "1.28.71"
+version = "1.28.73"
 requires_python = ">= 3.7"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore<1.32.0,>=1.31.71",
+    "botocore<1.32.0,>=1.31.73",
     "jmespath<2.0.0,>=0.7.1",
     "s3transfer<0.8.0,>=0.7.0",
 ]
 files = [
-    {file = "boto3-1.28.71-py3-none-any.whl", hash = "sha256:cf54d6da6d348317da896235e9850c7e550dbc18bd5cb16cce1b035e90d0166f"},
-    {file = "boto3-1.28.71.tar.gz", hash = "sha256:8d1b50127b20b817fdcec3ce6a625c5057b5a722acf1cfa64cf3824ff40b1e75"},
+    {file = "boto3-1.28.73-py3-none-any.whl", hash = "sha256:bbe377a288b6b12b526fae3b3d743318c6868626cf67e1e97f104345a5194b1e"},
+    {file = "boto3-1.28.73.tar.gz", hash = "sha256:a61cf96f7e196b1450afdf4856b7ea0e58080752e687b0011157be96934489be"},
 ]
 
 [[package]]
 name = "botocore"
-version = "1.31.71"
+version = "1.31.73"
 requires_python = ">= 3.7"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -139,8 +138,8 @@ dependencies = [
     "urllib3<2.1,>=1.25.4; python_version >= \"3.10\"",
 ]
 files = [
-    {file = "botocore-1.31.71-py3-none-any.whl", hash = "sha256:505cae827536a7400c3faaca8aeefd2e7618134a8644df6b3077fa487fe2b783"},
-    {file = "botocore-1.31.71.tar.gz", hash = "sha256:223e95e8d44ffd85d6baa5c9fc67b029ff087484d304a4478c4dfe38bd433f3f"},
+    {file = "botocore-1.31.73-py3-none-any.whl", hash = "sha256:6e9caaa7205e0c0505f4868a4053e96eaf3f4b6bce0368a46970a8efeeacb492"},
+    {file = "botocore-1.31.73.tar.gz", hash = "sha256:5334c22d5a3f4643931896137c57b2496fef005b039d87d8740e7a28eb31519d"},
 ]
 
 [[package]]
@@ -772,7 +771,7 @@ files = [
 
 [[package]]
 name = "moto"
-version = "4.2.7.dev25"
+version = "4.2.7"
 requires_python = ">=3.7"
 summary = ""
 dependencies = [
@@ -787,8 +786,8 @@ dependencies = [
     "xmltodict",
 ]
 files = [
-    {file = "moto-4.2.7.dev25-py2.py3-none-any.whl", hash = "sha256:d35464a23180000a58305220fd1d40fe15f31f22db2a8ccd067ac4dd224ae478"},
-    {file = "moto-4.2.7.dev25.tar.gz", hash = "sha256:754b26bbff3603cb63ec58ecf1c20d6484f90d35253d10391bea8e0800987ae3"},
+    {file = "moto-4.2.7-py2.py3-none-any.whl", hash = "sha256:3e0ef388900448485cd6eff18e9f7fcaa6cf4560b6fb536ba2e2e1278a5ecc59"},
+    {file = "moto-4.2.7.tar.gz", hash = "sha256:1298006aaa6996b886658eb194cac0e3a5679c9fcce6cb13e741ccc5a7247abb"},
 ]
 
 [[package]]
