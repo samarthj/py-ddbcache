@@ -113,22 +113,22 @@ files = [
 
 [[package]]
 name = "boto3"
-version = "1.28.78"
+version = "1.28.79"
 requires_python = ">= 3.7"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore<1.32.0,>=1.31.78",
+    "botocore<1.32.0,>=1.31.79",
     "jmespath<2.0.0,>=0.7.1",
     "s3transfer<0.8.0,>=0.7.0",
 ]
 files = [
-    {file = "boto3-1.28.78-py3-none-any.whl", hash = "sha256:ff8df4bb5aeb69acc64959a74b31042bfc52d64ca77dbe845a72c8062c48d179"},
-    {file = "boto3-1.28.78.tar.gz", hash = "sha256:aa970b1571321846543a6e615848352fe7621f1cb96b4454e919421924af95f7"},
+    {file = "boto3-1.28.79-py3-none-any.whl", hash = "sha256:02ce7dcad2d3b054cd99e7ca6df7a708e016a31b1c98b46d8df3b3891070c121"},
+    {file = "boto3-1.28.79.tar.gz", hash = "sha256:b8acb57a124434284d6ab69c61d32d70e84e13e2c27c33b4ad3c32f15ad407d3"},
 ]
 
 [[package]]
 name = "botocore"
-version = "1.31.78"
+version = "1.31.79"
 requires_python = ">= 3.7"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -138,8 +138,8 @@ dependencies = [
     "urllib3<2.1,>=1.25.4; python_version >= \"3.10\"",
 ]
 files = [
-    {file = "botocore-1.31.78-py3-none-any.whl", hash = "sha256:a9ca8deeb3f47a10a25637859fee8d81cac2db37ace819d24471279e44879547"},
-    {file = "botocore-1.31.78.tar.gz", hash = "sha256:320c70bc412157813c2cf60217a592b4b345f8e97e4bf3b1ce49b6be69ed8965"},
+    {file = "botocore-1.31.79-py3-none-any.whl", hash = "sha256:6f1fc49e9e12f9772b4fef577837670bc84d772a7c946b4d08fe2890e34a4305"},
+    {file = "botocore-1.31.79.tar.gz", hash = "sha256:07ecb93833475dde68e5c0e02a7ccf8ca22caf68cdc892651c300529894133e1"},
 ]
 
 [[package]]
@@ -772,7 +772,7 @@ files = [
 
 [[package]]
 name = "moto"
-version = "4.2.8.dev18"
+version = "4.2.8.dev23"
 requires_python = ">=3.7"
 summary = ""
 dependencies = [
@@ -787,8 +787,8 @@ dependencies = [
     "xmltodict",
 ]
 files = [
-    {file = "moto-4.2.8.dev18-py2.py3-none-any.whl", hash = "sha256:4f439271fa32642298b3065b41ba0f97509d7e09ae98c7b017936f2ff9aaaf2a"},
-    {file = "moto-4.2.8.dev18.tar.gz", hash = "sha256:a38e83c6d313f5fa6cc571d6bad1ad66ea8d3925862324c4e7829bd1ed60ec67"},
+    {file = "moto-4.2.8.dev23-py2.py3-none-any.whl", hash = "sha256:d144a10f2065141dc801a61d51fe388bfe8b4314e0a620663703e94574a65cf9"},
+    {file = "moto-4.2.8.dev23.tar.gz", hash = "sha256:e91dbaefd488c3a1ba864c262ed06573a4f3a7b6648ec69b603b11ad3a694c06"},
 ]
 
 [[package]]
@@ -1188,15 +1188,15 @@ files = [
 
 [[package]]
 name = "rope"
-version = "1.10.0"
+version = "1.11.0"
 requires_python = ">=3.8"
 summary = "a python refactoring library..."
 dependencies = [
     "pytoolconfig[global]>=1.2.2",
 ]
 files = [
-    {file = "rope-1.10.0-py3-none-any.whl", hash = "sha256:4e9f06d7296708a8a6518590c49352c99394053d91fde5b1d74c9ffc85c76d5b"},
-    {file = "rope-1.10.0.tar.gz", hash = "sha256:14bfcc7dfea69fa32c53db0667e86e321ef059de555c7f8101a0cb91c8d85a55"},
+    {file = "rope-1.11.0-py3-none-any.whl", hash = "sha256:62c9028353d1f020653bd1b090d659031539842ede6bd65985f86db3d6430932"},
+    {file = "rope-1.11.0.tar.gz", hash = "sha256:ac0cbdcda5a546e1e56c54976df07ea2cb04c806f65459bc213536c5d1bc073e"},
 ]
 
 [[package]]
