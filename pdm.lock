@@ -113,22 +113,22 @@ files = [
 
 [[package]]
 name = "boto3"
-version = "1.28.85"
+version = "1.29.1"
 requires_python = ">= 3.7"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore<1.32.0,>=1.31.85",
+    "botocore<1.33.0,>=1.32.1",
     "jmespath<2.0.0,>=0.7.1",
     "s3transfer<0.8.0,>=0.7.0",
 ]
 files = [
-    {file = "boto3-1.28.85-py3-none-any.whl", hash = "sha256:1fb7e7ba32a6701990168eb7a08e1fb624ae48130784dfab25904ed47deabb31"},
-    {file = "boto3-1.28.85.tar.gz", hash = "sha256:96b4cb2708933cef7dbe1177df37ef0593839942978784147aade0e49511eb2b"},
+    {file = "boto3-1.29.1-py3-none-any.whl", hash = "sha256:192695305fa65012d21f78ee852b91cb56dd571e84d51fb71f756302bf19d23f"},
+    {file = "boto3-1.29.1.tar.gz", hash = "sha256:20285ebf4e98b2905a88aeb162b4f77ff908b2e3e31038b3223e593789290aa3"},
 ]
 
 [[package]]
 name = "botocore"
-version = "1.31.85"
+version = "1.32.1"
 requires_python = ">= 3.7"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -138,8 +138,8 @@ dependencies = [
     "urllib3<2.1,>=1.25.4; python_version >= \"3.10\"",
 ]
 files = [
-    {file = "botocore-1.31.85-py3-none-any.whl", hash = "sha256:b8f35d65f2b45af50c36fc25cc1844d6bd61d38d2148b2ef133b8f10e198555d"},
-    {file = "botocore-1.31.85.tar.gz", hash = "sha256:ce58e688222df73ec5691f934be1a2122a52c9d11d3037b586b3fff16ed6d25f"},
+    {file = "botocore-1.32.1-py3-none-any.whl", hash = "sha256:1d9c0ff3eb7828a8bd8c5c7f12cd9d8c05c6fe4c616ef963fdaab538a0da3809"},
+    {file = "botocore-1.32.1.tar.gz", hash = "sha256:fcf3cc2913afba8e5f7ebcc15e8f6bfae844ab64bf983bf5a6fe3bb54cce239d"},
 ]
 
 [[package]]
@@ -915,19 +915,19 @@ files = [
 
 [[package]]
 name = "pycln"
-version = "2.3.0"
-requires_python = ">=3.6.2,<4"
+version = "2.4.0"
+requires_python = ">=3.7.0,<4"
 summary = "A formatter for finding and removing unused import statements."
 dependencies = [
-    "libcst>=0.3.10; python_version >= \"3.7\"",
+    "libcst>=0.3.10",
     "pathspec>=0.9.0",
     "pyyaml>=5.3.1",
     "tomlkit>=0.11.1",
     "typer>=0.4.1",
 ]
 files = [
-    {file = "pycln-2.3.0-py3-none-any.whl", hash = "sha256:d6731e17a60728b827211de2ca4bfc9b40ea1df99a12f3e0fd06a98a0c9e6caa"},
-    {file = "pycln-2.3.0.tar.gz", hash = "sha256:8759b36753234c8f95895a31dde329479ffed2218f49d1a1c77c7edccc02e09b"},
+    {file = "pycln-2.4.0-py3-none-any.whl", hash = "sha256:d1bf648df17077306100815d255d45430035b36f66bac635df04a323c61ba126"},
+    {file = "pycln-2.4.0.tar.gz", hash = "sha256:1f3eefb7be18a9ee06c3bdd0ba2e91218cd39317e20130325f107e96eb84b9f6"},
 ]
 
 [[package]]
