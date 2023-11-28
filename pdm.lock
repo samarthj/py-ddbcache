@@ -113,22 +113,22 @@ files = [
 
 [[package]]
 name = "boto3"
-version = "1.29.6"
+version = "1.33.0"
 requires_python = ">= 3.7"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore<1.33.0,>=1.32.6",
+    "botocore<1.34.0,>=1.33.0",
     "jmespath<2.0.0,>=0.7.1",
-    "s3transfer<0.8.0,>=0.7.0",
+    "s3transfer<0.9.0,>=0.8.0",
 ]
 files = [
-    {file = "boto3-1.29.6-py3-none-any.whl", hash = "sha256:f4d19e01d176c3a5a05e4af733185ff1891b08a3c38d4a439800fa132aa6e9be"},
-    {file = "boto3-1.29.6.tar.gz", hash = "sha256:d1d0d979a70bf9b0b13ae3b017f8523708ad953f62d16f39a602d67ee9b25554"},
+    {file = "boto3-1.33.0-py3-none-any.whl", hash = "sha256:799fe8399ea132aa5aa868caf78c47ef9ed675d5ef61be97cb7131081bb8a861"},
+    {file = "boto3-1.33.0.tar.gz", hash = "sha256:ebf6d86217c37986f965dbe35a3bbd0318127d23a65737ab6486667496decb54"},
 ]
 
 [[package]]
 name = "botocore"
-version = "1.32.6"
+version = "1.33.0"
 requires_python = ">= 3.7"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -138,8 +138,8 @@ dependencies = [
     "urllib3<2.1,>=1.25.4; python_version >= \"3.10\"",
 ]
 files = [
-    {file = "botocore-1.32.6-py3-none-any.whl", hash = "sha256:4454f967a4d1a01e3e6205c070455bc4e8fd53b5b0753221581ae679c55a9dfd"},
-    {file = "botocore-1.32.6.tar.gz", hash = "sha256:ecec876103783b5efe6099762dda60c2af67e45f7c0ab4568e8265d11c6c449b"},
+    {file = "botocore-1.33.0-py3-none-any.whl", hash = "sha256:ccf3d67fd046265ae73bc9862d1618c6e774a61a96beac832edb63d9a21fe1ba"},
+    {file = "botocore-1.33.0.tar.gz", hash = "sha256:e35526421fe8ee180b6aed3102929594aa51e4d60e3f29366a603707c37c0d52"},
 ]
 
 [[package]]
@@ -772,7 +772,7 @@ files = [
 
 [[package]]
 name = "moto"
-version = "4.2.10"
+version = "4.2.11.dev4"
 requires_python = ">=3.7"
 summary = ""
 dependencies = [
@@ -787,8 +787,8 @@ dependencies = [
     "xmltodict",
 ]
 files = [
-    {file = "moto-4.2.10-py2.py3-none-any.whl", hash = "sha256:5cf0736d1f43cb887498d00b00ae522774bfddb7db1f4994fedea65b290b9f0e"},
-    {file = "moto-4.2.10.tar.gz", hash = "sha256:92595fe287474a31ac3ef847941ebb097e8ffb0c3d6c106e47cf573db06933b2"},
+    {file = "moto-4.2.11.dev4-py2.py3-none-any.whl", hash = "sha256:8e23977568043f78791fb6273c11f8e0753fbd602e0d7cf138e15993c88c1c97"},
+    {file = "moto-4.2.11.dev4.tar.gz", hash = "sha256:278ccd1f6f7a0dce1292a477b1c06cd3a62c38577be37e5f1a7e6d9985f5f0f2"},
 ]
 
 [[package]]
@@ -1201,15 +1201,15 @@ files = [
 
 [[package]]
 name = "s3transfer"
-version = "0.7.0"
+version = "0.8.0"
 requires_python = ">= 3.7"
 summary = "An Amazon S3 Transfer Manager"
 dependencies = [
-    "botocore<2.0a.0,>=1.12.36",
+    "botocore<2.0a.0,>=1.32.7",
 ]
 files = [
-    {file = "s3transfer-0.7.0-py3-none-any.whl", hash = "sha256:10d6923c6359175f264811ef4bf6161a3156ce8e350e705396a7557d6293c33a"},
-    {file = "s3transfer-0.7.0.tar.gz", hash = "sha256:fd3889a66f5fe17299fe75b82eae6cf722554edca744ca5d5fe308b104883d2e"},
+    {file = "s3transfer-0.8.0-py3-none-any.whl", hash = "sha256:baa479dc2e63e5c2ed51611b4d46cdf0295e2070d8d0b86b22f335ee5b954986"},
+    {file = "s3transfer-0.8.0.tar.gz", hash = "sha256:e8d6bd52ffd99841e3a57b34370a54841f12d3aab072af862cdcc50955288002"},
 ]
 
 [[package]]
