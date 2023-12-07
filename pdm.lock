@@ -113,22 +113,22 @@ files = [
 
 [[package]]
 name = "boto3"
-version = "1.33.7"
+version = "1.33.9"
 requires_python = ">= 3.7"
 summary = "The AWS SDK for Python"
 dependencies = [
-    "botocore<1.34.0,>=1.33.7",
+    "botocore<1.34.0,>=1.33.9",
     "jmespath<2.0.0,>=0.7.1",
     "s3transfer<0.9.0,>=0.8.2",
 ]
 files = [
-    {file = "boto3-1.33.7-py3-none-any.whl", hash = "sha256:d12467fb3a64d359b0bda0570a8163a5859fcac13e786f2a3db0392523178556"},
-    {file = "boto3-1.33.7.tar.gz", hash = "sha256:eed0f7df91066b6ac63a53d16459ac082458d57061bedf766135d9e1c2b75a6b"},
+    {file = "boto3-1.33.9-py3-none-any.whl", hash = "sha256:baa6ea61527bcc82365a4ef365aa8f34126483ff8533d01274f3cdb340c22d73"},
+    {file = "boto3-1.33.9.tar.gz", hash = "sha256:9486f66f9a89f66d64d25cb4baa55aad323a1734ef9815b7a2c4c0787a3fc1fb"},
 ]
 
 [[package]]
 name = "botocore"
-version = "1.33.7"
+version = "1.33.9"
 requires_python = ">= 3.7"
 summary = "Low-level, data-driven core of boto 3."
 dependencies = [
@@ -138,8 +138,8 @@ dependencies = [
     "urllib3<2.1,>=1.25.4; python_version >= \"3.10\"",
 ]
 files = [
-    {file = "botocore-1.33.7-py3-none-any.whl", hash = "sha256:71ec0e85b996cf9def3dd8f4ca6cb4a9fd3a614aa4c9c7cbf33f2f68e1d0649a"},
-    {file = "botocore-1.33.7.tar.gz", hash = "sha256:b2299bc13bb8c0928edc98bf4594deb14cba2357536120f63772027a16ce7374"},
+    {file = "botocore-1.33.9-py3-none-any.whl", hash = "sha256:07ff4eea62f546da540310887000c81fca802c788eb374fef06eda28009dcafd"},
+    {file = "botocore-1.33.9.tar.gz", hash = "sha256:1b90be11dd9a9a25290c995a6b713e76b9e2bf7bf86ba9036e0d28f2ceb2edfc"},
 ]
 
 [[package]]
@@ -772,7 +772,7 @@ files = [
 
 [[package]]
 name = "moto"
-version = "4.2.12.dev3"
+version = "4.2.12.dev7"
 requires_python = ">=3.7"
 summary = ""
 dependencies = [
@@ -787,8 +787,8 @@ dependencies = [
     "xmltodict",
 ]
 files = [
-    {file = "moto-4.2.12.dev3-py2.py3-none-any.whl", hash = "sha256:c3f23847d0876b2713844067efe31f3d803b54e77bdbe8e43ddf34503c3fd9a8"},
-    {file = "moto-4.2.12.dev3.tar.gz", hash = "sha256:ae528fa075ab662dc7f5f0d72ee97e6b1a8f9597371e936e810d0d0983287007"},
+    {file = "moto-4.2.12.dev7-py2.py3-none-any.whl", hash = "sha256:7e1c5d101929c0132a3a0eabc456849745f9317671b7ba6ae15f9ed2399c663a"},
+    {file = "moto-4.2.12.dev7.tar.gz", hash = "sha256:54006b59ec2f99f717def2b63850b700cbcef62a632e9c45e6024b86ff5c25b1"},
 ]
 
 [[package]]
