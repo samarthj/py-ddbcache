@@ -941,7 +941,7 @@ files = [
 
 [[package]]
 name = "moto"
-version = "4.2.13.dev24"
+version = "4.2.13.dev28"
 requires_python = ">=3.7"
 summary = ""
 dependencies = [
@@ -956,8 +956,8 @@ dependencies = [
     "xmltodict",
 ]
 files = [
-    {file = "moto-4.2.13.dev24-py2.py3-none-any.whl", hash = "sha256:9926e2b65502a0a8455f4f626c58abb3a961ffe975d735ae04dcd75d8794aaab"},
-    {file = "moto-4.2.13.dev24.tar.gz", hash = "sha256:3e31a56909b1b853a2c817c2b9b092631e4d2fe94985f239278adf9f97f5ff07"},
+    {file = "moto-4.2.13.dev28-py2.py3-none-any.whl", hash = "sha256:ac92f23c6284dd1bc090a642cc4aed822ca7913d78b9436cf63de4a77a32faed"},
+    {file = "moto-4.2.13.dev28.tar.gz", hash = "sha256:d99510c339aefab6b48f3c12185ff1dfe1a113d85d007acc1938b5c9653767e4"},
 ]
 
 [[package]]
@@ -1245,7 +1245,7 @@ files = [
 
 [[package]]
 name = "pytest"
-version = "7.4.3"
+version = "7.4.4"
 requires_python = ">=3.7"
 summary = "pytest: simple powerful testing with Python"
 dependencies = [
@@ -1257,8 +1257,8 @@ dependencies = [
     "tomli>=1.0.0; python_version < \"3.11\"",
 ]
 files = [
-    {file = "pytest-7.4.3-py3-none-any.whl", hash = "sha256:0d009c083ea859a71b76adf7c1d502e4bc170b80a8ef002da5806527b9591fac"},
-    {file = "pytest-7.4.3.tar.gz", hash = "sha256:d989d136982de4e3b29dabcc838ad581c64e8ed52c11fbe86ddebd9da0818cd5"},
+    {file = "pytest-7.4.4-py3-none-any.whl", hash = "sha256:b090cdf5ed60bf4c45261be03239c2c1c22df034fbffe691abe93cd80cea01d8"},
+    {file = "pytest-7.4.4.tar.gz", hash = "sha256:2cf0005922c6ace4a3e2ec8b4080eb0d9753fdc93107415332f50ce9e7994280"},
 ]
 
 [[package]]
